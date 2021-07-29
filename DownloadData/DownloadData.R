@@ -1,8 +1,8 @@
 library(ARPALData)
 library(tidyverse)
 
-#Dati sulla qualità dell'aria
-#Passo 1: scaricare i dati di qualità dell'aria (inquinanti) 
+#Dati sulla qualit?? dell'aria
+#Passo 1: scaricare i dati di qualit?? dell'aria (inquinanti) 
 data1 = get_ARPA_Lombardia_AQ_data(
   ID_station = NULL,
   Year = c(2019,2020), #singolo anno: numero, oppure parentesi per costruire un vettore di anni
@@ -16,7 +16,7 @@ data1 = get_ARPA_Lombardia_AQ_data(
 data2 = get_ARPA_Lombardia_AQ_data(
   ID_station = c(584,501),
   Year = c(2019,2020), #singolo anno: numero, oppure parentesi per costruire un vettore di anni
-  Frequency = "hourly", #Frequenza
+  Frequency = "hourly", #Frequenza: oraria
   Var_vec = NULL,
   Fns_vec = NULL,
   by_sensor = 0,
