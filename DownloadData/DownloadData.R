@@ -42,6 +42,8 @@ sum$Descr
 sum$Descr_by_IDStat #Statistiche descrittive divise stazione per stazione
 
 #Come esportare i file
+setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData') #Bisogna aggiungere il path di destinazione qui
 write_csv(data2, "tabella.csv")
+
 
 #I comandi per il meteo sono gli stessi (stessa struttura)
