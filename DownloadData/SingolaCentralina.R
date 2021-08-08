@@ -11,5 +11,5 @@ data2 = get_ARPA_Lombardia_AQ_data(
   verbose = T
 )
 
-setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData') #Bisogna aggiungere il path di destinazione qui
+setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData') 
 write_csv(data2, "tabella.csv")
