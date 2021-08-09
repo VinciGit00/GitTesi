@@ -13,5 +13,5 @@ datipoll = get_ARPA_Lombardia_AQ_data(
 
 datashort = datipoll[, c(1:4, 12:13)]
 
-setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData/Compitp') 
+setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData/Compito') 
 write_csv(datashort, "datipoll.csv")
