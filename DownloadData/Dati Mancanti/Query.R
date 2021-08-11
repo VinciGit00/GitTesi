@@ -87,7 +87,7 @@ cast2020 <- data.frame(data2020)
 
 cast2020 = cast2020 %>%
   rename(
-    PM25 =PM2.5
+    PM25 = PM2.5
   )
 
 #Queries
@@ -120,3 +120,9 @@ result2020total <- sqldf('SELECT A.IDStation, A.NameStation, A.Ammonia, R10.PM10
 
 #Comment for result2020or:
 #There are 7 control units with an acceptable number of missing data
+#1: 693 Sannazzaro de' Burgondi - AGIP, missing data: 31
+#2: 681 Moggio, missing data: 37
+#3: 705 Milano - Pascal Città Studi, missing data: 39
+#4: 677 Cremona - Via Fatebenefratelli, missing data: 59
+#5: 642 Pavia - via Folperti, missing data: 71
+#6: 703 Schivenoglia, missing data:79

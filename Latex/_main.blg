@@ -1,5 +1,0 @@
-[0] Config.pm:311> INFO - This is Biber 2.16
-[1] Config.pm:314> INFO - Logfile is '_main.blg'
-[241] biber-darwin:340> INFO - === Wed Aug 11, 2021, 20:33:23
-[282] Utils.pm:411> ERROR - _main.bcf is malformed, last biblatex run probably failed. Deleted _main.bbl
-[283] Biber.pm:132> INFO - ERRORS: 1
