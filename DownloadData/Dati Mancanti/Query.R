@@ -16,12 +16,6 @@ data2019 <- get_ARPA_Lombardia_AQ_data(
   verbose = T
 )
 
-my_data %>% 
-  rename(
-    sepal_length = Sepal.Length,
-    sepal_width = Sepal.Width
-  )
-
 #Casting of the tables for queries
 cast2019 <- data.frame(data2019)
 
