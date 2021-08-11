@@ -25,7 +25,7 @@ cast2019 = cast2019 %>%
     PM25 =PM2.5
   )
 
-#Queries
+#Queries 2019
 result2019Ammonia <- sqldf('SELECT IDStation, NameStation, COUNT(*) as Ammonia
                     FROM  cast2019 
                     WHERE Ammonia is null
@@ -64,12 +64,25 @@ Cremona2019 <- sqldf('SELECT Date, IDStation, NameStation, Ammonia, PM10, PM25
                        FROM cast2019
                        WHERE IDStation = 677
                        ')
+Moggio2019 <-  sqldf('SELECT Date, IDStation, NameStation, Ammonia, PM10, PM25
+                       FROM cast2019
+                       WHERE IDStation = 681
+                       ')
+
+Sannazzaro2019 <-  sqldf('SELECT Date, IDStation, NameStation, Ammonia, PM10, PM25
+                       FROM cast2019
+                       WHERE IDStation = 693
+                       ')
+Pavia2019 <-  sqldf('SELECT Date, IDStation, NameStation, Ammonia, PM10, PM25
+                       FROM cast2019
+                       WHERE IDStation = 642
+                       ')
 
 autoplot(ts(Cremona2019[,c(4:6)]))
 
 plot(Cremona2019[,"Date"], Cremona2019[,"Ammonia"] )
 
-vettore <-ARPALdf_Summary(data2019)
+vettore   <-ARPALdf_Summary(data2019)
 variabile <- vettore$Gap_length$Ammonia
 
 #2020
@@ -90,7 +103,7 @@ cast2020 = cast2020 %>%
     PM25 = PM2.5
   )
 
-#Queries
+#Queries 202o
 result2020Ammonia <- sqldf('SELECT IDStation, NameStation, COUNT(*) as Ammonia
                     FROM  cast2020 
                     WHERE Ammonia is null
@@ -126,3 +139,36 @@ result2020total <- sqldf('SELECT A.IDStation, A.NameStation, A.Ammonia, R10.PM10
 #4: 677 Cremona - Via Fatebenefratelli, missing data: 59
 #5: 642 Pavia - via Folperti, missing data: 71
 #6: 703 Schivenoglia, missing data:79
+
+bestdata2020 <- sqldf('SELECT Date, IDStation, NameStation, Ammonia, PM10, PM25
+                       FROM cast2020
+                       WHERE IDStation = 693 or IDStation = 681 or IDStation = 705 or IDStation = 677
+                       or IDStation = 642 or IDStation = 703
+                       ')
+
+Sannazzaro2020 <- sqldf('SELECT Date, IDStation, NameStation, Ammonia, PM10, PM25
+                       FROM cast2020
+                       WHERE IDStation = 693
+                       ')
+Moggio2020 <- sqldf('SELECT Date, IDStation, NameStation, Ammonia, PM10, PM25
+                       FROM cast2020
+                       WHERE IDStation = 681
+                       ')
+Milano2020<-sqldf('SELECT Date, IDStation, NameStation, Ammonia, PM10, PM25
+                       FROM cast2020
+                       WHERE IDStation = 705
+                       ')
+Cremona2020<- sqldf('SELECT Date, IDStation, NameStation, Ammonia, PM10, PM25
+                       FROM cast2020
+                       WHERE IDStation = 677
+                       ')
+
+Pavia2020<-sqldf('SELECT Date, IDStation, NameStation, Ammonia, PM10, PM25
+                       FROM cast2020
+                       WHERE IDStation = 693
+                       ')
+
+Schivenoglia2020<-sqldf('SELECT Date, IDStation, NameStation, Ammonia, PM10, PM25
+                       FROM cast2020
+                       WHERE IDStation = 703
+                       ')
