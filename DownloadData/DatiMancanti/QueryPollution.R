@@ -65,6 +65,7 @@ Cremona2019 <- sqldf('SELECT Date, IDStation, NameStation, Ammonia, PM10, PM25
                        FROM cast2019
                        WHERE IDStation = 677
                        ')
+
 Moggio2019 <-  sqldf('SELECT Date, IDStation, NameStation, Ammonia, PM10, PM25
                        FROM cast2019
                        WHERE IDStation = 681
@@ -78,10 +79,6 @@ Pavia2019 <-  sqldf('SELECT Date, IDStation, NameStation, Ammonia, PM10, PM25
                        FROM cast2019
                        WHERE IDStation = 642
                        ')
-
-autoplot(ts(Cremona2019[,c(4:6)]))
-
-plot(Cremona2019[,"Date"], Cremona2019[,"Ammonia"] )
 
 vettore   <-ARPALdf_Summary(data2019)
 variabile <- vettore$Gap_length$Ammonia
@@ -106,6 +103,8 @@ cast2020 = cast2020 %>%
   rename(
     PM25 = PM2.5
   )
+
+autoplot(ts(Cremona2019[,c(4:6)]))
 
 #Queries 2020
 result2020Ammonia <- sqldf('SELECT IDStation, NameStation, COUNT(*) as Ammonia
@@ -176,3 +175,52 @@ Schivenoglia2020<-sqldf('SELECT Date, IDStation, NameStation, Ammonia, PM10, PM2
                        FROM cast2020
                        WHERE IDStation = 703
                        ')
+
+setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData/DatiMancanti') 
+write_csv(result2020or, "DatiMancanti2020.csv")
+
+#Plot and save of the graphs
+
+autoplot(ts(Cremona2019[,c(4:6)]))
+
+setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData/DatiMancanti/PlotDati') 
+
+#2019
+pdf(file="Moggio2019.pdf")
+plot(Cremona2019[,"Date"], Cremona2019[,"Ammonia"] )
+dev.off()
+
+
+pdf(file="Sannazzaro2019.pdf")
+plot(Sannazzaro2019[,"Date"], Sannazzaro2019[,"Ammonia"] )
+dev.off()
+
+pdf(file="Pavia2019.pdf")
+plot(Pavia2019[,"Date"], Pavia2019[,"Ammonia"] )
+dev.off()
+
+#2020
+
+pdf(file="Sannazzaro2020.pdf")
+plot(Sannazzaro2020[,"Date"], Sannazzaro2020[,"Ammonia"] )
+dev.off()
+
+pdf(file="Moggio2020.pdf")
+plot(Moggio2020[,"Date"], Moggio2020[,"Ammonia"] )
+dev.off()
+
+pdf(file="Milano2020.pdf")
+plot(Milano2020[,"Date"], Milano2020[,"Ammonia"] )
+dev.off()
+
+pdf(file="Cremona2020.pdf")
+plot(Cremona2020[,"Date"], Cremona2020[,"Ammonia"] )
+dev.off()
+
+pdf(file="Pavia2020.pdf")
+plot(Pavia2020[,"Date"], Pavia2020[,"Ammonia"] )
+dev.off()
+
+pdf(file="Schivenoglia2020.pdf")
+plot(Schivenoglia2020[,"Date"], Schivenoglia2020[,"Ammonia"] )
+dev.off()
