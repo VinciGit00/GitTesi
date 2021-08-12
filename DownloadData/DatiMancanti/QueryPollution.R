@@ -22,7 +22,7 @@ cast2019 <- data.frame(data2019)
 #Renaming the PM2.5 column
 cast2019 = cast2019 %>%
   rename(
-    PM25 =PM2.5
+    PM25 = PM2.5
   )
 
 #Queries 2019
@@ -52,6 +52,7 @@ result2019total <- sqldf('SELECT A.IDStation, A.NameStation, A.Ammonia, R10.PM10
                     WHERE A.NameStation  = R10.NameStation
                     AND   R10.NameStation = R25.NameStation 
                     ')
+
  # based on result2019or, we choose stations: 677-Cremona, 681-Moggio, 693-Sannazzaro de' Burgondi and 642-Pavia
  # given that they have the least missing observations. 
 
@@ -85,6 +86,9 @@ plot(Cremona2019[,"Date"], Cremona2019[,"Ammonia"] )
 vettore   <-ARPALdf_Summary(data2019)
 variabile <- vettore$Gap_length$Ammonia
 
+setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData/DatiMancanti') 
+write_csv(result2019or, "DatiMancanti2019.csv")
+
 #2020
 data2020 <- get_ARPA_Lombardia_AQ_data(
   ID_station = NULL,
@@ -103,7 +107,7 @@ cast2020 = cast2020 %>%
     PM25 = PM2.5
   )
 
-#Queries 202o
+#Queries 2020
 result2020Ammonia <- sqldf('SELECT IDStation, NameStation, COUNT(*) as Ammonia
                     FROM  cast2020 
                     WHERE Ammonia is null
