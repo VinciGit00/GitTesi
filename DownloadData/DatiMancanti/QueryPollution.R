@@ -224,3 +224,16 @@ dev.off()
 pdf(file="Schivenoglia2020.pdf")
 plot(Schivenoglia2020[,"Date"], Schivenoglia2020[,"Ammonia"] )
 dev.off()
+
+#2019 mixed with 2020
+result2019 = result2019or
+result2020 = result2020or
+
+total2019_2020 <- sqldf('SELECT r19.IDStation, r19.NameStation, sum(r19.nada)+sum(r20.nada) as nada
+                       FROM result2019 as r19 JOIN result2020 as r20
+                       ON r19.IDStation = r20.IDStation
+                       GROUP BY r19.IDStation
+                       ORDER BY nada
+                       ')
+write_csv(total2019_2020, "DatiMancanti20192020Combinati.csv")
+
