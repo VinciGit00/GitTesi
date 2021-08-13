@@ -186,42 +186,41 @@ autoplot(ts(Cremona2019[,c(4:6)]))
 setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData/DatiMancanti/PlotDati') 
 
 #2019
-pdf(file="Moggio2019.pdf")
+jpeg(file="Moggio2019.jpeg")
 plot(Cremona2019[,"Date"], Cremona2019[,"Ammonia"] )
 dev.off()
 
 
-pdf(file="Sannazzaro2019.pdf")
+jpeg(file="Sannazzaro2019.jpeg")
 plot(Sannazzaro2019[,"Date"], Sannazzaro2019[,"Ammonia"] )
 dev.off()
 
-pdf(file="Pavia2019.pdf")
+jpeg(file="Pavia2019.jpeg")
 plot(Pavia2019[,"Date"], Pavia2019[,"Ammonia"] )
 dev.off()
 
 #2020
-
-pdf(file="Sannazzaro2020.pdf")
+jpeg(file="Sannazzaro2020.jpeg")
 plot(Sannazzaro2020[,"Date"], Sannazzaro2020[,"Ammonia"] )
 dev.off()
 
-pdf(file="Moggio2020.pdf")
+jpeg(file="Moggio2020.jpeg")
 plot(Moggio2020[,"Date"], Moggio2020[,"Ammonia"] )
 dev.off()
 
-pdf(file="Milano2020.pdf")
+jpeg(file="Milano2020.jpeg")
 plot(Milano2020[,"Date"], Milano2020[,"Ammonia"] )
 dev.off()
 
-pdf(file="Cremona2020.pdf")
+jpeg(file="Cremona2020.jpeg")
 plot(Cremona2020[,"Date"], Cremona2020[,"Ammonia"] )
 dev.off()
 
-pdf(file="Pavia2020.pdf")
+jpeg(file="Pavia2020.jpeg")
 plot(Pavia2020[,"Date"], Pavia2020[,"Ammonia"] )
 dev.off()
 
-pdf(file="Schivenoglia2020.pdf")
+jpeg(file="Schivenoglia2020.jpeg")
 plot(Schivenoglia2020[,"Date"], Schivenoglia2020[,"Ammonia"] )
 dev.off()
 
@@ -235,5 +234,8 @@ total2019_2020 <- sqldf('SELECT r19.IDStation, r19.NameStation, sum(r19.nada)+su
                        GROUP BY r19.IDStation
                        ORDER BY nada
                        ')
+
+setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData/DatiMancanti') 
+
 write_csv(total2019_2020, "DatiMancanti20192020Combinati.csv")
 
