@@ -183,7 +183,7 @@ write_csv(result2020or, "DatiMancanti2020.csv")
 
 autoplot(ts(Cremona2019[,c(4:6)]))
 
-setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData/DatiMancanti/PlotDati') 
+setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData/DatiMancanti/PlotDati/2019') 
 
 #2019
 jpeg(file="Moggio2019.jpeg")
@@ -200,6 +200,9 @@ plot(Pavia2019[,"Date"], Pavia2019[,"Ammonia"] )
 dev.off()
 
 #2020
+
+setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData/DatiMancanti/PlotDati/2020') 
+
 jpeg(file="Sannazzaro2020.jpeg")
 plot(Sannazzaro2020[,"Date"], Sannazzaro2020[,"Ammonia"] )
 dev.off()
