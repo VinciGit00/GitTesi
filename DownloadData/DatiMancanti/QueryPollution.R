@@ -53,8 +53,12 @@ result2019total <- sqldf('SELECT A.IDStation, A.NameStation, A.Ammonia, R10.PM10
                     AND   R10.NameStation = R25.NameStation 
                     ')
 
- # based on result2019or, we choose stations: 677-Cremona, 681-Moggio, 693-Sannazzaro de' Burgondi and 642-Pavia
- # given that they have the least missing observations. 
+# Based on result2019or, we choose stations: 
+#1: 677-Cremona 
+#2: 681-Moggio 
+#3: 693-Sannazzaro de' Burgondi 
+#4: 642-Pavia
+# Given that they have the least missing observations. 
 
 bestdata2019 <- sqldf('SELECT Date, IDStation, NameStation, Ammonia, PM10, PM25
                        FROM cast2019
@@ -84,7 +88,7 @@ vettore   <-ARPALdf_Summary(data2019)
 variabile <- vettore$Gap_length$Ammonia
 
 setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData/DatiMancanti') 
-write_csv(result2019or, "DatiMancanti2019.csv")
+write_csv(result2019or, "MissingData2019.csv")
 
 #2020
 data2020 <- get_ARPA_Lombardia_AQ_data(
@@ -177,15 +181,15 @@ Schivenoglia2020<-sqldf('SELECT Date, IDStation, NameStation, Ammonia, PM10, PM2
                        ')
 
 setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData/DatiMancanti') 
-write_csv(result2020or, "DatiMancanti2020.csv")
+write_csv(result2020or, "MissingData2020.csv")
 
 #Plot and save of the graphs
 
 autoplot(ts(Cremona2019[,c(4:6)]))
 
-setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData/DatiMancanti/PlotDati/2019') 
+setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData/DatiMancanti/PlotDati/2019/Ammonia') 
 
-#2019
+#2019 Ammonia
 jpeg(file="Moggio2019.jpeg")
 plot(Cremona2019[,"Date"], Cremona2019[,"Ammonia"] )
 dev.off()
@@ -199,9 +203,41 @@ jpeg(file="Pavia2019.jpeg")
 plot(Pavia2019[,"Date"], Pavia2019[,"Ammonia"] )
 dev.off()
 
-#2020
+#2019 PM10
+setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData/DatiMancanti/PlotDati/2019/PM10') 
 
-setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData/DatiMancanti/PlotDati/2020') 
+jpeg(file="Moggio2019.jpeg")
+plot(Cremona2019[,"Date"], Cremona2019[,"PM10"] )
+dev.off()
+
+
+jpeg(file="Sannazzaro2019.jpeg")
+plot(Sannazzaro2019[,"Date"], Sannazzaro2019[,"PM10"] )
+dev.off()
+
+jpeg(file="Pavia2019.jpeg")
+plot(Pavia2019[,"Date"], Pavia2019[,"PM10"] )
+dev.off()
+
+#2019 PM 2.5
+
+setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData/DatiMancanti/PlotDati/2019/PM25') 
+
+jpeg(file="Moggio2019.jpeg")
+plot(Cremona2019[,"Date"], Cremona2019[,"PM25"] )
+dev.off()
+
+
+jpeg(file="Sannazzaro2019.jpeg")
+plot(Sannazzaro2019[,"Date"], Sannazzaro2019[,"PM25"] )
+dev.off()
+
+jpeg(file="Pavia2019.jpeg")
+plot(Pavia2019[,"Date"], Pavia2019[,"PM25"] )
+dev.off()
+
+#2020 Ammonia
+setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData/DatiMancanti/PlotDati/2020/Ammonia') 
 
 jpeg(file="Sannazzaro2020.jpeg")
 plot(Sannazzaro2020[,"Date"], Sannazzaro2020[,"Ammonia"] )
@@ -227,6 +263,60 @@ jpeg(file="Schivenoglia2020.jpeg")
 plot(Schivenoglia2020[,"Date"], Schivenoglia2020[,"Ammonia"] )
 dev.off()
 
+#2020 PM10
+setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData/DatiMancanti/PlotDati/2020/Ammonia/PM10') 
+
+jpeg(file="Sannazzaro2020.jpeg")
+plot(Sannazzaro2020[,"Date"], Sannazzaro2020[,"PM10"] )
+dev.off()
+
+jpeg(file="Moggio2020.jpeg")
+plot(Moggio2020[,"Date"], Moggio2020[,"PM10"] )
+dev.off()
+
+jpeg(file="Milano2020.jpeg")
+plot(Milano2020[,"Date"], Milano2020[,"PM10"] )
+dev.off()
+
+jpeg(file="Cremona2020.jpeg")
+plot(Cremona2020[,"Date"], Cremona2020[,"PM10"] )
+dev.off()
+
+jpeg(file="Pavia2020.jpeg")
+plot(Pavia2020[,"Date"], Pavia2020[,"PM10"] )
+dev.off()
+
+jpeg(file="Schivenoglia2020.jpeg")
+plot(Schivenoglia2020[,"Date"], Schivenoglia2020[,"PM10"] )
+dev.off()
+
+#2020 PM25
+setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData/DatiMancanti/PlotDati/2020/PM25') 
+
+jpeg(file="Sannazzaro2020.jpeg")
+plot(Sannazzaro2020[,"Date"], Sannazzaro2020[,"PM25"] )
+dev.off()
+
+jpeg(file="Moggio2020.jpeg")
+plot(Moggio2020[,"Date"], Moggio2020[,"PM25"] )
+dev.off()
+
+jpeg(file="Milano2020.jpeg")
+plot(Milano2020[,"Date"], Milano2020[,"PM25"] )
+dev.off()
+
+jpeg(file="Cremona2020.jpeg")
+plot(Cremona2020[,"Date"], Cremona2020[,"PM25"] )
+dev.off()
+
+jpeg(file="Pavia2020.jpeg")
+plot(Pavia2020[,"Date"], Pavia2020[,"PM25"] )
+dev.off()
+
+jpeg(file="Schivenoglia2020.jpeg")
+plot(Schivenoglia2020[,"Date"], Schivenoglia2020[,"PM25"] )
+dev.off()
+
 #2019 mixed with 2020
 result2019 = result2019or
 result2020 = result2020or
@@ -240,5 +330,104 @@ total2019_2020 <- sqldf('SELECT r19.IDStation, r19.NameStation, sum(r19.nada)+su
 
 setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData/DatiMancanti') 
 
-write_csv(total2019_2020, "DatiMancanti20192020Combinati.csv")
+write_csv(total2019_2020, "MissingData20192020Combined.csv")
 
+#Based on total2019_2020 we choose this stations:
+#1: 681 Moggio, 85 missing datas
+#2: 693 Sannazzaro De Burgondi Agip, 97 missing datas
+#3: 677 Cremona Via Fatebenefratelli, 103 missing datas
+#4: 642 Pavia Via Folperti, 147 missing datas
+#5: 703 Schivenoglia, 294 missing datas
+
+tabletotal = rbind(cast2019[, c(1:4, 12:13)], cast2020[, c(1:4, 17:18)])
+
+Moggio20192020 <- sqldf('SELECT Date, IDStation, NameStation, Ammonia, PM10, PM25
+                       FROM tabletotal
+                       WHERE IDStation = 681
+                       ')
+Sannazzaro20192020 <- sqldf('SELECT Date, IDStation, NameStation, Ammonia, PM10, PM25
+                       FROM tabletotal
+                       WHERE IDStation = 693
+                       ')
+Cremona20192020<-sqldf('SELECT Date, IDStation, NameStation, Ammonia, PM10, PM25
+                       FROM tabletotal
+                       WHERE IDStation = 677
+                       ')
+Pavia20192020<- sqldf('SELECT Date, IDStation, NameStation, Ammonia, PM10, PM25
+                       FROM tabletotal
+                       WHERE IDStation = 642
+                       ')
+
+Schivenoglia2019020<-sqldf('SELECT Date, IDStation, NameStation, Ammonia, PM10, PM25
+                       FROM tabletotal
+                       WHERE IDStation = 703
+                       ')
+
+#2019-2020 mixed Ammonia
+setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData/DatiMancanti/PlotDati/2019-2020Combined/Ammonia') 
+
+jpeg(file="Moggio20192020.jpeg")
+plot(Moggio20192020[,"Date"], Moggio20192020[,"Ammonia"] )
+dev.off()
+
+jpeg(file="Sannazzaro20192020.jpeg")
+plot(Sannazzaro20192020[,"Date"], Sannazzaro20192020[,"Ammonia"] )
+dev.off()
+
+jpeg(file="Cremona20192020.jpeg")
+plot(Cremona20192020[,"Date"], Cremona20192020[,"Ammonia"] )
+dev.off()
+
+jpeg(file="Pavia20192020.jpeg")
+plot(Pavia20192020[,"Date"], Pavia20192020[,"Ammonia"] )
+dev.off()
+
+jpeg(file="Schivenoglia2019020.jpeg")
+plot(Schivenoglia2019020[,"Date"], Schivenoglia2019020[,"Ammonia"] )
+dev.off()
+
+#2019-2020 mixed PM10
+setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData/DatiMancanti/PlotDati/2019-2020Combined/PM10') 
+
+jpeg(file="Moggio20192020.jpeg")
+plot(Moggio20192020[,"Date"], Moggio20192020[,"PM10"] )
+dev.off()
+
+jpeg(file="Sannazzaro20192020.jpeg")
+plot(Sannazzaro20192020[,"Date"], Sannazzaro20192020[,"PM10"] )
+dev.off()
+
+jpeg(file="Cremona20192020.jpeg")
+plot(Cremona20192020[,"Date"], Cremona20192020[,"PM10"] )
+dev.off()
+
+jpeg(file="Pavia20192020.jpeg")
+plot(Pavia20192020[,"Date"], Pavia20192020[,"PM10"] )
+dev.off()
+
+jpeg(file="Schivenoglia2019020.jpeg")
+plot(Schivenoglia2019020[,"Date"], Schivenoglia2019020[,"PM10"] )
+dev.off()
+
+#2019-2020 mixed PM25
+setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData/DatiMancanti/PlotDati/2019-2020Combined/PM25') 
+
+jpeg(file="Moggio20192020.jpeg")
+plot(Moggio20192020[,"Date"], Moggio20192020[,"PM25"] )
+dev.off()
+
+jpeg(file="Sannazzaro20192020.jpeg")
+plot(Sannazzaro20192020[,"Date"], Sannazzaro20192020[,"PM25"] )
+dev.off()
+
+jpeg(file="Cremona20192020.jpeg")
+plot(Cremona20192020[,"Date"], Cremona20192020[,"PM25"] )
+dev.off()
+
+jpeg(file="Pavia20192020.jpeg")
+plot(Pavia20192020[,"Date"], Pavia20192020[,"PM25"] )
+dev.off()
+
+jpeg(file="Schivenoglia2019020.jpeg")
+plot(Schivenoglia2019020[,"Date"], Schivenoglia2019020[,"PM25"] )
+dev.off()
