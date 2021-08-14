@@ -87,6 +87,57 @@ Pavia2019 <-  sqldf('SELECT Date, IDStation, NameStation, Ammonia, PM10, PM25
 vettore   <-ARPALdf_Summary(data2019)
 variabile <- vettore$Gap_length$Ammonia
 
+#Plot and save of the graphs
+autoplot(ts(Cremona2019[,c(4:6)]))
+
+setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData/DatiMancanti/PlotDati/2019/Ammonia') 
+
+#2019 Ammonia
+jpeg(file="Moggio2019.jpeg")
+plot(Cremona2019[,"Date"], Cremona2019[,"Ammonia"] )
+dev.off()
+
+
+jpeg(file="Sannazzaro2019.jpeg")
+plot(Sannazzaro2019[,"Date"], Sannazzaro2019[,"Ammonia"] )
+dev.off()
+
+jpeg(file="Pavia2019.jpeg")
+plot(Pavia2019[,"Date"], Pavia2019[,"Ammonia"] )
+dev.off()
+
+#2019 PM10
+setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData/DatiMancanti/PlotDati/2019/PM10') 
+
+jpeg(file="Moggio2019.jpeg")
+plot(Cremona2019[,"Date"], Cremona2019[,"PM10"] )
+dev.off()
+
+
+jpeg(file="Sannazzaro2019.jpeg")
+plot(Sannazzaro2019[,"Date"], Sannazzaro2019[,"PM10"] )
+dev.off()
+
+jpeg(file="Pavia2019.jpeg")
+plot(Pavia2019[,"Date"], Pavia2019[,"PM10"] )
+dev.off()
+
+#2019 PM 2.5
+setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData/DatiMancanti/PlotDati/2019/PM25') 
+
+jpeg(file="Moggio2019.jpeg")
+plot(Cremona2019[,"Date"], Cremona2019[,"PM25"] )
+dev.off()
+
+
+jpeg(file="Sannazzaro2019.jpeg")
+plot(Sannazzaro2019[,"Date"], Sannazzaro2019[,"PM25"] )
+dev.off()
+
+jpeg(file="Pavia2019.jpeg")
+plot(Pavia2019[,"Date"], Pavia2019[,"PM25"] )
+dev.off()
+
 setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData/DatiMancanti') 
 write_csv(result2019or, "MissingData2019.csv")
 
@@ -182,58 +233,6 @@ Schivenoglia2020<-sqldf('SELECT Date, IDStation, NameStation, Ammonia, PM10, PM2
 
 setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData/DatiMancanti') 
 write_csv(result2020or, "MissingData2020.csv")
-
-#Plot and save of the graphs
-
-autoplot(ts(Cremona2019[,c(4:6)]))
-
-setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData/DatiMancanti/PlotDati/2019/Ammonia') 
-
-#2019 Ammonia
-jpeg(file="Moggio2019.jpeg")
-plot(Cremona2019[,"Date"], Cremona2019[,"Ammonia"] )
-dev.off()
-
-
-jpeg(file="Sannazzaro2019.jpeg")
-plot(Sannazzaro2019[,"Date"], Sannazzaro2019[,"Ammonia"] )
-dev.off()
-
-jpeg(file="Pavia2019.jpeg")
-plot(Pavia2019[,"Date"], Pavia2019[,"Ammonia"] )
-dev.off()
-
-#2019 PM10
-setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData/DatiMancanti/PlotDati/2019/PM10') 
-
-jpeg(file="Moggio2019.jpeg")
-plot(Cremona2019[,"Date"], Cremona2019[,"PM10"] )
-dev.off()
-
-
-jpeg(file="Sannazzaro2019.jpeg")
-plot(Sannazzaro2019[,"Date"], Sannazzaro2019[,"PM10"] )
-dev.off()
-
-jpeg(file="Pavia2019.jpeg")
-plot(Pavia2019[,"Date"], Pavia2019[,"PM10"] )
-dev.off()
-
-#2019 PM 2.5
-setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData/DatiMancanti/PlotDati/2019/PM25') 
-
-jpeg(file="Moggio2019.jpeg")
-plot(Cremona2019[,"Date"], Cremona2019[,"PM25"] )
-dev.off()
-
-
-jpeg(file="Sannazzaro2019.jpeg")
-plot(Sannazzaro2019[,"Date"], Sannazzaro2019[,"PM25"] )
-dev.off()
-
-jpeg(file="Pavia2019.jpeg")
-plot(Pavia2019[,"Date"], Pavia2019[,"PM25"] )
-dev.off()
 
 #2020 Ammonia
 setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData/DatiMancanti/PlotDati/2020/Ammonia') 
