@@ -220,7 +220,6 @@ plot(Pavia2019[,"Date"], Pavia2019[,"PM10"] )
 dev.off()
 
 #2019 PM 2.5
-
 setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData/DatiMancanti/PlotDati/2019/PM25') 
 
 jpeg(file="Moggio2019.jpeg")
