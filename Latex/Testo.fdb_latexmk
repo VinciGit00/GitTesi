@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1628871818 "/Users/marcovinciguerra/Github/GitTesi/Latex/Testo.tex" "/Users/marcovinciguerra/Github/GitTesi/Latex/Testo.pdf" "Testo" 1628871820
-  "/Users/marcovinciguerra/Github/GitTesi/Latex/Testo.aux" 1628871819 686 4ce905362b6645b598ea182482e9aeed ""
-  "/Users/marcovinciguerra/Github/GitTesi/Latex/Testo.tex" 1628871817 508 8d629bdbf712562005bb15b4919eae92 ""
+["pdflatex"] 1629053701 "/Users/marcovinciguerra/Github/GitTesi/Latex/Testo.tex" "/Users/marcovinciguerra/Github/GitTesi/Latex/Testo.pdf" "Testo" 1629053702
+  "/Users/marcovinciguerra/Github/GitTesi/Latex/Testo.aux" 1629053702 686 4ce905362b6645b598ea182482e9aeed ""
+  "/Users/marcovinciguerra/Github/GitTesi/Latex/Testo.tex" 1629053701 580 0b91ccc33b4509d04ed367733da3a5b2 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1136768653 1288 655e228510b4c2a1abe905c368440826 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr17.tfm" 1136768653 1292 296a67155bdbfc32aa9c636f21e91433 ""
@@ -66,15 +66,15 @@
   "/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1616695603 5169178 a2ce6e2d73f603b690db6777d06dbccb ""
   "/usr/local/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1627825764 2724740 531828e745ac301a7d3744380d5fa998 ""
   "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
-  "Testo.aux" 1628871819 686 4ce905362b6645b598ea182482e9aeed "pdflatex"
-  "Testo.out" 1628871819 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "Testo.tex" 1628871817 508 8d629bdbf712562005bb15b4919eae92 ""
+  "Testo.aux" 1629053702 686 4ce905362b6645b598ea182482e9aeed "pdflatex"
+  "Testo.out" 1629053702 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "Testo.tex" 1629053701 580 0b91ccc33b4509d04ed367733da3a5b2 ""
   "UniBg-logo.jpg" 1628863450 404142 09b3eb0404ca14baf958c6fbdaaac38f ""
   "logo.PNG" 1628863450 11719 b855d050b74fcad482d1accc148164df ""
   (generated)
   "Testo.out"
+  "/Users/marcovinciguerra/Github/GitTesi/Latex/Testo.pdf"
+  "Testo.log"
   "Testo.pdf"
   "Testo.aux"
-  "/Users/marcovinciguerra/Github/GitTesi/Latex/Testo.pdf"
   "/Users/marcovinciguerra/Github/GitTesi/Latex/Testo.log"
-  "Testo.log"
