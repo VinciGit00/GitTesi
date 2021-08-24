@@ -3,6 +3,7 @@ library(ARPALData)
 library(tidyverse)
 library(sqldf)
 library(ggplot2)
+library(ggfortify)
 
 #Data download with ARPALData
 #2019
@@ -84,11 +85,43 @@ Pavia2019 <-  sqldf('SELECT Date, IDStation, NameStation, Ammonia, PM10, PM25
                        WHERE IDStation = 642
                        ')
 
+all2019 <- NULL
+
+all2019[[1]] <- Cremona2019
+all2019[[2]] <- Moggio2019
+all2019[[3]] <- Sannazzaro2019
+all2019[[4]] <- Pavia2019
+
 vettore   <-ARPALdf_Summary(data2019)
 variabile <- vettore$Gap_length$Ammonia
 
 #Plot and save of the graphs
-autoplot(ts(Cremona2019[,c(4:6)]))
+
+for (i in 1:length(all2019)) {
+  c9a <- ggplot(all2019[[i]], aes(x = Date, y = Ammonia)) +
+    geom_line()  + labs(title = paste(all2019[[i]][1,3],"2019"))
+  nada <- is.na(all2019[[i]]["Ammonia"])
+  c9a <- c9a + geom_vline(xintercept = all2019[[i]][nada,1], alpha = 0.3, 
+                          color = "blue", size=1.5)
+  
+  c910 <- ggplot(all2019[[i]], aes(x = Date, y = PM10)) +
+    geom_line() 
+  nada <- is.na(all2019[[i]]["PM10"])
+  c910 <- c910 + geom_vline(xintercept = all2019[[i]][nada,1], alpha = 0.3, 
+                            color = "blue", size=1.5)
+  
+  
+  c925 <- ggplot(all2019[[i]], aes(x = Date, y = PM25)) +
+    geom_line() 
+  nada <- is.na(all2019[[i]]["PM25"])
+  c925 <- c925 + geom_vline(xintercept = all2019[[i]][nada,1], alpha = 0.3, 
+                            color = "blue", size=1.7)
+  
+  jpeg(filename =paste(all2019[[i]][1,3],"2019.jpeg"),width = 1280, height = 720 )
+  multiplot(c9a, c910, c925)
+  dev.off()
+  
+}
 
 setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData/DatiMancanti/PlotDati/2019/Ammonia') 
 
@@ -234,6 +267,41 @@ Schivenoglia2020<-sqldf('SELECT Date, IDStation, NameStation, Ammonia, PM10, PM2
 setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData/DatiMancanti') 
 write_csv(result2020or, "MissingData2020.csv")
 
+all2020 <- NULL
+
+all2020[[1]] <- Sannazzaro2020
+all2020[[2]] <- Moggio2020
+all2020[[3]] <- Milano2020
+all2020[[4]] <- Cremona2020
+all2020[[5]] <- Pavia2020
+all2020[[6]] <- Schivenoglia2020
+
+for (i in 1:length(all2020)) {
+  c9a <- ggplot(all2020[[i]], aes(x = Date, y = Ammonia)) +
+    geom_line()  + labs(title = paste(all2020[[i]][1,3],"2020"))
+  nada <- is.na(all2020[[i]]["Ammonia"])
+  c9a <- c9a + geom_vline(xintercept = all2020[[i]][nada,1], alpha = 0.3, 
+                          color = "blue", size=1.5)
+  
+  c910 <- ggplot(all2020[[i]], aes(x = Date, y = PM10)) +
+    geom_line() 
+  nada <- is.na(all2020[[i]]["PM10"])
+  c910 <- c910 + geom_vline(xintercept = all2020[[i]][nada,1], alpha = 0.3, 
+                            color = "blue", size=1.5)
+  
+  
+  c925 <- ggplot(all2020[[i]], aes(x = Date, y = PM25)) +
+    geom_line() 
+  nada <- is.na(all2020[[i]]["PM25"])
+  c925 <- c925 + geom_vline(xintercept = all2020[[i]][nada,1], alpha = 0.3, 
+                            color = "blue", size=1.7)
+  
+  jpeg(filename =paste(all2020[[i]][1,3],"2020.jpeg"),width = 1280, height = 720 )
+  multiplot(c9a, c910, c925)
+  dev.off()
+  
+}
+
 #2020 Ammonia
 setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData/DatiMancanti/PlotDati/2020/Ammonia') 
 
@@ -356,10 +424,45 @@ Pavia20192020<- sqldf('SELECT Date, IDStation, NameStation, Ammonia, PM10, PM25
                        WHERE IDStation = 642
                        ')
 
-Schivenoglia2019020<-sqldf('SELECT Date, IDStation, NameStation, Ammonia, PM10, PM25
+Schivenoglia20192020<-sqldf('SELECT Date, IDStation, NameStation, Ammonia, PM10, PM25
                        FROM tabletotal
                        WHERE IDStation = 703
                        ')
+
+all20192020 <- NULL
+
+all20192020[[1]] <- Moggio20192020
+all20192020[[2]] <- Sannazzaro20192020
+all20192020[[3]] <- Cremona20192020
+all20192020[[4]] <- Pavia20192020
+all20192020[[5]] <- Schivenoglia20192020
+
+for (i in 1:length(all20192020)) {
+  c9a <- ggplot(all20192020[[i]], aes(x = Date, y = Ammonia)) +
+    geom_line()  + labs(title = paste(all20192020[[i]][1,3],"2019-2020"))
+  nada <- is.na(all20192020[[i]]["Ammonia"])
+  c9a <- c9a + geom_vline(xintercept = all20192020[[i]][nada,1], alpha = 0.3, 
+                          color = "blue", size=1.5)
+  
+  c910 <- ggplot(all20192020[[i]], aes(x = Date, y = PM10)) +
+    geom_line() 
+  nada <- is.na(all20192020[[i]]["PM10"])
+  c910 <- c910 + geom_vline(xintercept = all20192020[[i]][nada,1], alpha = 0.3, 
+                            color = "blue", size=1.5)
+  
+  
+  c925 <- ggplot(all20192020[[i]], aes(x = Date, y = PM25)) +
+    geom_line() 
+  nada <- is.na(all20192020[[i]]["PM25"])
+  c925 <- c925 + geom_vline(xintercept = all20192020[[i]][nada,1], alpha = 0.3, 
+                            color = "blue", size=1.7)
+  
+  jpeg(filename =paste(all20192020[[i]][1,3],"2019-2020.jpeg"),width = 1280, height = 720 )
+  multiplot(c9a, c910, c925)
+  dev.off()
+  
+}
+
 
 #2019-2020 mixed Ammonia
 setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData/DatiMancanti/PlotDati/2019-2020Combined/Ammonia') 
@@ -428,4 +531,53 @@ dev.off()
 
 jpeg(file="Schivenoglia2019020.jpeg")
 plot(Schivenoglia2019020[,"Date"], Schivenoglia2019020[,"PM25"] )
+dev.off()
+
+# Mapping 
+
+#Based on total2019_2020 we choose this stations:
+#1: 681 Moggio, 85 missing datas
+#2: 693 Sannazzaro De Burgondi Agip, 97 missing datas
+#3: 677 Cremona Via Fatebenefratelli, 103 missing datas
+#4: 642 Pavia Via Folperti, 147 missing datas
+#5: 703 Schivenoglia, 294 missing datas
+
+data19 <- get_ARPA_Lombardia_AQ_data(
+  ID_station = c(642,677,681,693),
+  Year = 2019,
+  Frequency = "daily",
+  Var_vec = NULL,
+  Fns_vec = NULL,
+  by_sensor = 0,
+  verbose = T
+)
+
+data20 <- get_ARPA_Lombardia_AQ_data(
+  ID_station = c(681,693,677,642,705,703),
+  Year = 2020,
+  Frequency = "daily",
+  Var_vec = NULL,
+  Fns_vec = NULL,
+  by_sensor = 0,
+  verbose = T
+)
+
+
+data1920 <- get_ARPA_Lombardia_AQ_data(
+  ID_station = c(681,693,677,642,703),
+  Year = c(2019,2020),
+  Frequency = "daily",
+  Var_vec = NULL,
+  Fns_vec = NULL,
+  by_sensor = 0,
+  verbose = T
+)
+jpeg(filename = "mappa 2019",width = 1280, height = 720 )
+map_Lombardia_stations(data19)
+dev.off()
+jpeg(filename = "mappa 2020",width = 1280, height = 720 )
+map_Lombardia_stations(data20)
+dev.off()
+jpeg(filename = "mappa 2019-2020",width = 1280, height = 720 )
+map_Lombardia_stations(data1920)
 dev.off()
