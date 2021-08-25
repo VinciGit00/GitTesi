@@ -87,6 +87,7 @@ Pavia2019 <-  sqldf('SELECT Date, IDStation, NameStation, Ammonia, PM10, PM25
 
 all2019 <- NULL
 
+#Create a list
 all2019[[1]] <- Cremona2019
 all2019[[2]] <- Moggio2019
 all2019[[3]] <- Sannazzaro2019
@@ -117,7 +118,8 @@ for (i in 1:length(all2019)) {
   c925 <- c925 + geom_vline(xintercept = all2019[[i]][nada,1], alpha = 0.3, 
                             color = "blue", size=1.7)
   
-  jpeg(filename =paste(all2019[[i]][1,3],"2019.jpeg"),width = 1280, height = 720 )
+  setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData/DatiMancanti/PlotDati/2020/Total') 
+  jpeg(filename = paste(all2019[[i]][1,3],"2019.jpeg"),width = 1280, height = 720 )
   multiplot(c9a, c910, c925)
   dev.off()
   
@@ -267,6 +269,7 @@ Schivenoglia2020<-sqldf('SELECT Date, IDStation, NameStation, Ammonia, PM10, PM2
 setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData/DatiMancanti') 
 write_csv(result2020or, "MissingData2020.csv")
 
+#Create a list
 all2020 <- NULL
 
 all2020[[1]] <- Sannazzaro2020
@@ -296,6 +299,7 @@ for (i in 1:length(all2020)) {
   c925 <- c925 + geom_vline(xintercept = all2020[[i]][nada,1], alpha = 0.3, 
                             color = "blue", size=1.7)
   
+  setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData/DatiMancanti/PlotDati/2020/Total') 
   jpeg(filename =paste(all2020[[i]][1,3],"2020.jpeg"),width = 1280, height = 720 )
   multiplot(c9a, c910, c925)
   dev.off()
