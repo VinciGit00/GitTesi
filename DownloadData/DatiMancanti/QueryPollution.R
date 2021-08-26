@@ -5,6 +5,8 @@ library(sqldf)
 library(ggplot2)
 library(ggfortify)
 
+# add 2018
+
 #Data download with ARPALData
 #2019
 data2019 <- get_ARPA_Lombardia_AQ_data(
@@ -84,10 +86,10 @@ Pavia2019 <-  sqldf('SELECT Date, IDStation, NameStation, Ammonia, PM10, PM25
                        FROM cast2019
                        WHERE IDStation = 642
                        ')
+# add extra stations
 
 all2019 <- NULL
 
-#Create a list
 all2019[[1]] <- Cremona2019
 all2019[[2]] <- Moggio2019
 all2019[[3]] <- Sannazzaro2019
@@ -118,8 +120,7 @@ for (i in 1:length(all2019)) {
   c925 <- c925 + geom_vline(xintercept = all2019[[i]][nada,1], alpha = 0.3, 
                             color = "blue", size=1.7)
   
-  setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData/DatiMancanti/PlotDati/2020/Total') 
-  jpeg(filename = paste(all2019[[i]][1,3],"2019.jpeg"),width = 1280, height = 720 )
+  jpeg(filename =paste(all2019[[i]][1,3],"2019.jpeg"),width = 1280, height = 720 )
   multiplot(c9a, c910, c925)
   dev.off()
   
@@ -269,7 +270,6 @@ Schivenoglia2020<-sqldf('SELECT Date, IDStation, NameStation, Ammonia, PM10, PM2
 setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData/DatiMancanti') 
 write_csv(result2020or, "MissingData2020.csv")
 
-#Create a list
 all2020 <- NULL
 
 all2020[[1]] <- Sannazzaro2020
@@ -299,7 +299,6 @@ for (i in 1:length(all2020)) {
   c925 <- c925 + geom_vline(xintercept = all2020[[i]][nada,1], alpha = 0.3, 
                             color = "blue", size=1.7)
   
-  setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData/DatiMancanti/PlotDati/2020/Total') 
   jpeg(filename =paste(all2020[[i]][1,3],"2020.jpeg"),width = 1280, height = 720 )
   multiplot(c9a, c910, c925)
   dev.off()
@@ -585,3 +584,31 @@ dev.off()
 jpeg(filename = "mappa 2019-2020",width = 1280, height = 720 )
 map_Lombardia_stations(data1920)
 dev.off()
+
+library(lubridate)
+
+registry <- get_ARPA_Lombardia_AQ_registry()
+
+registry %>% 
+  filter(Pollutant%in% c("Ammonia","PM10","PM2.5")) %>%
+  View
+
+IDStat <- registry %>% 
+  filter(Pollutant%in% c("Ammonia","PM10","PM2.5"),
+         is.na(DateStop),
+         year(DateStart)<=2017) %>%
+  distinct(IDSensor) %>% pull() %>% sort() 
+
+RegistryRed <- registry %>% 
+  filter(Pollutant%in% c("Ammonia","PM10","PM2.5"),
+         IDSensor%in% IDStat) 
+
+map_Lombardia_stations(RegistryRed)
+
+RegistryRed %>% 
+  group_by(IDStation) %>% 
+  summarise(n=n()) %>%
+  filter(n>=2) %>% 
+  distinct(IDStation) %>%
+  pull()
+  
