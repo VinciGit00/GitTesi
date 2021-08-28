@@ -368,14 +368,6 @@ tableMissingDatasTotal2020 <- sqldf(' SELECT ma.IDStation, ma.NameStation, ma.Mi
 
 
 
-
-
-
-
-
-
-
-
 #Creating the table of yes/no
 threpresents <- RegistryRed %>% 
   group_by(IDStation) %>% 
