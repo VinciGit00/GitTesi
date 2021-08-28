@@ -68,6 +68,7 @@ cast2019 <- data.frame(data2019)
 cast2020 <- data.frame(data2020)
 
 #Renaming the variables (SQL misinterprets periods)
+#ANCHE QUI FARE UN CICLO FOR CHE LI GENERA DA SOLI
 cast2018 = cast2018 %>%
   rename(
     PM25 = PM2.5
