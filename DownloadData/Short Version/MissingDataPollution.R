@@ -82,7 +82,7 @@ cast2020 = cast2020 %>%
   )
 
 #Starting with the queries
-#AGGIUNGERE UN CICLO FOR CHE CREA TUTTO
+#AGGIUNGERE UN CICLO FOR CHE SCARICA I DATI E FA LA QUERY TUTTO DA SOLO
 #DAVID LO FACCIO IO PERO'
 #SE LO FAI TI MANGIO, NON STO SCHERZANDO
 #Utilizzo la concatenazione
@@ -142,6 +142,20 @@ tableMissingDatasTotal2020 <- sqldf(' SELECT ma.IDStation, ma.NameStation, ma.Mi
                                   JOIN table2020MissingallDatas mtodos
                                   on ma.IDStation = mtodos.IDStation
                                 ')
+#For loop for downloading data and queries
+for(val in 2018:2020) {
+  
+}
+
+
+#Total of missing data from 2018 to 2020
+totalethreeyears = sqldf('SELECT T18.IDStation, sum(T18.MissingAmmonia+T19.MissingAmmonia+T20.MissingAmmonia), sum(T18.MissingPM10+T19.MissingPM10+T20.MissingPM10), 
+                         sum(T18.MissingPM25+T19.MissingPM25+T20.MissingPM25)
+                         FROM tableMissingDatasTotal2018 AS T18 JOIN tableMissingDatasTotal2019 AS T19
+                         ON  T18.IDStation = T19.IDStation
+                         JOIN tableMissingDatasTotal2020 AS T20
+                         ON  T18.IDStation = T20.IDStation
+                         GRUOUP BY T19.IDStation')
 
 
 ####IN progress
