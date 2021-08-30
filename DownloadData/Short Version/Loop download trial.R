@@ -37,6 +37,7 @@ data <- NULL
 cast <- NULL
 
 for(index in startyear:lastyear) {
+    #Downloading
     data[[index]] <- get_ARPA_Lombardia_AQ_data(
     ID_station = c(bestcentralines),
     Year = index,
@@ -46,8 +47,10 @@ for(index in startyear:lastyear) {
     by_sensor = 0,
     verbose = T
   )
+    #Casting
     cast[[index]]<- data.frame(data[[index]])
     
+    #Renaming
     cast[[index]] = cast[[index]] %>%
       rename(
         PM25 = PM2.5
@@ -55,3 +58,22 @@ for(index in startyear:lastyear) {
 }
 
 #Starting with the queries
+for(index in startyear:lastyear) {
+  castindex <- paste('cast',index, sep = '')
+  #Ammonia
+  missingAmmonia[[index]]  = MissingTable('Ammonia', 'castindex')
+  #PM10
+  MissingPM10[[index]]     = MissingTable('PM10', 'castindex')
+  #PM2.5
+  MissingPM25[[index]]     = MissingTable('PM25', 'castindex')
+  #All datas
+  MissingallDatas[[index]] = MissingAll('castindex')
+  
+  #Saving the datas on a .csv file
+  setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData/Short Version/MissingTables')
+  filename <- paste('Missing',index, sep = '')
+  write_csv(MissingallDatas[[index]], filename)
+
+}
+
+
