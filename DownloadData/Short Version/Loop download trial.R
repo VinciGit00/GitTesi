@@ -38,7 +38,7 @@ cast <- NULL
 
 for(index in startyear:lastyear) {
     #Downloading
-    data[[index]] <- get_ARPA_Lombardia_AQ_data(
+    data[[1+index-startyear]] <- get_ARPA_Lombardia_AQ_data(
     ID_station = c(bestcentralines),
     Year = index,
     Frequency = "daily",
@@ -48,10 +48,10 @@ for(index in startyear:lastyear) {
     verbose = T
   )
     #Casting
-    cast[[index]]<- data.frame(data[[index]])
+    cast[[1+index-startyear]] <- data.frame(data[[1+index-startyear]] )
     
     #Renaming
-    cast[[index]] = cast[[index]] %>%
+    cast[[1+index-startyear]] <- cast[[1+index-startyear]]  %>%
       rename(
         PM25 = PM2.5
       )
@@ -61,19 +61,20 @@ for(index in startyear:lastyear) {
 for(index in startyear:lastyear) {
   castindex <- paste('cast',index, sep = '')
   #Ammonia
-  missingAmmonia[[index]]  = MissingTable('Ammonia', 'castindex')
+  missingAmmonia[[1+index-startyear]]  = MissingTable('Ammonia', 'castindex')
   #PM10
-  MissingPM10[[index]]     = MissingTable('PM10', 'castindex')
+  MissingPM10[[1+index-startyear]]     = MissingTable('PM10', 'castindex')
   #PM2.5
-  MissingPM25[[index]]     = MissingTable('PM25', 'castindex')
+  MissingPM25[[1+index-startyear]]     = MissingTable('PM25', 'castindex')
   #All datas
-  MissingallDatas[[index]] = MissingAll('castindex')
+  MissingallDatas[[1+index-startyear]] = MissingAll('castindex')
   
   #Saving the datas on a .csv file
   setwd('/Users/marcovinciguerra/Github/GitTesi/DownloadData/Short Version/MissingTables')
   filename <- paste('Missing',index, sep = '')
   write_csv(MissingallDatas[[index]], filename)
-
+  write_csv(result2020or, "MissingData2020.csv")
+  
 }
 
 
