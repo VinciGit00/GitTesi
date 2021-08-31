@@ -26,61 +26,36 @@ bestcentralines <- RegistryRed %>%
   distinct(IDStation) %>%
   pull() # stations that measure at least 2 of the variables at the same time
 
-map_Lombardia_stations(bestcentralines) # TODO ld-style crs object detected; please recreate object with a recent sf::st_crs()
+map_Lombardia_stations(bestcentralines)
 
-#Downloading data from the best stations (the ones that measure at least 2 of the variables since 2017)
-#2018
-data2018 <- get_ARPA_Lombardia_AQ_data(
-  ID_station = c(bestcentralines),
-  Year = 2018,
-  Frequency = "daily",
-  Var_vec = NULL,
-  Fns_vec = NULL,
-  by_sensor = 0,
-  verbose = T
-)
+#Starting with the loop for downloading the data + casting of the data
 
-#2019
-data2019 <- get_ARPA_Lombardia_AQ_data(
-  ID_station = c(bestcentralines),
-  Year = 2019,
-  Frequency = "daily",
-  Var_vec = NULL,
-  Fns_vec = NULL,
-  by_sensor = 0,
-  verbose = T
-)
+startyear = 2018
+lastyear  = 2020
 
-#2020
-data2020 <- get_ARPA_Lombardia_AQ_data(
-  ID_station = c(bestcentralines),
-  Year = 2020,
-  Frequency = "daily",
-  Var_vec = NULL,
-  Fns_vec = NULL,
-  by_sensor = 0,
-  verbose = T
-)
+data <- NULL
+cast <- NULL
 
-#Casting of the variables (allows for manipulation with SQL)
-cast2018 <- data.frame(data2018)
-cast2019 <- data.frame(data2019)
-cast2020 <- data.frame(data2020)
-
-#Renaming the variables (SQL misinterprets periods)
-#ANCHE QUI FARE UN CICLO FOR CHE LI GENERA DA SOLI
-cast2018 = cast2018 %>%
-  rename(
-    PM25 = PM2.5
+for(index in startyear:lastyear) {
+  #Downloading
+  data[[1+index-startyear]] <- get_ARPA_Lombardia_AQ_data(
+    ID_station = c(bestcentralines),
+    Year = index,
+    Frequency = "daily",
+    Var_vec = NULL,
+    Fns_vec = NULL,
+    by_sensor = 0,
+    verbose = T
   )
-cast2019 = cast2019 %>%
-  rename(
-    PM25 = PM2.5
-  )
-cast2020 = cast2020 %>%
-  rename(
-    PM25 = PM2.5
-  )
+  #Casting
+  cast[[1+index-startyear]] <- data.frame(data[[1+index-startyear]] )
+  
+  #Renaming
+  cast[[1+index-startyear]] <- cast[[1+index-startyear]]  %>%
+    rename(
+      PM25 = PM2.5
+    )
+}
 
 #Starting with the queries
 #AGGIUNGERE UN CICLO FOR CHE SCARICA I DATI E FA LA QUERY TUTTO DA SOLO
