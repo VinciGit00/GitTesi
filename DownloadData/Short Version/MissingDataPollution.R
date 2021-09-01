@@ -151,80 +151,156 @@ for(index in startyear:lastyear) {
   write_csv(tableMissingDatasTotal[[index-startyear+1]], name)
 }
 
-####IN progress
 #Creating the table of yes/no
-#Three yes
-threepresents <- RegistryRed %>% 
-  group_by(IDStation) %>% 
-  summarise(n=n()) %>%
-  filter(n==3) %>% 
-  distinct(IDStation) %>%
-  pull()
-
-yesword = "yes"
-noword  = "no" 
-
-matriceyes <- matrix(0, nrow =length(threepresents) , ncol = 3)
-
-for(val in 1:length(threepresents)) {
-  for(otherindex in 1:3) {
-    matriceyes[val, otherindex] = yesword
-  }
-}
-
-#Two yes
-
-twopresents <- RegistryRed %>% 
-  group_by(IDStation) %>% 
-  summarise(n=n()) %>%
-  filter(n==2) %>% 
-  distinct(IDStation) %>%
-  pull()
-
-#Casting + temporary variables
-Searchpollution <- data.frame(twopresents)
-cast18 <- cast[[1]]
-
-#Starting with queries
-columnPM10 <- sqldf("SELECT s.IDStattion, s.NameStation, yes
-                     FROM Searchpollution s JOIN cast18 c
-                     ON  s.twopresents = c.IDStation
-                     WHERE c.PM10 is not null")
-
 # queries yes/no table 
 
 TableA <- tableMissingAmmmonia[[1]]
 
-ColumnA <- sqldf('select IDStation, NameStation, 1 as Ammonia
-      from TableA 
-      where MissingAmmonia < 365
+ColumnA <- sqldf('SELECT IDStation, NameStation, 1 as Ammonia
+      FROM TableA 
+      WHERE MissingAmmonia < 365
       union
-      select IDStation, NameStation, 0 as Ammonia
-      from TableA 
-      where MissingAmmonia >= 365
+      SELECT IDStation, NameStation, 0 as Ammonia
+      FROM TableA 
+      WHERE MissingAmmonia >= 365
       order by IDStation')
 
 Table10 <- tableMissingPM10[[1]]
 
-Column10 <- sqldf('select IDStation, NameStation, 1 as PM10
-      from Table10 
-      where MissingAmmonia < 365
+Column10 <- sqldf('SELECT IDStation, NameStation, 1 as PM10
+      FROM Table10 
+      WHERE MissingPM10 < 365
       union
-      select IDStation, NameStation, 0 as PM10
-      from Table10 
-      where MissingAmmonia >= 365
+      SELECT IDStation, NameStation, 0 as PM10
+      FROM Table10 
+      WHERE MissingPM10 >= 365
       order by IDStation')
 
-TableA <- tableMissingAmmmonia[[1]]
+Table25 <- tableMissingPM25[[1]]
 
-Column25 <- sqldf('select IDStation, NameStation, 1 as Ammonia
-      from TableA 
-      where MissingAmmonia < 365
+Column25 <- sqldf('SELECT IDStation, NameStation, 1 as PM25
+      FROM Table25
+      WHERE MissingPM25 < 365
       union
-      select IDStation, NameStation, 0 as Ammonia
-      from TableA 
-      where MissingAmmonia >= 365
+      SELECT IDStation, NameStation, 0 as PM25
+      FROM Table25
+      WHERE MissingPM25 >= 365
       order by IDStation')
+#N.B: 1 means presence
+#0 means absence
+presencetable <- sqldf("SELECT c25.IDStation, C25.NameStation, c25.PM25, c10.PM10, ca.Ammonia
+                 FROM Column25 c25 JOIN Column10 c10
+                 ON c25.IDStation = c10.IDStation
+                 JOIN ColumnA ca
+                 ON c25.IDStation = ca.IDStation")
+
+####IN progress
+#Data plot
+
+BlueStripes <- function(vector,year){
+  
+  for (i in 1:length(vector)) {
+    c9a <- ggplot(vector[[i]], aes(x = Date, y = Ammonia)) +
+      geom_line()  + labs(title = paste(vector[[i]][1,3],year))
+    nada <- is.na(vector[[i]]["Ammonia"])
+    c9a <- c9a + geom_vline(xintercept = vector[[i]][nada,1], alpha = 0.3, 
+                            color = "blue", size=1.5)
+    
+    c910 <- ggplot(vector[[i]], aes(x = Date, y = PM10)) +
+      geom_line() 
+    nada <- is.na(vector[[i]]["PM10"])
+    c910 <- c910 + geom_vline(xintercept = vector[[i]][nada,1], alpha = 0.3, 
+                              color = "blue", size=1.5)
+    
+    
+    c925 <- ggplot(vector[[i]], aes(x = Date, y = PM25)) +
+      geom_line() 
+    nada <- is.na(vector[[i]]["PM25"])
+    c925 <- c925 + geom_vline(xintercept = vector[[i]][nada,1], alpha = 0.3, 
+                              color = "blue", size=1.5)
+    
+    jpeg(filename =paste(vector[[i]][1,3],paste(year,".jpeg")),width = 1280, height = 720 )
+    multiplot(c9a, c910, c925)
+    dev.off()
+    
+  }
+  
+}
+
+multiplot <- function(..., plotlist=NULL, file, cols=1, layout=NULL) {
+  library(grid)
+  
+  # Make a list FROM the ... arguments and plotlist
+  plots <- c(list(...), plotlist)
+  
+  numPlots = length(plots)
+  
+  # If layout is NULL, then use 'cols' to determine layout
+  if (is.null(layout)) {
+    # Make the panel
+    # ncol: Number of columns of plots
+    # nrow: Number of rows needed, calculated FROM # of cols
+    layout <- matrix(seq(1, cols * ceiling(numPlots/cols)),
+                     ncol = cols, nrow = ceiling(numPlots/cols))
+  }
+  
+  if (numPlots==1) {
+    print(plots[[1]])
+    
+  } else {
+    # Set up the page
+    grid.newpage()
+    pushViewport(viewport(layout = grid.layout(nrow(layout), ncol(layout))))
+    
+    # Make each plot, in the correct location
+    for (i in 1:numPlots) {
+      # Get the i,j matrix positions of the regions that contain this subplot
+      matchidx <- as.data.frame(which(layout == i, arr.ind = TRUE))
+      
+      print(plots[[i]], vp = viewport(layout.pos.row = matchidx$row,
+                                      layout.pos.col = matchidx$col))
+    }
+  }
+}
 
 
+threeYesPlot <- sqldf("SELECT IDStation 
+                      FROM presencetable
+                      WHERE Ammonia = 1 and PM10 = 1 and PM25=1")
+threeYesPlot <- as.vector(t(threeYesPlot))
+FullStations <- NULL
+table18 <- cast[[1]]
 
+for (i in 1:length(threeYesPlot)) {
+  
+  FullStations[[i]] <- sqldf(paste("SELECT *
+                             FROM table18
+                             WHERE IDStation = ", threeYesPlot[i],sep = ""))
+  
+}
+
+setwd("/Users/marcovinciguerra/Github/GitTesi/DownloadData/Short Version/PlotDatas")
+BlueStripes(FullStations,2018)
+
+table18_20 <- get_ARPA_Lombardia_AQ_data(
+  ID_station = threeYesPlot,
+  Year = c(startyear:lastyear),
+  Frequency = "daily",
+  Var_vec = NULL,
+  Fns_vec = NULL,
+  by_sensor = 0,
+  verbose = T
+)
+
+FullStations <- NULL
+
+for (i in 1:length(threeYesPlot)) {
+  
+  FullStations[[i]] <- sqldf(paste("SELECT *
+                             FROM table18_20
+                             WHERE IDStation = ", threeYesPlot[i],sep = ""))
+  
+}
+
+setwd("/Users/marcovinciguerra/Github/GitTesi/DownloadData/Short Version/PlotDatas")
+BlueStripes(FullStations,"2018-2020")
