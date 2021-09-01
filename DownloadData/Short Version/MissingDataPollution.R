@@ -190,3 +190,41 @@ columnPM10 <- sqldf("SELECT s.IDStattion, s.NameStation, yes
                      FROM Searchpollution s JOIN cast18 c
                      ON  s.twopresents = c.IDStation
                      WHERE c.PM10 is not null")
+
+# queries yes/no table 
+
+TableA <- tableMissingAmmmonia[[1]]
+
+ColumnA <- sqldf('select IDStation, NameStation, 1 as Ammonia
+      from TableA 
+      where MissingAmmonia < 365
+      union
+      select IDStation, NameStation, 0 as Ammonia
+      from TableA 
+      where MissingAmmonia >= 365
+      order by IDStation')
+
+Table10 <- tableMissingPM10[[1]]
+
+Column10 <- sqldf('select IDStation, NameStation, 1 as PM10
+      from Table10 
+      where MissingAmmonia < 365
+      union
+      select IDStation, NameStation, 0 as PM10
+      from Table10 
+      where MissingAmmonia >= 365
+      order by IDStation')
+
+TableA <- tableMissingAmmmonia[[1]]
+
+Column25 <- sqldf('select IDStation, NameStation, 1 as Ammonia
+      from TableA 
+      where MissingAmmonia < 365
+      union
+      select IDStation, NameStation, 0 as Ammonia
+      from TableA 
+      where MissingAmmonia >= 365
+      order by IDStation')
+
+
+
