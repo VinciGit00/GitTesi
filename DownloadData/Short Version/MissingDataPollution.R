@@ -290,7 +290,12 @@ table18_20 <- get_ARPA_Lombardia_AQ_data(
   Fns_vec = NULL,
   by_sensor = 0,
   verbose = T
-)
+) 
+
+table18_20 %>%
+  rename(
+    PM25 = PM2.5
+  )
 
 FullStations <- NULL
 
