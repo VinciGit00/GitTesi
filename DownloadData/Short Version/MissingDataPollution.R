@@ -56,109 +56,137 @@ for(index in startyear:lastyear) {
       PM25 = PM2.5
     )
 }
-
-#Starting with the queries
-#AGGIUNGERE UN CICLO FOR CHE SCARICA I DATI E FA LA QUERY TUTTO DA SOLO
-#DAVID LO FACCIO IO PERO'
-#SE LO FAI TI MANGIO, NON STO SCHERZANDO
-#Utilizzo la concatenazione
-#2018
-table2018MissingAmmmonia <- MissingTable('Ammonia', 'cast2018')
-
-table2018MissingPM10 <- MissingTable('PM10', 'cast2018')
-
-table2018MissingPM25 <- MissingTable('PM25', 'cast2018')
-
-table2018MissingallDatas <- MissingAll('cast2018')
-
-#All the missing datas for every station
-tableMissingDatasTotal2018 <- sqldf(' SELECT ma.IDStation, ma.NameStation, ma.MissingAmmonia, m10.MissingPM10, m25.MissingPM25,mtodos.MissingAllThree
-                                  FROM table2018MissingAmmmonia ma  JOIN table2018MissingPM10 m10
-                                  ON ma.IDStation = m10.IDStation
-                                  JOIN table2018MissingPM25 m25
-                                  ON ma.IDStation = m25.IDStation
-                                  JOIN table2018MissingallDatas mtodos
-                                  on ma.IDStation = mtodos.IDStation
-                                ')
-
-#2019
-table2019MissingAmmmonia <- MissingTable('Ammonia', 'cast2019')
-
-table2019MissingPM10 <- MissingTable('PM10', 'cast2019')
-
-table2019MissingPM25 <- MissingTable('PM25', 'cast2019')
-
-table2019MissingallDatas <- MissingAll('cast2019')
-
-#All the missing datas for every station
-tableMissingDatasTotal2019 <- sqldf(' SELECT ma.IDStation, ma.NameStation, ma.MissingAmmonia, m10.MissingPM10, m25.MissingPM25,mtodos.MissingAllThree
-                                  FROM table2019MissingAmmmonia ma  JOIN table2019MissingPM10 m10
-                                  ON ma.IDStation = m10.IDStation
-                                  JOIN table2019MissingPM25 m25
-                                  ON ma.IDStation = m25.IDStation
-                                  JOIN table2019MissingallDatas mtodos
-                                  on ma.IDStation = mtodos.IDStation
-                                ')
-
-#2020
-table2020MissingAmmmonia <- MissingTable('Ammonia', 'cast2020')
-
-table2020MissingPM10 <-  MissingTable('PM10', 'cast2020')
-
-table2020MissingPM25 <- MissingTable('PM25', 'cast2020')
-
-table2020MissingallDatas <- MissingAll('cast2020')
-
-#All the missing datas for every station
-tableMissingDatasTotal2020 <- sqldf(' SELECT ma.IDStation, ma.NameStation, ma.MissingAmmonia, m10.MissingPM10, m25.MissingPM25,mtodos.MissingAllThree
-                                  FROM table2020MissingAmmmonia ma  JOIN table2020MissingPM10 m10
-                                  ON ma.IDStation = m10.IDStation
-                                  JOIN table2020MissingPM25 m25
-                                  ON ma.IDStation = m25.IDStation
-                                  JOIN table2020MissingallDatas mtodos
-                                  on ma.IDStation = mtodos.IDStation
-                                ')
-#For loop for downloading data and queries
-for(val in 2018:2020) {
+#Supporting functions 
+MissingTable <- function(Variable, Table) {
+  library(sqldf)
+  
+  tableMissing <- sqldf(paste('SELECT IDStation, NameStation, count(*) as Missing', Variable,
+                              ' FROM ', Table,
+                              ' WHERE ',Variable,' is null 
+                                GROUP BY IDStation
+                                ORDER BY Missing', Variable, sep = ''))  # stations where there minimun 1 missing value
+  
+  rest <- sqldf(paste(' SELECT IDStation, NameStation, 0 as Missing', Variable,
+                      ' FROM ', Table,
+                      ' EXCEPT
+                        SELECT IDStation, NameStation, 0 as Missing', Variable,
+                      ' FROM ', Table,
+                      ' WHERE ', Variable,' is null 
+                        GROUP BY IDStation', sep = '' )) # stations where there are no missing values
+  
+  return ( sqldf(paste('SELECT *
+                               FROM tableMissing
+                               UNION
+                               SELECT *
+                               FROM rest
+                               ORDER BY Missing', Variable , sep = ''
+  )) ) # all stations with regards to this variable
   
 }
 
 
-#Total of missing data from 2018 to 2020
-totalethreeyears = sqldf('SELECT T18.IDStation, sum(T18.MissingAmmonia+T19.MissingAmmonia+T20.MissingAmmonia), sum(T18.MissingPM10+T19.MissingPM10+T20.MissingPM10), 
-                         sum(T18.MissingPM25+T19.MissingPM25+T20.MissingPM25)
-                         FROM tableMissingDatasTotal2018 AS T18 JOIN tableMissingDatasTotal2019 AS T19
-                         ON  T18.IDStation = T19.IDStation
-                         JOIN tableMissingDatasTotal2020 AS T20
-                         ON  T18.IDStation = T20.IDStation
-                         GRUOUP BY T19.IDStation')
+MissingAll <- function(Table) {
+  library(sqldf)
+  
+  missingAll <- sqldf(paste(
+    'SELECT IDStation, NameStation, count(*) as MissingAllThree
+                        FROM ', Table,
+    ' WHERE Ammonia is null and PM10 is null and PM25 is null
+                        GROUP BY IDStation
+                        ORDER BY MissingAllThree', sep = ''
+  ))
+  
+  rest <- sqldf(paste('         SELECT IDStation, NameStation, 0 as MissingAllThree
+                        FROM ', Table,'
+                        EXCEPT
+                        SELECT IDStation, NameStation, 0 as MissingAllThree
+                        FROM ', Table,' 
+                        WHERE Ammonia is null AND PM10 is null AND PM25 is null
+                        GROUP BY IDStation', sep = ''))
+  
+  return (                     sqldf('SELECT *
+                               FROM missingAll
+                               UNION
+                               SELECT *
+                               FROM rest
+                               ORDER BY MissingAllThree
+                              '))
+}
 
+tableMissingAmmmonia<-NULL
+tableMissingPM10<-NULL
+tableMissingPM25<-NULL
+tableMissingallDatas <-NULL
+tableMissingDatasTotal<-NULL
+
+for(index in startyear:lastyear) {
+  interestedTable <- cast[[index-startyear+1]]
+  
+  tableMissingAmmmonia[[index-startyear+1]] <- MissingTable('Ammonia', 'interestedTable')
+  
+  tableMissingPM10[[index-startyear+1]] <- MissingTable('PM10', 'interestedTable')
+  
+  tableMissingPM25[[index-startyear+1]] <- MissingTable('PM25', 'interestedTable')
+  
+  tableMissingallDatas[[index-startyear+1]] <- MissingAll('interestedTable')
+  
+  tableMissingAmmmoniatemp <- tableMissingAmmmonia[[index-startyear+1]]
+  
+  tableMissingPM10temp     <- tableMissingPM10[[index-startyear+1]]
+    
+  tableMissingPM25temp     <- tableMissingPM25[[index-startyear+1]]
+  
+  tableMissingallDatastemp <- tableMissingallDatas[[index-startyear+1]]
+  
+  tableMissingDatasTotal[[index-startyear+1]] <- sqldf(' SELECT ma.IDStation, ma.NameStation, ma.MissingAmmonia, m10.MissingPM10, m25.MissingPM25,mtodos.MissingAllThree
+                                  FROM tableMissingAmmmoniatemp ma  JOIN tableMissingPM10temp m10
+                                  ON ma.IDStation = m10.IDStation
+                                  JOIN tableMissingPM25temp m25
+                                  ON ma.IDStation = m25.IDStation
+                                  JOIN tableMissingallDatastemp mtodos
+                                  on ma.IDStation = mtodos.IDStation
+                                ')
+  name = paste("Missing",index,".csv",sep="" )
+  setwd("/Users/marcovinciguerra/Github/GitTesi/DownloadData/Short Version/MissingTables")
+  write_csv(tableMissingDatasTotal[[index-startyear+1]], name)
+}
 
 ####IN progress
 #Creating the table of yes/no
+#Three yes
 threepresents <- RegistryRed %>% 
   group_by(IDStation) %>% 
   summarise(n=n()) %>%
-  filter(n=3) %>% 
-  distinct(IDStation) %>%
-  pull()
-
-twopresents <- RegistryRed %>% 
-  group_by(IDStation) %>% 
-  summarise(n=n()) %>%
-  filter(n=2) %>% 
+  filter(n==3) %>% 
   distinct(IDStation) %>%
   pull()
 
 yesword = "yes"
 noword  = "no" 
 
-matriceyes <- NULL
+matriceyes <- matrix(0, nrow =length(threepresents) , ncol = 3)
 
-for(val in 1:length(threpresents)) {
+for(val in 1:length(threepresents)) {
   for(otherindex in 1:3) {
     matriceyes[val, otherindex] = yesword
   }
 }
 
-print(matriceyes)
+#Two yes
+
+twopresents <- RegistryRed %>% 
+  group_by(IDStation) %>% 
+  summarise(n=n()) %>%
+  filter(n==2) %>% 
+  distinct(IDStation) %>%
+  pull()
+
+#Casting + temporary variables
+Searchpollution <- data.frame(twopresents)
+cast18 <- cast[[1]]
+
+#Starting with queries
+columnPM10 <- sqldf("SELECT s.IDStattion, s.NameStation, yes
+                     FROM Searchpollution s JOIN cast18 c
+                     ON  s.twopresents = c.IDStation
+                     WHERE c.PM10 is not null")
