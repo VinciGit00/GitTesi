@@ -26,12 +26,13 @@ bestcentralines <- RegistryRed %>%
   distinct(IDStation) %>%
   pull() # stations that measure at least 2 of the variables at the same time
 
+#Plot of the best centralines
 map_Lombardia_stations(bestcentralines)
 
 #Starting with the loop for downloading the data + casting of the data
 
-startyear = 2018
-lastyear  = 2020
+startyear <- 2018
+lastyear  <- 2020
 
 data <- NULL
 cast <- NULL
@@ -147,12 +148,12 @@ for(index in startyear:lastyear) {
                                   on ma.IDStation = mtodos.IDStation
                                 ')
   name = paste("Missing",index,".csv",sep="" )
-  setwd("/Users/marcovinciguerra/Github/GitTesi/DownloadData/Short Version/MissingTables")
+  setwd("/Users/marcovinciguerra/Github/GitTesi/DownloadData/MissingTables")
   write_csv(tableMissingDatasTotal[[index-startyear+1]], name)
 }
 
 #Creating the table of yes/no
-# queries yes/no table 
+#queries yes/no table 
 
 TableA <- tableMissingAmmmonia[[1]]
 
@@ -186,17 +187,18 @@ Column25 <- sqldf('SELECT IDStation, NameStation, 1 as PM25
       FROM Table25
       WHERE MissingPM25 >= 365
       order by IDStation')
-#N.B: 1 means presence
+#Legend
+#1 means presence
 #0 means absence
 presencetable <- sqldf("SELECT c25.IDStation, C25.NameStation, c25.PM25, c10.PM10, ca.Ammonia
                  FROM Column25 c25 JOIN Column10 c10
                  ON c25.IDStation = c10.IDStation
                  JOIN ColumnA ca
                  ON c25.IDStation = ca.IDStation")
+setwd("/Users/marcovinciguerra/Github/GitTesi/DownloadData")
+write.csv(presencetable, "presencetable.csv")
 
-####IN progress
-#Data plot
-
+#Data plot of the centralines with all the sensors
 BlueStripes <- function(vector,year){
   
   for (i in 1:length(vector)) {
@@ -271,17 +273,6 @@ threeYesPlot <- as.vector(t(threeYesPlot))
 FullStations <- NULL
 table18 <- cast[[1]]
 
-for (i in 1:length(threeYesPlot)) {
-  
-  FullStations[[i]] <- sqldf(paste("SELECT *
-                             FROM table18
-                             WHERE IDStation = ", threeYesPlot[i],sep = ""))
-  
-}
-
-setwd("/Users/marcovinciguerra/Github/GitTesi/DownloadData/Short Version/PlotDatas")
-BlueStripes(FullStations,2018)
-
 table18_20 <- get_ARPA_Lombardia_AQ_data(
   ID_station = threeYesPlot,
   Year = c(startyear:lastyear),
@@ -307,5 +298,5 @@ for (i in 1:length(threeYesPlot)) {
   
 }
 
-setwd("/Users/marcovinciguerra/Github/GitTesi/DownloadData/Short Version/PlotDatas")
+setwd("/Users/marcovinciguerra/Github/GitTesi/DownloadData/PlotDatas")
 BlueStripes(FullStations,"2018-2020")
