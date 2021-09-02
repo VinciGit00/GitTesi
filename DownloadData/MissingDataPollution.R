@@ -57,6 +57,7 @@ for(index in startyear:lastyear) {
       PM25 = PM2.5
     )
 }
+
 #Supporting functions 
 MissingTable <- function(Variable, Table) {
   library(sqldf)
@@ -140,7 +141,7 @@ for(index in startyear:lastyear) {
   tableMissingallDatastemp <- tableMissingallDatas[[index-startyear+1]]
   
   tableMissingDatasTotal[[index-startyear+1]] <- sqldf(' SELECT ma.IDStation, ma.NameStation, ma.MissingAmmonia, m10.MissingPM10, m25.MissingPM25,mtodos.MissingAllThree
-                                  FROM tableMissingAmmmoniatemp ma  JOIN tableMissingPM10temp m10
+                                  FROM tableMissingAmmmoniatemp ma JOIN tableMissingPM10temp m10
                                   ON ma.IDStation = m10.IDStation
                                   JOIN tableMissingPM25temp m25
                                   ON ma.IDStation = m25.IDStation
@@ -154,7 +155,6 @@ for(index in startyear:lastyear) {
 
 #Creating the table of yes/no
 #queries yes/no table 
-
 TableA <- tableMissingAmmmonia[[1]]
 
 ColumnA <- sqldf('SELECT IDStation, NameStation, 1 as Ammonia
@@ -187,7 +187,8 @@ Column25 <- sqldf('SELECT IDStation, NameStation, 1 as PM25
       FROM Table25
       WHERE MissingPM25 >= 365
       order by IDStation')
-#Legend
+
+#Legend:
 #1 means presence
 #0 means absence
 presencetable <- sqldf("SELECT c25.IDStation, C25.NameStation, c25.PM25, c10.PM10, ca.Ammonia
@@ -265,7 +266,6 @@ multiplot <- function(..., plotlist=NULL, file, cols=1, layout=NULL) {
   }
 }
 
-
 threeYesPlot <- sqldf("SELECT IDStation 
                       FROM presencetable
                       WHERE Ammonia = 1 and PM10 = 1 and PM25=1")
@@ -295,7 +295,6 @@ for (i in 1:length(threeYesPlot)) {
   FullStations[[i]] <- sqldf(paste("SELECT *
                              FROM table18_20
                              WHERE IDStation = ", threeYesPlot[i],sep = ""))
-  
 }
 
 setwd("/Users/marcovinciguerra/Github/GitTesi/DownloadData/PlotDatas")
