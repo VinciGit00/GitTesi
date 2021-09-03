@@ -6,7 +6,7 @@ library(ggplot2)
 library(ggfortify)
 library(lubridate)
 
-source("~/GitHub/BachelorThesis/Rstudio code/Functions.R", encoding = 'UTF-8')
+source("/Users/marcovinciguerra/Github/GitTesi/DownloadData/Functions.R", encoding = 'UTF-8')
 
 #Filter datas
 registry <- get_ARPA_Lombardia_AQ_registry()
@@ -27,30 +27,6 @@ bestcentralines <- RegistryRed %>%
   filter(n>=2) %>% 
   distinct(IDStation) %>%
   pull() # stations that measure at least 2 of the variables at the same time
-
-#Plot of the best centralines
-win.graph()
-map_Lombardia_stations_custom(RegistryRed)
-map_Lombardia_stations(registry)
-
-
-
-presencetable <- presencetable %>%
-  mutate(Etichetta = case_when(PM10 == 1 & PM25 == 1 & Ammonia == 1 ~ "Tutti",
-                               PM10 == 1 & PM25 == 1 & Ammonia == 0 ~ "PM10-PM2.5",
-                               PM10 == 1 & PM25 == 0 & Ammonia == 1 ~ "PM10-NH3",
-                               PM10 == 0 & PM25 == 1 & Ammonia == 1 ~ "PM2.5-NH3",
-                               PM10 == 1 & PM25 == 0 & Ammonia == 0 ~ "PM10",
-                               PM10 == 0 & PM25 == 1 & Ammonia == 0 ~ "PM2.5",
-                               PM10 == 0 & PM25 == 0 & Ammonia == 1 ~ "NH3"))
-
-presencetable_red <- presencetable %>%
-  select(IDStation,Etichetta)
-
-RegistryRed <- full_join(RegistryRed,presencetable_red,by = c("IDStation"))
-
-map_Lombardia_stations_custom(RegistryRed,col_points = Etichetta)
-
 
 #Starting with the loop for downloading the data + casting of the data
 
@@ -287,3 +263,24 @@ for (i in 1:length(lastYearStations)) {
 }
 
 BlueStripes(FullStations,"2018-2020")
+
+#Lombardy map
+#Plot of the best centralines
+map_Lombardia_stations_custom(RegistryRed)
+
+presencetable <- presencetable %>%
+  mutate(Etichetta = case_when(PM10 == 1 & PM25 == 1 & Ammonia == 1 ~ "Tutti",
+                               PM10 == 1 & PM25 == 1 & Ammonia == 0 ~ "PM10-PM2.5",
+                               PM10 == 1 & PM25 == 0 & Ammonia == 1 ~ "PM10-NH3",
+                               PM10 == 0 & PM25 == 1 & Ammonia == 1 ~ "PM2.5-NH3",
+                               PM10 == 1 & PM25 == 0 & Ammonia == 0 ~ "PM10",
+                               PM10 == 0 & PM25 == 1 & Ammonia == 0 ~ "PM2.5",
+                               PM10 == 0 & PM25 == 0 & Ammonia == 1 ~ "NH3"))
+
+presencetable_red <- presencetable %>%
+  select(IDStation,Etichetta)
+
+RegistryRed <- full_join(RegistryRed,presencetable_red,by = c("IDStation"))
+
+map_Lombardia_stations_custom(RegistryRed,col_points = Etichetta)
+
