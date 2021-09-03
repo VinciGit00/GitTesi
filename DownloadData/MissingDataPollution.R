@@ -6,6 +6,8 @@ library(ggplot2)
 library(ggfortify)
 library(lubridate)
 
+source("~/GitHub/BachelorThesis/Rstudio code/Functions.R", encoding = 'UTF-8')
+
 #Filter datas
 registry <- get_ARPA_Lombardia_AQ_registry()
 
@@ -27,7 +29,28 @@ bestcentralines <- RegistryRed %>%
   pull() # stations that measure at least 2 of the variables at the same time
 
 #Plot of the best centralines
-map_Lombardia_stations(bestcentralines)
+win.graph()
+map_Lombardia_stations_custom(RegistryRed)
+map_Lombardia_stations(registry)
+
+
+
+presencetable <- presencetable %>%
+  mutate(Etichetta = case_when(PM10 == 1 & PM25 == 1 & Ammonia == 1 ~ "Tutti",
+                               PM10 == 1 & PM25 == 1 & Ammonia == 0 ~ "PM10-PM2.5",
+                               PM10 == 1 & PM25 == 0 & Ammonia == 1 ~ "PM10-NH3",
+                               PM10 == 0 & PM25 == 1 & Ammonia == 1 ~ "PM2.5-NH3",
+                               PM10 == 1 & PM25 == 0 & Ammonia == 0 ~ "PM10",
+                               PM10 == 0 & PM25 == 1 & Ammonia == 0 ~ "PM2.5",
+                               PM10 == 0 & PM25 == 0 & Ammonia == 1 ~ "NH3"))
+
+presencetable_red <- presencetable %>%
+  select(IDStation,Etichetta)
+
+RegistryRed <- full_join(RegistryRed,presencetable_red,by = c("IDStation"))
+
+map_Lombardia_stations_custom(RegistryRed,col_points = Etichetta)
+
 
 #Starting with the loop for downloading the data + casting of the data
 
@@ -58,61 +81,6 @@ for(index in startyear:lastyear) {
     )
 }
 #Supporting functions 
-MissingTable <- function(Variable, Table) {
-  library(sqldf)
-  
-  tableMissing <- sqldf(paste('SELECT IDStation, NameStation, count(*) as Missing', Variable,
-                              ' FROM ', Table,
-                              ' WHERE ',Variable,' is null 
-                                GROUP BY IDStation
-                                ORDER BY Missing', Variable, sep = ''))  # stations where there minimun 1 missing value
-  
-  rest <- sqldf(paste(' SELECT IDStation, NameStation, 0 as Missing', Variable,
-                      ' FROM ', Table,
-                      ' EXCEPT
-                        SELECT IDStation, NameStation, 0 as Missing', Variable,
-                      ' FROM ', Table,
-                      ' WHERE ', Variable,' is null 
-                        GROUP BY IDStation', sep = '' )) # stations where there are no missing values
-  
-  return ( sqldf(paste('SELECT *
-                               FROM tableMissing
-                               UNION
-                               SELECT *
-                               FROM rest
-                               ORDER BY Missing', Variable , sep = ''
-  )) ) # all stations with regards to this variable
-  
-}
-
-
-MissingAll <- function(Table) {
-  library(sqldf)
-  
-  missingAll <- sqldf(paste(
-    'SELECT IDStation, NameStation, count(*) as MissingAllThree
-                        FROM ', Table,
-    ' WHERE Ammonia is null and PM10 is null and PM25 is null
-                        GROUP BY IDStation
-                        ORDER BY MissingAllThree', sep = ''
-  ))
-  
-  rest <- sqldf(paste('         SELECT IDStation, NameStation, 0 as MissingAllThree
-                        FROM ', Table,'
-                        EXCEPT
-                        SELECT IDStation, NameStation, 0 as MissingAllThree
-                        FROM ', Table,' 
-                        WHERE Ammonia is null AND PM10 is null AND PM25 is null
-                        GROUP BY IDStation', sep = ''))
-  
-  return (                     sqldf('SELECT *
-                               FROM missingAll
-                               UNION
-                               SELECT *
-                               FROM rest
-                               ORDER BY MissingAllThree
-                              '))
-}
 
 tableMissingAmmmonia<-NULL
 tableMissingPM10<-NULL
@@ -199,71 +167,7 @@ setwd("/Users/marcovinciguerra/Github/GitTesi/DownloadData")
 write.csv(presencetable, "presencetable.csv")
 
 #Data plot of the centralines with all the sensors
-BlueStripes <- function(vector,year){
-  
-  for (i in 1:length(vector)) {
-    c9a <- ggplot(vector[[i]], aes(x = Date, y = Ammonia)) +
-      geom_line()  + labs(title = paste(vector[[i]][1,3],year))
-    nada <- is.na(vector[[i]]["Ammonia"])
-    c9a <- c9a + geom_vline(xintercept = vector[[i]][nada,1], alpha = 0.3, 
-                            color = "blue", size=1.5)
-    
-    c910 <- ggplot(vector[[i]], aes(x = Date, y = PM10)) +
-      geom_line() 
-    nada <- is.na(vector[[i]]["PM10"])
-    c910 <- c910 + geom_vline(xintercept = vector[[i]][nada,1], alpha = 0.3, 
-                              color = "blue", size=1.5)
-    
-    
-    c925 <- ggplot(vector[[i]], aes(x = Date, y = PM25)) +
-      geom_line() 
-    nada <- is.na(vector[[i]]["PM25"])
-    c925 <- c925 + geom_vline(xintercept = vector[[i]][nada,1], alpha = 0.3, 
-                              color = "blue", size=1.5)
-    
-    jpeg(filename =paste(vector[[i]][1,3],paste(year,".jpeg")),width = 1280, height = 720 )
-    multiplot(c9a, c910, c925)
-    dev.off()
-    
-  }
-  
-}
 
-multiplot <- function(..., plotlist=NULL, file, cols=1, layout=NULL) {
-  library(grid)
-  
-  # Make a list FROM the ... arguments and plotlist
-  plots <- c(list(...), plotlist)
-  
-  numPlots = length(plots)
-  
-  # If layout is NULL, then use 'cols' to determine layout
-  if (is.null(layout)) {
-    # Make the panel
-    # ncol: Number of columns of plots
-    # nrow: Number of rows needed, calculated FROM # of cols
-    layout <- matrix(seq(1, cols * ceiling(numPlots/cols)),
-                     ncol = cols, nrow = ceiling(numPlots/cols))
-  }
-  
-  if (numPlots==1) {
-    print(plots[[1]])
-    
-  } else {
-    # Set up the page
-    grid.newpage()
-    pushViewport(viewport(layout = grid.layout(nrow(layout), ncol(layout))))
-    
-    # Make each plot, in the correct location
-    for (i in 1:numPlots) {
-      # Get the i,j matrix positions of the regions that contain this subplot
-      matchidx <- as.data.frame(which(layout == i, arr.ind = TRUE))
-      
-      print(plots[[i]], vp = viewport(layout.pos.row = matchidx$row,
-                                      layout.pos.col = matchidx$col))
-    }
-  }
-}
 
 presencetable <- NULL
 
