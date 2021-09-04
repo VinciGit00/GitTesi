@@ -162,14 +162,18 @@ Column25 <- sqldf('SELECT IDStation, NameStation, 1 as PM25
 #Legend
 #1 means presence
 #0 means absence
-presencetable <- sqldf("SELECT c25.IDStation, C25.NameStation, c25.PM25, c10.PM10, ca.Ammonia
+presencetable <- sqldf("SELECT c25.IDStation, C25.NameStation, c25.PM25, c10.PM10, ca.Ammonia, SUM(c25.PM25+c10.PM10+ca.Ammonia) as Somma
                  FROM Column25 c25 JOIN Column10 c10
                  ON c25.IDStation = c10.IDStation
                  JOIN ColumnA ca
-                 ON c25.IDStation = ca.IDStation") ##AGGIUNGERE L'ORDINE
+                 ON c25.IDStation = ca.IDStation
+                 GROUP BY c25.IDStation ") 
+
+presencetable <- sqldf('SELECT IDStation, NameStation, PM25, PM10, Ammonia
+                        FROM presencetable 
+                        GROUP BY  Somma, IDStation')
 
 #Plot of the centralines with at least 1 observation for one of the pollutant
-
 presencetable <- presencetable %>%
   mutate(Etichetta = case_when(PM10 == 1 & PM25 == 1 & Ammonia == 1 ~ "Tutti",
                                PM10 == 1 & PM25 == 1 & Ammonia == 0 ~ "PM10-PM2.5",
@@ -185,7 +189,7 @@ presencetable_red <- presencetable %>%
 RegistryRed <- full_join(RegistryRed,presencetable_red,by = c("IDStation"))
 
 setwd("/Users/marcovinciguerra/Github/GitTesi/DownloadData")
-write.table(presencetable, "presencetable.csv")
+write.table(presencetable, "presencetable_red.csv")
 
 #PART 3: plot of the Lombardy map
 map_Lombardia_stations_custom(RegistryRed,col_points = Etichetta)
@@ -232,22 +236,22 @@ for (i in 1:length(tableMissingAmmmonia)) {
   #Legend
   #1 means presence
   #0 means absence
-  presencetable[[i]] <- sqldf("SELECT c25.IDStation, C25.NameStation, c25.PM25, c10.PM10, ca.Ammonia
+  presencetableYear[[i]] <- sqldf("SELECT c25.IDStation, C25.NameStation, c25.PM25, c10.PM10, ca.Ammonia
                  FROM Column25 c25 JOIN Column10 c10
                  ON c25.IDStation = c10.IDStation
                  JOIN ColumnA ca
                  ON c25.IDStation = ca.IDStation")
   #setwd("/Users/marcovinciguerra/Github/GitTesi/DownloadData")
-  #write.csv(presencetable, paste("presencetable",i,".csv",sep = ""))
+  #write.csv(presencetableYear, paste("presencetableYear",i,".csv",sep = ""))
 }
 
 
 threeYesPlot <- NULL
 setwd("/Users/marcovinciguerra/Github/GitTesi/DownloadData/Dataplot")
 
-for (i in 1:length(presencetable)) {
+for (i in 1:length(presencetableYear)) {
   
-  pt <- presencetable[[i]]
+  pt <- presencetableYear[[i]]
   
   threeYesPlot[[i]] <- sqldf("SELECT IDStation 
                       FROM pt

@@ -41,13 +41,34 @@ registry_KNN_dist <- function(reg_X,reg_Y,k){
   return(list(output_tab))
 }
 
-
+#Start of the script
 
 library(ARPALData)
 library(tidyverse)
 library(sf)
 
-regAQ <- get_ARPA_Lombardia_AQ_registry()
+
+
+registry <- get_ARPA_Lombardia_AQ_registry()
+
+IDStat <- registry %>% 
+  filter(Pollutant%in% c("Ammonia","PM10","PM2.5"),
+         is.na(DateStop),
+         year(DateStart)<=2017) %>%
+  distinct(IDSensor) %>% pull() %>% sort() # Stations that measure all three since 2017 and haven't been decomessioned
+
+RegistryRed <- registry %>% 
+  filter(Pollutant%in% c("Ammonia","PM10","PM2.5"),
+         IDSensor%in% IDStat) 
+
+bestcentralines <- RegistryRed %>% 
+  group_by(IDStation) %>% 
+  summarise(n=n()) %>%
+  filter(n>=2) %>% 
+  distinct(IDStation) %>%
+  pull()
+
+regAQ <- bestcentralines
 regAQ <- regAQ %>%
   filter(Pollutant %in% c("PM10"), is.na(DateStop)) %>%
   distinct(IDStation,NameStation,Longitude,Latitude) %>%
