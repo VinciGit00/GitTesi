@@ -199,6 +199,9 @@ map_Lombardia_stations_custom(RegistryRed)
 
 
 #PART 4: Plot of the time series
+
+presencetableYear <- NULL
+
 for (i in 1:length(tableMissingAmmmonia)) {
   
   TableA <- tableMissingAmmmonia[[i]]
@@ -247,7 +250,7 @@ for (i in 1:length(tableMissingAmmmonia)) {
 
 
 threeYesPlot <- NULL
-setwd("/Users/marcovinciguerra/Github/GitTesi/DownloadData/Dataplot")
+#setwd("/Users/marcovinciguerra/Github/GitTesi/DownloadData/Dataplot")
 
 for (i in 1:length(presencetableYear)) {
   
@@ -316,4 +319,5 @@ for (i in 1:length(lastYearStations)) {
 }
 
 BlueStripes(FullStations,"2018-2020")
+
 
