@@ -6,7 +6,8 @@ library(ggplot2)
 library(ggfortify)
 library(lubridate)
 
-source("~/GitHub/BachelorThesis/Rstudio code/Functions.R", encoding = 'UTF-8')
+source("/Users/marcovinciguerra/Github/GitTesi/DownloadData/Functions.R", encoding = 'UTF-8')
+source("/Users/marcovinciguerra/Github/GitTesi/DownloadData/DownloadFunction.R", encoding = 'UTF-8')
 
 #Filter datas
 registry <- get_ARPA_Lombardia_AQ_registry()
@@ -26,40 +27,18 @@ bestcentralines <- RegistryRed %>%
   summarise(n=n()) %>%
   filter(n>=2) %>% 
   distinct(IDStation) %>%
-  pull() # stations that measure at least 2 of the variables at the same time
+  pull() # Stations that measure at least 2 of the variables at the same time
 
-
-
-#Starting with the loop for downloading the data + casting of the data
 
 startyear <- 2018
 lastyear  <- 2020
 
-data <- NULL
-cast <- NULL
+#PART 1: looking for centralines with 2 or more pollutants
+#Starting with the loop for downloading the data + casting of the data
 
-for(index in startyear:lastyear) {
-  #Downloading
-  data[[1+index-startyear]] <- get_ARPA_Lombardia_AQ_data(
-    ID_station = c(bestcentralines),
-    Year = index,
-    Frequency = "daily",
-    Var_vec = NULL,
-    Fns_vec = NULL,
-    by_sensor = 0,
-    verbose = T
-  )
-  #Casting
-  cast[[1+index-startyear]] <- data.frame(data[[1+index-startyear]] )
-  
-  #Renaming
-  cast[[1+index-startyear]] <- cast[[1+index-startyear]]  %>%
-    rename(
-      PM25 = PM2.5
-    )
-}
-#Supporting functions 
+cast <- Download(startyear, lastyear, bestcentralines)
 
+#Queries for counting the amount of missing datas
 tableMissingAmmmonia<-NULL
 tableMissingPM10<-NULL
 tableMissingPM25<-NULL
@@ -94,14 +73,61 @@ for(index in startyear:lastyear) {
                                   on ma.IDStation = mtodos.IDStation
                                 ')
   name = paste("Missing",index,".csv",sep="" )
-  #setwd("/Users/marcovinciguerra/Github/GitTesi/DownloadData/MissingTables")
-  #write_csv(tableMissingDatasTotal[[index-startyear+1]], name)
+  setwd("/Users/marcovinciguerra/Github/GitTesi/DownloadData/MissingTables")
+  write_csv(tableMissingDatasTotal[[index-startyear+1]], name)
 }
 
+#PART 2: looking for centralines with 1 or more pollutants
+CentralineMorethan1 <- RegistryRed %>% 
+  group_by(IDStation) %>% 
+  summarise(n=n()) %>%
+  filter(n>=1) %>% 
+  distinct(IDStation) %>%
+  pull() # Stations that measure at least 2 of the variables at the same time
+
+cast2 <- Download(startyear, lastyear, CentralineMorethan1)
+
+#Queries for counting the amount of missing datas
+tableMissingAmmmonia2<-NULL
+tableMissingPM102<-NULL
+tableMissingPM252<-NULL
+tableMissingallDatas2 <-NULL
+tableMissingDatasTotal2<-NULL
+
+for(index in startyear:lastyear) {
+  interestedTable2 <- cast2[[index-startyear+1]]
+  
+  tableMissingAmmmonia2[[index-startyear+1]] <- MissingTable('Ammonia', 'interestedTable')
+  
+  tableMissingPM102[[index-startyear+1]] <- MissingTable('PM10', 'interestedTable')
+  
+  tableMissingPM252[[index-startyear+1]] <- MissingTable('PM25', 'interestedTable')
+  
+  tableMissingallDatas2[[index-startyear+1]] <- MissingAll('interestedTable')
+  
+  tableMissingAmmmoniatemp2 <- tableMissingAmmmonia2[[index-startyear+1]]
+  
+  tableMissingPM10temp2     <- tableMissingPM102[[index-startyear+1]]
+  
+  tableMissingPM25temp2     <- tableMissingPM252[[index-startyear+1]]
+  
+  tableMissingallDatastemp2 <- tableMissingallDatas2[[index-startyear+1]]
+  
+  tableMissingDatasTotal2[[index-startyear+1]] <- sqldf(' SELECT ma.IDStation, ma.NameStation, ma.MissingAmmonia, m10.MissingPM10, m25.MissingPM25,mtodos.MissingAllThree
+                                  FROM tableMissingAmmmoniatemp2 ma  JOIN tableMissingPM10temp2 m10
+                                  ON ma.IDStation = m10.IDStation
+                                  JOIN tableMissingPM25temp2 m25
+                                  ON ma.IDStation = m25.IDStation
+                                  JOIN tableMissingallDatastemp2 mtodos
+                                  on ma.IDStation = mtodos.IDStation
+                                ')
+}
+
+#YES/NO TABLE
 #Creating the table of yes/no
 #queries yes/no table 
 
-TableA <- tableMissingAmmmonia[[1]]
+TableA <- tableMissingAmmmonia2[[1]]
 
 ColumnA <- sqldf('SELECT IDStation, NameStation, 1 as Ammonia
       FROM TableA 
@@ -112,7 +138,7 @@ ColumnA <- sqldf('SELECT IDStation, NameStation, 1 as Ammonia
       WHERE MissingAmmonia >= 365
       order by IDStation')
 
-Table10 <- tableMissingPM10[[1]]
+Table10 <- tableMissingPM102[[1]]
 
 Column10 <- sqldf('SELECT IDStation, NameStation, 1 as PM10
       FROM Table10 
@@ -123,7 +149,7 @@ Column10 <- sqldf('SELECT IDStation, NameStation, 1 as PM10
       WHERE MissingPM10 >= 365
       order by IDStation')
 
-Table25 <- tableMissingPM25[[1]]
+Table25 <- tableMissingPM252[[1]]
 
 Column25 <- sqldf('SELECT IDStation, NameStation, 1 as PM25
       FROM Table25
@@ -140,11 +166,9 @@ presencetable <- sqldf("SELECT c25.IDStation, C25.NameStation, c25.PM25, c10.PM1
                  FROM Column25 c25 JOIN Column10 c10
                  ON c25.IDStation = c10.IDStation
                  JOIN ColumnA ca
-                 ON c25.IDStation = ca.IDStation")
-#setwd("/Users/marcovinciguerra/Github/GitTesi/DownloadData")
-#write.csv(presencetable, "presencetable.csv")
+                 ON c25.IDStation = ca.IDStation") ##AGGIUNGERE L'ORDINE
 
-#Plot of the best centralines
+#Plot of the centralines with at least 1 observation for one of the pollutant
 
 presencetable <- presencetable %>%
   mutate(Etichetta = case_when(PM10 == 1 & PM25 == 1 & Ammonia == 1 ~ "Tutti",
@@ -160,14 +184,17 @@ presencetable_red <- presencetable %>%
 
 RegistryRed <- full_join(RegistryRed,presencetable_red,by = c("IDStation"))
 
+setwd("/Users/marcovinciguerra/Github/GitTesi/DownloadData")
+write.table(presencetable, "presencetable.csv")
+
+#PART 3: plot of the Lombardy map
 map_Lombardia_stations_custom(RegistryRed,col_points = Etichetta)
 
 #win.graph()
 map_Lombardia_stations_custom(RegistryRed)
 
 
-presencetable <- NULL
-
+#PART 4: Plot of the time series
 for (i in 1:length(tableMissingAmmmonia)) {
   
   TableA <- tableMissingAmmmonia[[i]]
@@ -214,7 +241,9 @@ for (i in 1:length(tableMissingAmmmonia)) {
   #write.csv(presencetable, paste("presencetable",i,".csv",sep = ""))
 }
 
+
 threeYesPlot <- NULL
+setwd("/Users/marcovinciguerra/Github/GitTesi/DownloadData/Dataplot")
 
 for (i in 1:length(presencetable)) {
   
@@ -256,7 +285,6 @@ for (i in 1:length(threeYesPlot)) {
   BlueStripes(FullStations[(1+n):(length(threeYesPlot[[i]])+n)],startyear+i-1)
   n <- j
 }
-
 
 lastYearStations <- threeYesPlot[[length(threeYesPlot)]]
 
