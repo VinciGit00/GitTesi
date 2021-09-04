@@ -97,13 +97,13 @@ tableMissingDatasTotal2<-NULL
 for(index in startyear:lastyear) {
   interestedTable2 <- cast2[[index-startyear+1]]
   
-  tableMissingAmmmonia2[[index-startyear+1]] <- MissingTable('Ammonia', 'interestedTable')
+  tableMissingAmmmonia2[[index-startyear+1]] <- MissingTable('Ammonia', 'interestedTable2')
   
-  tableMissingPM102[[index-startyear+1]] <- MissingTable('PM10', 'interestedTable')
+  tableMissingPM102[[index-startyear+1]] <- MissingTable('PM10', 'interestedTable2')
   
-  tableMissingPM252[[index-startyear+1]] <- MissingTable('PM25', 'interestedTable')
+  tableMissingPM252[[index-startyear+1]] <- MissingTable('PM25', 'interestedTable2')
   
-  tableMissingallDatas2[[index-startyear+1]] <- MissingAll('interestedTable')
+  tableMissingallDatas2[[index-startyear+1]] <- MissingAll('interestedTable2')
   
   tableMissingAmmmoniatemp2 <- tableMissingAmmmonia2[[index-startyear+1]]
   
