@@ -123,6 +123,35 @@ for(index in startyear:lastyear) {
                                 ')
 }
 
+
+#COUNT OF THE TOTAL OF THE MISSING DATAS for every station
+
+totalMissingFromBeginning <- NULL
+temp <- NULL
+for(index in 1:(length(tableMissingDatasTotal2))) {
+  if(index==1) {
+    totalMissingFromBeginning <- tableMissingDatasTotal2[[index]]
+  } else {
+    temp <- tableMissingDatasTotal2[[index]]
+    auxiliaryTable <- totalMissingFromBeginning 
+    auxiliaryTable
+    totalMissingFromBeginning <- sqldf('SELECT t.IDStation,t.NameStation, 
+                                      SUM(t.MissingAmmonia+a.MissingAmmonia)  
+                                      as MissingAmmonia,
+                                      SUM(t.MissingPM10+a.MissingPM10)
+                                      as MissingPM10 ,
+                                      SUM(t.MissingPM25+a.MissingPM25)
+                                      as MissingPM25,
+                                      SUM(t.MissingAllThree+a.MissingAllThree)
+                                      as t.MissingAllThree
+                                      FROM temp t 
+                                      JOIN auxiliaryTable a
+                                      ON t.IDstation = a.IDStation
+                                      GROUP BY t.IDStation
+                                       ')
+  } 
+}
+
 #YES/NO TABLE
 #Creating the table of yes/no
 #queries yes/no table 
@@ -159,7 +188,7 @@ Column25 <- sqldf('SELECT IDStation, NameStation, 1 as PM25
       FROM Table25
       WHERE MissingPM25 >= 365
       order by IDStation')
-#Legend
+#Legend:
 #1 means presence
 #0 means absence
 presencetable <- sqldf("SELECT c25.IDStation, C25.NameStation, c25.PM25, c10.PM10, ca.Ammonia, SUM(c25.PM25+c10.PM10+ca.Ammonia) as Somma
