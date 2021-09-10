@@ -6,10 +6,11 @@ library(ggplot2)
 library(ggfortify)
 library(lubridate)
 
+#Source functions
 source("/Users/marcovinciguerra/Github/GitTesi/DownloadData/Functions.R", encoding = 'UTF-8')
 source("/Users/marcovinciguerra/Github/GitTesi/DownloadData/DownloadFunction.R", encoding = 'UTF-8')
 
-#Filter datas
+#Filter datas with registry
 registry <- get_ARPA_Lombardia_AQ_registry()
 
 IDStat <- registry %>% 
@@ -33,7 +34,7 @@ bestcentralines <- RegistryRed %>%
 startyear <- 2018
 lastyear  <- 2020
 
-#PART 1: looking for centralines with 2 or more pollutants
+#PART 1: looking for centralines with 2 or more pollutants using SQL queries
 #Starting with the loop for downloading the data + casting of the data
 
 cast <- Download(startyear, lastyear, bestcentralines)
@@ -151,6 +152,9 @@ for(index in 1:(length(tableMissingDatasTotal2))) {
                                        ')
   } 
 }
+
+setwd("/Users/marcovinciguerra/Github/GitTesi/DownloadData")
+write.table(totalMissingFromBeginning, "MissingFromTheBeginning.csv")
 
 #YES/NO TABLE
 #Creating the table of yes/no
