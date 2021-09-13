@@ -1,3 +1,4 @@
+#Download only some datas
 Download <- function(startyear, lastyear, centraline) {
   #Libraries
   library(ARPALData)
@@ -34,6 +35,8 @@ Download <- function(startyear, lastyear, centraline) {
   return(cast)
 }
 
+
+#Download of all the datas
 DownloadALl <- function(startyear, lastyear, centraline) {
   #Libraries
   library(ARPALData)

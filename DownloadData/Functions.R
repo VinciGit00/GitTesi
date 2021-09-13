@@ -182,3 +182,48 @@ Download <- function(startyear, lastyear, centraline) {
   
   return(cast)
 }
+
+#Nearest neighbor functions
+
+##### k_min_vals_vec_idx
+# Identifies the indices of the first (minimum) k values in a vector x
+k_min_vals_vec_idx <- function(x,k) {
+  sort.int(x, index.return = T)$ix[1:k]
+}
+
+##### k_min_vals_vec
+# Identifies the values of the first (minimum) k values in a vector x
+k_min_vals_vec <- function(x,k) {
+  idx <- sort.int(x, index.return = T)$ix[1:k]
+  x[idx]
+}
+
+#####registry_KNN_dist
+# For each element included in reg_X, it dentifies the k-nearest neighbours (among those included in reg_Y)
+# according to an Euclidean distance metric
+registry_KNN_dist <- function(reg_X,reg_Y,k){
+  
+  ### Computing distance
+  dist_matrix <- sf::st_distance(reg_X,reg_Y)
+  ### Identifying the k-NN IDStation of reg_Y
+  min_dist_idx <- apply(dist_matrix,MARGIN = 1, FUN = k_min_vals_vec_idx, k=k)
+  min_dist <- apply(dist_matrix,MARGIN = 1, FUN = k_min_vals_vec, k=k)
+  if (k == 1) {
+    min_dist_idx <- t(as.matrix(min_dist_idx)) 
+  }
+  ### Extracting for each k the corresponding ID and NameStation of reg_Y
+  knn_list <- list(length = k)
+  for (j in 1:k) {
+    knn_prog <- data.frame(cbind(reg_Y[min_dist_idx[j,],]$NameStation,
+                                 reg_Y[min_dist_idx[j,],]$IDStation,
+                                 round(min_dist[j,],2)))
+    colnames(knn_prog) <- c(paste0("reg_Y_nn",j,"_name"),
+                            paste0("reg_Y_nn",j,"_ID"),
+                            paste0("reg_Y_nn",j,"_dist"))
+    knn_list[[j]] <- knn_prog 
+  }
+  ### Combining dataframes
+  output_tab <- dplyr::bind_cols(reg_X,knn_list)
+  
+  return(list(output_tab))
+}

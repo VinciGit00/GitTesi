@@ -5,6 +5,7 @@ library(sqldf)
 library(ggplot2)
 library(ggfortify)
 library(lubridate)
+library(sf)
 
 #Source functions
 source("/Users/marcovinciguerra/Github/GitTesi/DownloadData/Functions.R", encoding = 'UTF-8')
@@ -23,7 +24,7 @@ RegistryRed <- registry %>%
   filter(Pollutant%in% c("Ammonia","PM10","PM2.5"),
          IDSensor%in% IDStat) 
 
-bestcentralines <- RegistryRed %>% 
+beststations <- RegistryRed %>% 
   group_by(IDStation) %>% 
   summarise(n=n()) %>%
   filter(n>=2) %>% 
@@ -34,10 +35,10 @@ bestcentralines <- RegistryRed %>%
 startyear <- 2018
 lastyear  <- 2020
 
-#PART 1: looking for centralines with 2 or more pollutants using SQL queries
+#PART 1: looking for stations with 2 or more pollutants using SQL queries
 #Starting with the loop for downloading the data + casting of the data
 
-cast <- Download(startyear, lastyear, bestcentralines)
+cast <- Download(startyear, lastyear, beststations)
 
 #Queries for counting the amount of missing datas
 tableMissingAmmmonia<-NULL
@@ -78,7 +79,7 @@ for(index in startyear:lastyear) {
   write_csv(tableMissingDatasTotal[[index-startyear+1]], name)
 }
 
-#PART 2: looking for centralines with 1 or more pollutants
+#PART 2: looking for stations with 1 or more pollutants
 CentralineMorethan1 <- RegistryRed %>% 
   group_by(IDStation) %>% 
   summarise(n=n()) %>%
@@ -206,7 +207,7 @@ presencetable <- sqldf('SELECT IDStation, NameStation, PM25, PM10, Ammonia
                         FROM presencetable 
                         GROUP BY  Somma, IDStation')
 
-#Plot of the centralines with at least 1 observation for one of the pollutant
+#Plot of the stations with at least 1 observation for one of the pollutant
 presencetable <- presencetable %>%
   mutate(Etichetta = case_when(PM10 == 1 & PM25 == 1 & Ammonia == 1 ~ "Tutti",
                                PM10 == 1 & PM25 == 1 & Ammonia == 0 ~ "PM10-PM2.5",
@@ -349,5 +350,73 @@ for (i in 1:length(lastYearStations)) {
                              WHERE IDStation = ", lastYearStations[i],sep = ""))
   
 }
+#TODODODODODODODODDOOD
+BlueStripes(FullStations,"2018-2020") #SISTEMARE CON CONCATENAZIONE
 
-BlueStripes(FullStations,"2018-2020")
+#PART 5: Nearest Neighbor
+#Calculate the distances of the 2 nearest stations 
+regAQ <- get_ARPA_Lombardia_AQ_registry()
+regAQ <- regAQ %>%
+  filter(Pollutant %in% c("PM10"), is.na(DateStop)) %>%
+  distinct(IDStation,NameStation,Longitude,Latitude) %>%
+  mutate(lng = Longitude, lat = Latitude) %>%
+  sf::st_as_sf(coords = c("lng", "lat"), crs=4326)
+regW <- get_ARPA_Lombardia_W_registry()
+regW <- regW %>%
+  filter(is.na(DateStop)) %>%
+  distinct(IDStation,NameStation,Longitude,Latitude) %>%
+  mutate(lng = Longitude, lat = Latitude) %>%
+  sf::st_as_sf(coords = c("lng", "lat"), crs=4326)
+
+dist_mat <- sf::st_distance(regAQ,regW)
+
+reg_X <- regAQ
+reg_Y <- regW
+
+k <- 2
+distance <- registry_KNN_dist(reg_X,reg_Y,k)
+#distance contains the 6 best stations
+distance <- data.frame(distance[[1]])
+distance <- distance[distance[,'IDStation'] %in% threeYesPlot[[1]],]
+
+#Download the meteo-stations
+we18 <- get_ARPA_Lombardia_W_data(
+  ID_station = distance[,'reg_Y_nn1_ID'], 
+  Year = c(2018:2019),
+  Frequency = "daily",
+  Var_vec = NULL,
+  Fns_vec = NULL,
+  by_sensor = 0,
+  verbose = T
+)
+
+we19 <- get_ARPA_Lombardia_W_data(
+  ID_station = distance[,'reg_Y_nn1_ID'], 
+  Year = 2019,
+  Frequency = "daily",
+  Var_vec = NULL,
+  Fns_vec = NULL,
+  by_sensor = 0,
+  verbose = T
+)
+
+we20 <-  get_ARPA_Lombardia_W_data(
+  ID_station = distance[,'reg_Y_nn1_ID'], 
+  Year = 2020,
+  Frequency = "daily",
+  Var_vec = NULL,
+  Fns_vec = NULL,
+  by_sensor = 0,
+  verbose = T
+)
+
+tableAllyears <- DownloadALl(startyear, lastyear, threeYesPlot[[1]])
+equiv <- distance[,c('IDStation','reg_Y_nn1_ID')]
+
+#Table with pollution stations and the first nearest weather station 
+aqwe<- sqldf('select *
+      from tableAllyears t join equiv e on t.IDStation = e.IDStation join we on e.reg_Y_nn1_ID = we.IDStation
+               where t.Date = we.Date')
+
+setwd("/Users/marcovinciguerra/Github/GitTesi/DownloadData")
+write_csv(aqwe,'NNdatas.csv')
