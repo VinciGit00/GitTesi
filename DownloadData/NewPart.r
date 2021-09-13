@@ -36,39 +36,18 @@ registry_KNN_dist <- function(reg_X,reg_Y,k){
     knn_list[[j]] <- knn_prog 
   }
   ### Combining dataframes
-  output_tab <- dplyr::bind_cols(reg_X_name,knn_list)
+  output_tab <- dplyr::bind_cols(reg_X,knn_list)
   
   return(list(output_tab))
 }
 
-#Start of the script
+
 
 library(ARPALData)
 library(tidyverse)
 library(sf)
 
-
-
-registry <- get_ARPA_Lombardia_AQ_registry()
-
-IDStat <- registry %>% 
-  filter(Pollutant%in% c("Ammonia","PM10","PM2.5"),
-         is.na(DateStop),
-         year(DateStart)<=2017) %>%
-  distinct(IDSensor) %>% pull() %>% sort() # Stations that measure all three since 2017 and haven't been decomessioned
-
-RegistryRed <- registry %>% 
-  filter(Pollutant%in% c("Ammonia","PM10","PM2.5"),
-         IDSensor%in% IDStat) 
-
-bestcentralines <- RegistryRed %>% 
-  group_by(IDStation) %>% 
-  summarise(n=n()) %>%
-  filter(n>=2) %>% 
-  distinct(IDStation) %>%
-  pull()
-
-regAQ <- bestcentralines
+regAQ <- get_ARPA_Lombardia_AQ_registry()
 regAQ <- regAQ %>%
   filter(Pollutant %in% c("PM10"), is.na(DateStop)) %>%
   distinct(IDStation,NameStation,Longitude,Latitude) %>%
@@ -87,5 +66,27 @@ reg_X <- regAQ
 reg_Y <- regW
 
 k <- 2
-registry_KNN_dist(reg_X,reg_Y,k)
+distance <- registry_KNN_dist(reg_X,reg_Y,k)
+distance <- data.frame(distance[[1]])
+distance <- distance[distance[,'IDStation'] %in% threeYesPlot[[1]],]
 
+
+we <- get_ARPA_Lombardia_W_data(
+  #ID_station = distance[,'reg_Y_nn1_ID'], 
+  ID_station = 642,
+  Year = 2019,
+  Frequency = "daily",
+  Var_vec = NULL,
+  Fns_vec = NULL,
+  by_sensor = 0,
+  verbose = T
+)
+
+
+table19 <- cast[[2]]
+equiv <- distance[,c('IDStation','reg_Y_nn1_ID')]
+
+aqwe19<- sqldf('select *
+      from table19 t join equiv e on t.IDStation = e.IDStation join we on e.reg_Y_nn1_ID = we.IDStation
+               where t.Date = we.Date')
+write_csv(aqwe19,'aqwePavia19.csv')
