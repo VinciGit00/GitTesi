@@ -380,38 +380,26 @@ distance <- data.frame(distance[[1]])
 distance <- distance[distance[,'IDStation'] %in% threeYesPlot[[1]],]
 
 #Download the meteo-stations
-we18 <- get_ARPA_Lombardia_W_data(
-  ID_station = distance[,'reg_Y_nn1_ID'], 
-  Year = c(2018:2019),
-  Frequency = "daily",
-  Var_vec = NULL,
-  Fns_vec = NULL,
-  by_sensor = 0,
-  verbose = T
-)
 
-we19 <- get_ARPA_Lombardia_W_data(
-  ID_station = distance[,'reg_Y_nn1_ID'], 
-  Year = 2019,
-  Frequency = "daily",
-  Var_vec = NULL,
-  Fns_vec = NULL,
-  by_sensor = 0,
-  verbose = T
-)
-
-we20 <-  get_ARPA_Lombardia_W_data(
-  ID_station = distance[,'reg_Y_nn1_ID'], 
-  Year = 2020,
-  Frequency = "daily",
-  Var_vec = NULL,
-  Fns_vec = NULL,
-  by_sensor = 0,
-  verbose = T
-)
-
-tableAllyears <- DownloadALl(startyear, lastyear, threeYesPlot[[1]])
 equiv <- distance[,c('IDStation','reg_Y_nn1_ID')]
+
+we <-  get_ARPA_Lombardia_W_data(
+  ID_station = distance[,'reg_Y_nn1_ID'], 
+  Year = c(2018:2020),
+  Frequency = "daily",
+  Var_vec = NULL,
+  Fns_vec = NULL,
+  by_sensor = 0,
+  verbose = T
+)
+
+tableAllyears <- get_ARPA_Lombardia_AQ_data(
+  ID_station = threeYesPlot[[1]],
+  Year = c(startyear:lastyear),
+  Frequency = "daily",
+)
+
+tableAllyears <- data.frame(tableAllyears)
 
 #Table with pollution stations and the first nearest weather station 
 aqwe<- sqldf('select *
@@ -419,4 +407,17 @@ aqwe<- sqldf('select *
                where t.Date = we.Date')
 
 setwd("/Users/marcovinciguerra/Github/GitTesi/DownloadData")
-write_csv(aqwe,'NNdatas.csv')
+write_csv(aqwe,'NNdata.csv')
+
+# part 6: Scatterplots
+
+plot(table18_20[,c('Ammonia','PM10','PM25')], pch = 16,  col = alpha("red", 0.3))
+plot(table18_20[,c(4:19)],  pch = 16,  col = alpha("salmon3", 0.45))
+plot(aqwe19[,c('Ammonia','PM10','PM25','Temperature','Relative_humidity','Global_radiation','Rainfall')])
+
+library(colorspace) 
+df <- table18_20
+df$color <- factor(df$NameStation,
+                   labels=c("blue", "red","green","orange","coral","brown"))
+
+plot(df[,c('Ammonia','PM10','PM25')], pch = 16,  col = alpha(as.character(df$color),0.45))
