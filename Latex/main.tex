@@ -1,0 +1,38 @@
+\documentclass{article}
+
+\usepackage[a4paper,left=18mm,right=18mm,top=20mm,bottom=18mm]{geometry}
+\usepackage[italian]{babel}
+
+\usepackage{titling}
+\usepackage{graphicx}
+
+\title{Prova}
+\author{A}
+\date{\today}
+
+\makeatletter         
+\def\@maketitle{
+\noindent\begin{minipage}{\textwidth}
+\begin{minipage}[c]{0.8\textwidth}
+\begin{center}
+{\Huge \bfseries \sffamily \@title }\\[4ex] 
+{\Large  \@author}\\[4ex] 
+\@date\\[0ex]
+\end{center}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.2\textwidth}
+\raggedleft
+\includegraphics[width = 20mm]{logo.png}\\[0.1ex]
+\includegraphics[width = 25mm]{UniBg-logo.jpg}
+\end{minipage}
+\end{minipage}
+}
+\makeatother
+
+
+\begin{document}
+
+
+\maketitle
+
+\end{document}
