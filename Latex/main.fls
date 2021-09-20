@@ -179,6 +179,9 @@ INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
+OUTPUT /Users/marcovinciguerra/Github/GitTesi/Latex/main.pdf
+INPUT /usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm
@@ -187,15 +190,14 @@ INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/logo.png
 INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/logo.png
 INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/logo.png
 INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/logo.png
-OUTPUT /Users/marcovinciguerra/Github/GitTesi/Latex/main.pdf
 INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/logo.png
 INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/UniBg-logo.jpg
 INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/UniBg-logo.jpg
 INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/UniBg-logo.jpg
 INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/UniBg-logo.jpg
 INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/UniBg-logo.jpg
-INPUT /usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/main.aux
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb
