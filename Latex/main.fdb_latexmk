@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1632304177 "/Users/marcovinciguerra/Github/GitTesi/Latex/main.tex" "/Users/marcovinciguerra/Github/GitTesi/Latex/main.pdf" "main" 1632304178
-  "/Users/marcovinciguerra/Github/GitTesi/Latex/main.aux" 1632304178 778 d23a5e0d0de42d8d6d11ae4d8afb20ed ""
-  "/Users/marcovinciguerra/Github/GitTesi/Latex/main.tex" 1632304177 3501 061dfdb2cccf4ee19ef98396c97683c6 ""
+["pdflatex"] 1632320478 "/Users/marcovinciguerra/Github/GitTesi/Latex/main.tex" "/Users/marcovinciguerra/Github/GitTesi/Latex/main.pdf" "main" 1632320479
+  "/Users/marcovinciguerra/Github/GitTesi/Latex/main.aux" 1632320479 914 8dd9639215a9913436e63e696487f3a9 ""
+  "/Users/marcovinciguerra/Github/GitTesi/Latex/main.tex" 1632320478 3806 86b591da26e17f0a8013e30d4db14c73 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -48,11 +48,12 @@
   "Milano Pascal Citta Studi 2018-2020 .jpeg" 1632300707 196660 3ad69381b1e601c18be3ca4de0f15ca4 ""
   "UniBg-logo.jpg" 1631776086 404142 09b3eb0404ca14baf958c6fbdaaac38f ""
   "logo.png" 1631776086 11719 b855d050b74fcad482d1accc148164df ""
-  "main.aux" 1632304178 778 d23a5e0d0de42d8d6d11ae4d8afb20ed "pdflatex"
-  "main.tex" 1632304177 3501 061dfdb2cccf4ee19ef98396c97683c6 ""
+  "main.aux" 1632320479 914 8dd9639215a9913436e63e696487f3a9 "pdflatex"
+  "main.tex" 1632320478 3806 86b591da26e17f0a8013e30d4db14c73 ""
+  "mappina.jpeg" 1630762896 90081 0c82c1ef1cac48f753993f1336b5edd7 ""
   (generated)
-  "main.aux"
-  "main.pdf"
-  "main.log"
   "/Users/marcovinciguerra/Github/GitTesi/Latex/main.log"
+  "main.log"
+  "main.pdf"
+  "main.aux"
   "/Users/marcovinciguerra/Github/GitTesi/Latex/main.pdf"

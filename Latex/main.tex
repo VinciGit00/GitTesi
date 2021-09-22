@@ -44,10 +44,10 @@ forniti dal sito ARPAL relativi allo studio del $NH_{3}$ e dei particolati atmos
 fine di dimostrare i risultati positivi e la diminuzione dell'inquinamento dell'aria 
 dovuti dal Covid19 in Lombardia.
 
-\section{Analisi preliminare dei dati}
+\section{Analisi preliminare dei dati per gli inquinanti}
 La fase iniziale del progetto consiste nel cercare le centraline in Lombardia
 che misurano contemporaneamente $NH_{3}$, $PM_{10}$ e $PM_{2.5}$ oppure solo due di essi
-(sono ammessi dei dati mancanti sporadicamente).
+(sono ammessi dei dati mancanti sporadicamente per entrambi i casi).
 Le centraline che misurano tutti e 3 sono solamente 6 e sono le seguenti:
 \begin{itemize}
     \item Cremona via Fatebenefratelli (ID station: 677)
@@ -66,21 +66,25 @@ delle centraline prese in considerazione precedentemente (presencetableRed.csv).
 Per ogni centralina che presenta tutti e 3 i regressori di interesse è stato fatto
 un plot della serie storica e in presenza di un dato mancante in corrispondenza
 di uno specifico giorno è stata tracciata una linea verticale blu.
+Il risultato della mappa della Lombardia in funzione di tutte le centrali che misurano 2 o più inquinanti che 
+vengono presi in considerazione è il seguente:
+
+\includegraphics[scale=0.35]{mappina.jpeg}
+
 Ecco un esempio di una  delle 6 migliori centraline con un numero accettabile di dati mancanti e una con
 un numero molto alto di dati mancanti (sempre appartenente alla lista delle 6 migliori centrali):
-\includegraphics[scale=0.25]{Cremona Via Fatebenefratelli 2018-2020 .jpeg}
-\begin{figure}[!h]
-    \caption{Cremona Via Fatebenefratelli 2018-2020, Mancanti Ammonia: 2, PM10: 4, PM25: 7, tutti e 3 contemporaneamente: 2}
-\end{figure}
 
-\includegraphics[scale=0.25]{Milano Pascal Citta Studi 2018-2020 .jpeg}
-\begin{figure}[!h]
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.35]{Cremona Via Fatebenefratelli 2018-2020 .jpeg} 
+    \caption{Cremona Via Fatebenefratelli 2018-2020, Mancanti Ammonia: 2, PM10: 4, PM25: 7, tutti e 3 contemporaneamente: 2}
+    \centering
+    \includegraphics[scale=0.35]{Milano Pascal Citta Studi 2018-2020 .jpeg}
     \caption{Milano Pascal Citta Studi 2018-2020, Mancanti Ammonia: 167, PM10: 27, PM25: 34, tutti e 3 contemporaneamente: 14}
 \end{figure}
 
-Successivamente è stata cercata per ogni centraline di inquinanti, le due migliori 
-stazioni meteo che misurassero contemporaneamente velocità del vento (wind speed), direzione del vento (wind direction), 
+\section{Analisi dei dati per il meteo}
+Successivamente è stata cercata per ogni centralina che misura gli inquinanti, le due  
+stazioni meteo più vicine che misurassero contemporaneamente velocità del vento (wind speed), direzione del vento (wind direction), 
 temperatura (temperature) e precipitazioni (rainfall).
-
-
 \end{document}

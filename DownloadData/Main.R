@@ -209,7 +209,7 @@ presencetable <- sqldf('SELECT IDStation, NameStation, PM25, PM10, Ammonia
 
 #Plot of the stations with at least 1 observation for one of the pollutant
 presencetable <- presencetable %>%
-  mutate(Etichetta = case_when(PM10 == 1 & PM25 == 1 & Ammonia == 1 ~ "Tutti",
+  mutate(Etichetta = case_when(PM10 == 1 & PM25 == 1 & Ammonia == 1 ~ "All",
                                PM10 == 1 & PM25 == 1 & Ammonia == 0 ~ "PM10-PM2.5",
                                PM10 == 1 & PM25 == 0 & Ammonia == 1 ~ "PM10-NH3",
                                PM10 == 0 & PM25 == 1 & Ammonia == 1 ~ "PM2.5-NH3",
