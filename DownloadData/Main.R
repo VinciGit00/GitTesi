@@ -350,7 +350,6 @@ for (i in 1:length(lastYearStations)) {
                              WHERE IDStation = ", lastYearStations[i],sep = ""))
   
 }
-#TODODODODODODODODDOOD
 BlueStripes(FullStations,"2018-2020") #SISTEMARE CON CONCATENAZIONE
 
 #PART 5: Nearest Neighbor

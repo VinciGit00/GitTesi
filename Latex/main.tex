@@ -7,7 +7,7 @@
 \usepackage{graphicx}
 
 \title{Report analisi dell'aria}
-\author{A}
+\author{David Guzman Pedrahita e Marco Vinciguerra}
 \date{\today}
 
 \makeatletter         
@@ -44,8 +44,25 @@ forniti dal sito ARPAL relativi allo studio del $NH_{3}$ e dei particolati atmos
 fine di dimostrare i risultati positivi e la diminuzione dell'inquinamento dell'aria 
 dovuti dal Covid19 in Lombardia.
 
-\section{Analisi dei dati}
+\section{Analisi preliminare dei dati}
 La fase iniziale del progetto consiste nel cercare le centraline in Lombardia
 che misurano contemporaneamente $NH_{3}$, $PM_{10}$ e $PM_{2.5}$ oppure solo due di essi
 (sono ammessi dei dati mancanti sporadicamente).
+Le centraline che misurano tutti e 3 sono solamente 6 e sono le seguenti:
+\begin{itemize}
+    \item Cremona via Fatebenefratelli (ID station: 677)
+    \item Schivenoglia (ID station: 703)
+    \item Sannazzaro de Burgondi Agip (ID station: 693)
+    \item Pavia via Folperti (ID station: 642)
+    \item Milano Pascal Citta Studi (ID station: 705)
+    \item Moggio (ID station: 681)
+\end{itemize}
+mentre le stazioni che ne misurano solo due sono in totale 26.
+In allegato c'è una tabella che descrive cosa viene misurato in ognuna
+delle centraline prese in considerazione precedentemente (presencetableRed.csv).
+Per ogni centralina che presenta tutti e 3 i regressori di interesse è stato fatto
+un plot della serie storica e in presenza di un dato mancante in corrispondenza
+di uno specifico giorno è stata tracciata una linea verticale blu.
+
+
 \end{document}
