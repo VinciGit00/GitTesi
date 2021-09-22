@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.1)  22 SEP 2021 11:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.1)  22 SEP 2021 11:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -182,22 +182,36 @@ File: UniBg-logo.jpg Graphic file (type jpg)
 <use UniBg-logo.jpg>
 Package pdftex.def Info: UniBg-logo.jpg  used on input line 35.
 (pdftex.def)             Requested size: 71.13188pt x 71.12737pt.
- [1
+<Cremona Via Fatebenefratelli 2018-2020 .jpeg, id=4, 1284.8pt x 722.7pt>
+File: Cremona Via Fatebenefratelli 2018-2020 .jpeg Graphic file (type jpg)
+<use Cremona Via Fatebenefratelli 2018-2020 .jpeg>
+Package pdftex.def Info: Cremona Via Fatebenefratelli 2018-2020 .jpeg  used on input line 71.
+(pdftex.def)             Requested size: 321.19922pt x 180.67455pt.
 
-{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Users/marcovinciguerra/Github/GitTesi/Latex/logo.png> </Users/marcovinciguerra/Github/GitTesi/Latex/UniBg-logo.jpg>] (/Users/marcovinciguerra/Github/GitTesi/Latex/main.aux) ) 
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Milano Pascal Citta Studi 2018-2020 .jpeg, id=5, 1284.8pt x 722.7pt>
+File: Milano Pascal Citta Studi 2018-2020 .jpeg Graphic file (type jpg)
+<use Milano Pascal Citta Studi 2018-2020 .jpeg>
+Package pdftex.def Info: Milano Pascal Citta Studi 2018-2020 .jpeg  used on input line 76.
+(pdftex.def)             Requested size: 321.19922pt x 180.67455pt.
+[1
+
+{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Users/marcovinciguerra/Github/GitTesi/Latex/logo.png> </Users/marcovinciguerra/Github/GitTesi/Latex/UniBg-logo.jpg> </Users/marcovinciguerra/Github/GitTesi/Latex/Cremona Via Fatebenefratelli 2018-2020 .jpeg>] [2 </Users/marcovinciguerra/Github/GitTesi/Latex/Milano Pascal Citta Studi 2018-2020 .jpeg>] (/Users/marcovinciguerra/Github/GitTesi/Latex/main.aux) ) 
 Here is how much of TeX's memory you used:
- 2910 strings out of 478994
- 42022 string characters out of 5858185
- 362072 words of memory out of 5000000
- 20400 multiletter control sequences out of 15000+600000
+ 2924 strings out of 478994
+ 42585 string characters out of 5858185
+ 365074 words of memory out of 5000000
+ 20411 multiletter control sequences out of 15000+600000
  405578 words of font info for 34 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,8n,74p,226b,252s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,8n,74p,292b,252s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on /Users/marcovinciguerra/Github/GitTesi/Latex/main.pdf (1 page, 503091 bytes).
+Output written on /Users/marcovinciguerra/Github/GitTesi/Latex/main.pdf (2 pages, 908464 bytes).
 PDF statistics:
- 49 PDF objects out of 1000 (max. 8388607)
- 33 compressed objects within 1 object stream
+ 54 PDF objects out of 1000 (max. 8388607)
+ 35 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

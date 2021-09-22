@@ -231,7 +231,6 @@ map_Lombardia_stations_custom(RegistryRed,col_points = Etichetta)
 #win.graph()
 map_Lombardia_stations_custom(RegistryRed)
 
-
 #PART 4: Plot of the time series
 presencetableYear <- NULL
 
