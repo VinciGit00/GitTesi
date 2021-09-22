@@ -385,7 +385,7 @@ equiv <- distance[,c('IDStation','reg_Y_nn1_ID')]
 
 we <-  get_ARPA_Lombardia_W_data(
   ID_station = distance[,'reg_Y_nn1_ID'], 
-  Year = c(2018:2020),
+  Year = c(startyear:lastyear),
   Frequency = "daily",
   Var_vec = NULL,
   Fns_vec = NULL,
@@ -410,7 +410,6 @@ setwd("/Users/marcovinciguerra/Github/GitTesi/DownloadData")
 write_csv(aqwe,'NNdata.csv')
 
 # part 6: Scatterplots
-
 plot(table18_20[,c('Ammonia','PM10','PM25')], pch = 16,  col = alpha("red", 0.3))
 plot(table18_20[,c(4:19)],  pch = 16,  col = alpha("salmon3", 0.45))
 plot(aqwe19[,c('Ammonia','PM10','PM25','Temperature','Relative_humidity','Global_radiation','Rainfall')])
