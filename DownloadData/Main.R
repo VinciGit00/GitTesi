@@ -229,6 +229,14 @@ map_Lombardia_stations_custom(RegistryRed,col_points = Etichetta)
 #win.graph()
 map_Lombardia_stations_custom(RegistryRed)
 
+
+
+
+
+
+
+
+
 #PART 4: Plot of the time series
 presencetableYear <- NULL
 
@@ -347,11 +355,8 @@ for (i in 1:length(lastYearStations)) {
                              WHERE IDStation = ", lastYearStations[i],sep = ""))
   
 }
-BlueStripes(FullStations,"2018-2020") #SISTEMARE CON CONCATENAZIONE
 
-#PART 5: Nearest Neighbor
-#Calculate the distances of the 2 nearest stations 
-# Distances
+BlueStripes(FullStations,"2018-2020") #SISTEMARE CON CONCATENAZIONE
 
 #PART 5: Nearest Neighbor
 #Calculate the distances of the 2 nearest stations 
@@ -439,6 +444,7 @@ for (i in 1:length(WStations)) {
 BlueStripesW(FullStationsW,"2018-2020")
 
 # part 6: Scatterplots
+
 plot(table18_20[,c('Ammonia','PM10','PM25')], pch = 16,  col = alpha("red", 0.3))
 plot(table18_20[,c(4:19)],  pch = 16,  col = alpha("salmon3", 0.45))
 plot(aqwe19[,c('Ammonia','PM10','PM25','Temperature','Relative_humidity','Global_radiation','Rainfall')])
