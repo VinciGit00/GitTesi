@@ -31,7 +31,6 @@ beststations <- RegistryRed %>%
   distinct(IDStation) %>%
   pull() # Stations that measure at least 2 of the variables at the same time
 
-
 startyear <- 2018
 lastyear  <- 2020
 
@@ -127,7 +126,6 @@ for(index in startyear:lastyear) {
 
 
 #COUNT OF THE TOTAL OF THE MISSING DATAS for every station
-
 totalMissingFromBeginning <- NULL
 temp <- NULL
 for(index in 1:(length(tableMissingDatasTotal2))) {
