@@ -31,7 +31,6 @@ beststations <- RegistryRed %>%
   distinct(IDStation) %>%
   pull() # Stations that measure at least 2 of the variables at the same time
 
-
 startyear <- 2018
 lastyear  <- 2020
 
@@ -127,7 +126,6 @@ for(index in startyear:lastyear) {
 
 
 #COUNT OF THE TOTAL OF THE MISSING DATAS for every station
-
 totalMissingFromBeginning <- NULL
 temp <- NULL
 for(index in 1:(length(tableMissingDatasTotal2))) {
@@ -209,7 +207,7 @@ presencetable <- sqldf('SELECT IDStation, NameStation, PM25, PM10, Ammonia
 
 #Plot of the stations with at least 1 observation for one of the pollutant
 presencetable <- presencetable %>%
-  mutate(Etichetta = case_when(PM10 == 1 & PM25 == 1 & Ammonia == 1 ~ "Tutti",
+  mutate(Etichetta = case_when(PM10 == 1 & PM25 == 1 & Ammonia == 1 ~ "All",
                                PM10 == 1 & PM25 == 1 & Ammonia == 0 ~ "PM10-PM2.5",
                                PM10 == 1 & PM25 == 0 & Ammonia == 1 ~ "PM10-NH3",
                                PM10 == 0 & PM25 == 1 & Ammonia == 1 ~ "PM2.5-NH3",
@@ -230,7 +228,6 @@ map_Lombardia_stations_custom(RegistryRed,col_points = Etichetta)
 
 #win.graph()
 map_Lombardia_stations_custom(RegistryRed)
-
 
 #PART 4: Plot of the time series
 presencetableYear <- NULL
@@ -350,7 +347,6 @@ for (i in 1:length(lastYearStations)) {
                              WHERE IDStation = ", lastYearStations[i],sep = ""))
   
 }
-#TODODODODODODODODDOOD
 BlueStripes(FullStations,"2018-2020") #SISTEMARE CON CONCATENAZIONE
 
 #PART 5: Nearest Neighbor
@@ -398,7 +394,7 @@ equiv <- distance[,c('IDStation','reg_Y_nn1_ID')]
 
 we <-  get_ARPA_Lombardia_W_data(
   ID_station = distance[,'reg_Y_nn1_ID'], 
-  Year = c(2018:2020),
+  Year = c(startyear:lastyear),
   Frequency = "daily",
   Var_vec = NULL,
   Fns_vec = NULL,
@@ -443,7 +439,6 @@ for (i in 1:length(WStations)) {
 BlueStripesW(FullStationsW,"2018-2020")
 
 # part 6: Scatterplots
-
 plot(table18_20[,c('Ammonia','PM10','PM25')], pch = 16,  col = alpha("red", 0.3))
 plot(table18_20[,c(4:19)],  pch = 16,  col = alpha("salmon3", 0.45))
 plot(aqwe19[,c('Ammonia','PM10','PM25','Temperature','Relative_humidity','Global_radiation','Rainfall')])
