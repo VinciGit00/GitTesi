@@ -355,13 +355,26 @@ BlueStripes(FullStations,"2018-2020") #SISTEMARE CON CONCATENAZIONE
 
 #PART 5: Nearest Neighbor
 #Calculate the distances of the 2 nearest stations 
+# Distances
+
+#PART 5: Nearest Neighbor
+#Calculate the distances of the 2 nearest stations 
 regAQ <- get_ARPA_Lombardia_AQ_registry()
+
 regAQ <- regAQ %>%
   filter(Pollutant %in% c("PM10"), is.na(DateStop)) %>%
   distinct(IDStation,NameStation,Longitude,Latitude) %>%
   mutate(lng = Longitude, lat = Latitude) %>%
   sf::st_as_sf(coords = c("lng", "lat"), crs=4326)
+
 regW <- get_ARPA_Lombardia_W_registry()
+
+regW <- regW %>% 
+  filter(Measure %in% c("Wind_speed","Wind_direction","Temperature","Rainfall"),
+         is.na(DateStop),
+         year(DateStart)<=2017) 
+
+
 regW <- regW %>%
   filter(is.na(DateStop)) %>%
   distinct(IDStation,NameStation,Longitude,Latitude) %>%
@@ -399,6 +412,7 @@ tableAllyears <- get_ARPA_Lombardia_AQ_data(
   Frequency = "daily",
 )
 
+we <- data.frame(we)
 tableAllyears <- data.frame(tableAllyears)
 
 #Table with pollution stations and the first nearest weather station 
@@ -408,6 +422,25 @@ aqwe<- sqldf('select *
 
 setwd("/Users/marcovinciguerra/Github/GitTesi/DownloadData")
 write_csv(aqwe,'NNdata.csv')
+
+# single out the weather variables to study regarding their missing values
+
+FullStationsW <- NULL
+
+WStations <- sqldf('select distinct IDStation
+                   from we')
+WStations <- as.matrix(WStations)
+
+for (i in 1:length(WStations)) {
+  
+  FullStationsW[[i]] <- sqldf(paste("SELECT *
+                             FROM we
+                             WHERE IDStation = ", WStations[i],sep = ""))
+  
+}
+
+
+BlueStripesW(FullStationsW,"2018-2020")
 
 # part 6: Scatterplots
 
