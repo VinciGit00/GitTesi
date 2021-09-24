@@ -59,11 +59,10 @@ seguenti:
       \caption{Stazioni del meteo}
       \label{fig:sub2}
     \end{subfigure}
-    \caption{A figure with two subfigures}
     \label{fig:test}
     \end{figure}
 Come si può osservare entrambe le reti di centraline non sono equidistanti tra loro e non formano 
-una rete omogenea ma eterogenea.
+una rete omogenea ma una rete eterogenea.
 
 \section{Analisi preliminare dei dati per gli inquinanti}
 La fase iniziale del progetto consiste nel cercare le centraline in Lombardia
@@ -80,7 +79,7 @@ Le centraline che misurano tutti e 3 sono solamente 6 e sono le seguenti:
 \end{itemize}
 mentre le stazioni che ne misurano solo due sono in totale 26.
 Per ognuno di essi è stato calcolato quanti giorni tra il 2018 e il 2020 sono assenti
-$NH_{3}$, $PM_{10}$ e $PM_{2.5}$ e quanti giorni sono assenti tutti e 3 contemporaneamente
+$NH_{3}$, $PM_{10}$ e $PM_{2.5}$ (singolarmente) e quanti giorni sono assenti tutti e 3 contemporaneamente
 (allegata con il nome MissingFromTheBeginning.csv).
 In allegato c'è una tabella che descrive cosa viene misurato in ognuna
 delle centraline prese in considerazione precedentemente (presencetableRed.csv).
@@ -106,6 +105,6 @@ un numero molto alto di dati mancanti (sempre appartenente alla lista delle 6 mi
 
 \section{Analisi dei dati per il meteo}
 Successivamente è stata cercata per ogni centralina che misura gli inquinanti, le due  
-stazioni meteo più vicine che misurassero contemporaneamente velocità del vento (wind speed), direzione del vento (wind direction), 
-temperatura (temperature) e precipitazioni (rainfall).
+stazioni meteo con la distanza euclidea inferiore che misurassero contemporaneamente velocità del vento (wind speed), 
+direzione del vento (wind direction), temperatura (temperature) e precipitazioni (rainfall).
 \end{document}
