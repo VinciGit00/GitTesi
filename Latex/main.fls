@@ -217,56 +217,56 @@ INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
-INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/logo.png
-INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/logo.png
-INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/logo.png
-INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/logo.png
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Picture/logo.png
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Picture/logo.png
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Picture/logo.png
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Picture/logo.png
 OUTPUT /Users/marcovinciguerra/Github/GitTesi/Latex/main.pdf
-INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/logo.png
-INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/UniBg-logo.jpg
-INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/UniBg-logo.jpg
-INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/UniBg-logo.jpg
-INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/UniBg-logo.jpg
-INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/UniBg-logo.jpg
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Picture/logo.png
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Picture/UniBg-logo.jpg
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Picture/UniBg-logo.jpg
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Picture/UniBg-logo.jpg
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Picture/UniBg-logo.jpg
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Picture/UniBg-logo.jpg
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Lpollution.png
-INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Lpollution.png
-INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Lpollution.png
-INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Lpollution.png
-INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Lpollution.png
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Picture/Lpollution.png
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Picture/Lpollution.png
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Picture/Lpollution.png
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Picture/Lpollution.png
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Picture/Lpollution.png
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr9.tfm
-INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Lweather.png
-INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Lweather.png
-INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Lweather.png
-INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Lweather.png
-INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Lweather.png
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Picture/Lweather.png
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Picture/Lweather.png
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Picture/Lweather.png
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Picture/Lweather.png
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Picture/Lweather.png
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm
-INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/b.png
-INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/b.png
-INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/b.png
-INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/b.png
-INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/PresenceTable.png
-INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/PresenceTable.png
-INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/PresenceTable.png
-INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/PresenceTable.png
-INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/PresenceTable.png
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Picture/b.png
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Picture/b.png
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Picture/b.png
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Picture/b.png
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Picture/PresenceTable.png
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Picture/PresenceTable.png
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Picture/PresenceTable.png
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Picture/PresenceTable.png
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Picture/PresenceTable.png
 INPUT /usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map
-INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/mappina.jpeg
-INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/mappina.jpeg
-INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/mappina.jpeg
-INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/mappina.jpeg
-INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/mappina.jpeg
-INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Cremona Via Fatebenefratelli 2018-2020 .jpeg
-INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Cremona Via Fatebenefratelli 2018-2020 .jpeg
-INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Cremona Via Fatebenefratelli 2018-2020 .jpeg
-INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Cremona Via Fatebenefratelli 2018-2020 .jpeg
-INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Cremona Via Fatebenefratelli 2018-2020 .jpeg
-INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Milano Pascal Citta Studi 2018-2020 .jpeg
-INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Milano Pascal Citta Studi 2018-2020 .jpeg
-INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Milano Pascal Citta Studi 2018-2020 .jpeg
-INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Milano Pascal Citta Studi 2018-2020 .jpeg
-INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Milano Pascal Citta Studi 2018-2020 .jpeg
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Picture/mappina.jpeg
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Picture/mappina.jpeg
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Picture/mappina.jpeg
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Picture/mappina.jpeg
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Picture/mappina.jpeg
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Picture/Cremona Via Fatebenefratelli 2018-2020 .jpeg
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Picture/Cremona Via Fatebenefratelli 2018-2020 .jpeg
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Picture/Cremona Via Fatebenefratelli 2018-2020 .jpeg
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Picture/Cremona Via Fatebenefratelli 2018-2020 .jpeg
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Picture/Cremona Via Fatebenefratelli 2018-2020 .jpeg
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Picture/Milano Pascal Citta Studi 2018-2020 .jpeg
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Picture/Milano Pascal Citta Studi 2018-2020 .jpeg
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Picture/Milano Pascal Citta Studi 2018-2020 .jpeg
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Picture/Milano Pascal Citta Studi 2018-2020 .jpeg
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Picture/Milano Pascal Citta Studi 2018-2020 .jpeg
 INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/main.aux
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb

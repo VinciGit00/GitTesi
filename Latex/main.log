@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.1)  26 SEP 2021 11:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.1)  26 SEP 2021 15:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -194,70 +194,70 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 36.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 36.
-<logo.png, id=1, 163.3603pt x 110.66344pt>
-File: logo.png Graphic file (type png)
-<use logo.png>
-Package pdftex.def Info: logo.png  used on input line 36.
+<Picture/logo.png, id=1, 163.3603pt x 110.66344pt>
+File: Picture/logo.png Graphic file (type png)
+<use Picture/logo.png>
+Package pdftex.def Info: Picture/logo.png  used on input line 36.
 (pdftex.def)             Requested size: 56.9055pt x 38.5487pt.
-<UniBg-logo.jpg, id=3, 1003.75pt x 1003.75pt>
-File: UniBg-logo.jpg Graphic file (type jpg)
-<use UniBg-logo.jpg>
-Package pdftex.def Info: UniBg-logo.jpg  used on input line 36.
+<Picture/UniBg-logo.jpg, id=3, 1003.75pt x 1003.75pt>
+File: Picture/UniBg-logo.jpg Graphic file (type jpg)
+<use Picture/UniBg-logo.jpg>
+Package pdftex.def Info: Picture/UniBg-logo.jpg  used on input line 36.
 (pdftex.def)             Requested size: 71.13188pt x 71.12737pt.
-<Lpollution.png, id=4, 209.78375pt x 163.61125pt>
-File: Lpollution.png Graphic file (type png)
-<use Lpollution.png>
-Package pdftex.def Info: Lpollution.png  used on input line 52.
+<Picture/Lpollution.png, id=4, 209.78375pt x 163.61125pt>
+File: Picture/Lpollution.png Graphic file (type png)
+<use Picture/Lpollution.png>
+Package pdftex.def Info: Picture/Lpollution.png  used on input line 52.
 (pdftex.def)             Requested size: 173.27652pt x 135.13821pt.
-<Lweather.png, id=5, 192.72pt x 165.61874pt>
-File: Lweather.png Graphic file (type png)
-<use Lweather.png>
-Package pdftex.def Info: Lweather.png  used on input line 58.
+<Picture/Lweather.png, id=5, 192.72pt x 165.61874pt>
+File: Picture/Lweather.png Graphic file (type png)
+<use Picture/Lweather.png>
+Package pdftex.def Info: Picture/Lweather.png  used on input line 58.
 (pdftex.def)             Requested size: 173.27652pt x 148.9089pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 88.
 
-<b.png, id=6, 326.21875pt x 179.67125pt>
-File: b.png Graphic file (type png)
-<use b.png>
-Package pdftex.def Info: b.png  used on input line 90.
+<Picture/b.png, id=6, 326.21875pt x 179.67125pt>
+File: Picture/b.png Graphic file (type png)
+<use Picture/b.png>
+Package pdftex.def Info: Picture/b.png  used on input line 90.
 (pdftex.def)             Requested size: 326.21794pt x 179.67079pt.
-<PresenceTable.png, id=7, 259.97125pt x 224.84pt>
-File: PresenceTable.png Graphic file (type png)
-<use PresenceTable.png>
-Package pdftex.def Info: PresenceTable.png  used on input line 92.
+<Picture/PresenceTable.png, id=7, 259.97125pt x 224.84pt>
+File: Picture/PresenceTable.png Graphic file (type png)
+<use Picture/PresenceTable.png>
+Package pdftex.def Info: Picture/PresenceTable.png  used on input line 92.
 (pdftex.def)             Requested size: 259.97061pt x 224.83945pt.
 [1
 
-{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Users/marcovinciguerra/Github/GitTesi/Latex/logo.png> </Users/marcovinciguerra/Github/GitTesi/Latex/UniBg-logo.jpg> </Users/marcovinciguerra/Github/GitTesi/Latex/Lpollution.png> </Users/marcovinciguerra/Github/GitTesi/Latex/Lweather.png>] [2 </Users/marcovinciguerra/Github/GitTesi/Latex/b.png> </Users/marcovinciguerra/Github/GitTesi/Latex/PresenceTable.png>]
-<mappina.jpeg, id=30, 1284.8pt x 722.7pt>
-File: mappina.jpeg Graphic file (type jpg)
-<use mappina.jpeg>
-Package pdftex.def Info: mappina.jpeg  used on input line 103.
+{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Users/marcovinciguerra/Github/GitTesi/Latex/Picture/logo.png> </Users/marcovinciguerra/Github/GitTesi/Latex/Picture/UniBg-logo.jpg> </Users/marcovinciguerra/Github/GitTesi/Latex/Picture/Lpollution.png> </Users/marcovinciguerra/Github/GitTesi/Latex/Picture/Lweather.png>] [2 </Users/marcovinciguerra/Github/GitTesi/Latex/Picture/b.png> </Users/marcovinciguerra/Github/GitTesi/Latex/Picture/PresenceTable.png>]
+<Picture/mappina.jpeg, id=30, 1284.8pt x 722.7pt>
+File: Picture/mappina.jpeg Graphic file (type jpg)
+<use Picture/mappina.jpeg>
+Package pdftex.def Info: Picture/mappina.jpeg  used on input line 103.
 (pdftex.def)             Requested size: 449.68674pt x 252.94878pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 110.
 
-<Cremona Via Fatebenefratelli 2018-2020 .jpeg, id=31, 1284.8pt x 722.7pt>
-File: Cremona Via Fatebenefratelli 2018-2020 .jpeg Graphic file (type jpg)
-<use Cremona Via Fatebenefratelli 2018-2020 .jpeg>
-Package pdftex.def Info: Cremona Via Fatebenefratelli 2018-2020 .jpeg  used on input line 112.
+<Picture/Cremona Via Fatebenefratelli 2018-2020 .jpeg, id=31, 1284.8pt x 722.7pt>
+File: Picture/Cremona Via Fatebenefratelli 2018-2020 .jpeg Graphic file (type jpg)
+<use Picture/Cremona Via Fatebenefratelli 2018-2020 .jpeg>
+Package pdftex.def Info: Picture/Cremona Via Fatebenefratelli 2018-2020 .jpeg  used on input line 112.
 (pdftex.def)             Requested size: 449.68674pt x 252.94878pt.
-<Milano Pascal Citta Studi 2018-2020 .jpeg, id=32, 1284.8pt x 722.7pt>
-File: Milano Pascal Citta Studi 2018-2020 .jpeg Graphic file (type jpg)
-<use Milano Pascal Citta Studi 2018-2020 .jpeg>
-Package pdftex.def Info: Milano Pascal Citta Studi 2018-2020 .jpeg  used on input line 115.
+<Picture/Milano Pascal Citta Studi 2018-2020 .jpeg, id=32, 1284.8pt x 722.7pt>
+File: Picture/Milano Pascal Citta Studi 2018-2020 .jpeg Graphic file (type jpg)
+<use Picture/Milano Pascal Citta Studi 2018-2020 .jpeg>
+Package pdftex.def Info: Picture/Milano Pascal Citta Studi 2018-2020 .jpeg  used on input line 115.
 (pdftex.def)             Requested size: 449.68674pt x 252.94878pt.
-[3 </Users/marcovinciguerra/Github/GitTesi/Latex/mappina.jpeg>] [4 </Users/marcovinciguerra/Github/GitTesi/Latex/Cremona Via Fatebenefratelli 2018-2020 .jpeg> </Users/marcovinciguerra/Github/GitTesi/Latex/Milano Pascal Citta Studi 2018-2020 .jpeg>] (/Users/marcovinciguerra/Github/GitTesi/Latex/main.aux) ) 
+[3 </Users/marcovinciguerra/Github/GitTesi/Latex/Picture/mappina.jpeg>] [4 </Users/marcovinciguerra/Github/GitTesi/Latex/Picture/Cremona Via Fatebenefratelli 2018-2020 .jpeg> </Users/marcovinciguerra/Github/GitTesi/Latex/Picture/Milano Pascal Citta Studi 2018-2020 .jpeg>] (/Users/marcovinciguerra/Github/GitTesi/Latex/main.aux) ) 
 Here is how much of TeX's memory you used:
- 4277 strings out of 478994
- 68372 string characters out of 5858185
- 389732 words of memory out of 5000000
- 21749 multiletter control sequences out of 15000+600000
+ 4279 strings out of 478994
+ 68757 string characters out of 5858185
+ 389748 words of memory out of 5000000
+ 21750 multiletter control sequences out of 15000+600000
  405877 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,8n,77p,323b,457s stack positions out of 5000i,500n,10000p,200000b,80000s

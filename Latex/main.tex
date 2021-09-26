@@ -23,10 +23,10 @@
 \end{minipage}\hfill
 \begin{minipage}[c]{0.2\textwidth}
 \raggedleft
-\includegraphics[width = 20mm]{logo.png}\\[0.1ex]
-\includegraphics[width = 25mm]{UniBg-logo.jpg}
+\includegraphics[width = 20mm]{Picture/logo.png}\\[0.1ex]
+\includegraphics[width = 25mm]{Picture/UniBg-logo.jpg}
 \end{minipage}
-\end{minipage}
+\end{minipage}  
 }
 \makeatother
 
@@ -49,13 +49,13 @@ seguenti:
     \centering
     \begin{subfigure}{.5\textwidth}
       \centering
-      \includegraphics[width=.7\linewidth]{Lpollution.png}
+      \includegraphics[width=.7\linewidth]{Picture/Lpollution.png}
       \caption{Stazioni degli inquinanti}
       \label{fig:sub1}
     \end{subfigure}%
     \begin{subfigure}{.5\textwidth}
       \centering
-      \includegraphics[width=.7\linewidth]{Lweather.png}
+      \includegraphics[width=.7\linewidth]{Picture/Lweather.png}
       \caption{Stazioni del meteo}
       \label{fig:sub2}
     \end{subfigure}
@@ -69,7 +69,7 @@ La fase iniziale del progetto consiste nel cercare le centraline in Lombardia
 che misurano contemporaneamente $NH_{3}$, $PM10$ e $PM2.5$ oppure solo due di essi
 (sono ammessi dei dati mancanti sporadicamente per entrambi i casi). In totale 
 ARPA Lombardia mette a disposizione 174 stazioni di qualità dell'aria e 279 stazioni 
-meteorologiche 
+meteorologiche  
 Le centraline che misurano tutti e 3 i regressori sono solamente 6 e sono le seguenti:
 \begin{itemize}
     \item Cremona via Fatebenefratelli (ID station: 677)
@@ -87,9 +87,9 @@ $NH_{3}$, $PM10$ e $PM2.5$ (singolarmente) e quanti giorni sono assenti tutti e 
 (allegata con il nome MissingFromTheBeginning.csv). 
 \begin{figure}[]
   \centering
-  \includegraphics{b}
+  \includegraphics{Picture/b}
   \centering
-  \includegraphics{PresenceTable.png}
+  \includegraphics{Picture/PresenceTable.png}
 \end{figure}
 
 In allegato c'è una tabella che descrive cosa viene misurato in ognuna
@@ -100,7 +100,7 @@ di uno specifico giorno è stata tracciata una linea verticale blu.
 Il risultato della mappa della Lombardia in funzione di tutte le centrali che misurano 2 o più inquinanti che 
 vengono presi in considerazione è il seguente:
 
-\includegraphics[scale=0.35]{mappina.jpeg}
+\includegraphics[scale=0.35]{Picture/mappina.jpeg}
 
 La mancanza di dati può essere un fattore importante per gestire la fase successiva della tesi
 e quindi sono state scelte le stazioni con il numero di missing data inferiore.
@@ -109,10 +109,10 @@ un numero molto alto di dati mancanti (sempre appartenente alla lista delle 6 mi
 
 \begin{figure}[]
     \centering
-    \includegraphics[scale=0.35]{Cremona Via Fatebenefratelli 2018-2020 .jpeg} 
+    \includegraphics[scale=0.35]{Picture/Cremona Via Fatebenefratelli 2018-2020 .jpeg} 
     \caption{Cremona Via Fatebenefratelli 2018-2020, Mancanti Ammonia: 2, PM10: 4, PM25: 7, tutti e 3 contemporaneamente: 2}
     \centering
-    \includegraphics[scale=0.35]{Milano Pascal Citta Studi 2018-2020 .jpeg}
+    \includegraphics[scale=0.35]{Picture/Milano Pascal Citta Studi 2018-2020 .jpeg}
     \caption{Milano Pascal Citta Studi 2018-2020, Mancanti Ammonia: 167, PM10: 27, PM25: 34, tutti e 3 contemporaneamente: 14}
 \end{figure}
 
