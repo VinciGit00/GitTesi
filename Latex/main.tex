@@ -36,7 +36,7 @@
 \maketitle
 
 \par\noindent\rule{\textwidth}{0.4pt}
-\textbf{Abstract:} Paper preliminare per la tesi di laurea
+\textbf{Abstract:} Paper preliminare per la tesi di laurea (gestione dei dati inquinanti-meteo)
 \par\noindent\rule{\textwidth}{0.4pt}
 
 \section{Introduzione}
@@ -61,7 +61,7 @@ seguenti:
     \end{subfigure}
     \label{fig:test}
 \end{figure}
-Come si può osservare entrambe le reti di centraline non sono equidistanti tra loro e non formano 
+\\Come si può osservare entrambe le reti di centraline non sono equidistanti tra loro e non formano 
 una rete omogenea ma una rete eterogenea.
 
 \section{Analisi preliminare dei dati per gli inquinanti}
@@ -117,14 +117,15 @@ un numero molto alto di dati mancanti (sempre appartenente alla lista delle 6 mi
 \end{figure}
 
 \section{Analisi dei dati per il meteo}
-Nel caso delle centraline meteorologiche, la strategia e l’obiettivo per studiare la qualità dei dati differisce da quella proposta per gli inquinanti. 
+Nel caso delle centraline meteorologiche, la strategia e l’obiettivo per studiare la qualità dei dati differisce da quella proposta 
+per gli inquinanti. 
 Difatti, mentre nelle variabili della qualità dell’aria l’ammoniaca e il particolato erano, 
 per così dire, i bersagli, le variabili meteorologiche hanno un ruolo meramente ausiliario. 
 Dopotutto, anche se il loro ruolo può essere determinante, non sono le variabili che i modelli cercheranno di predire. 
 Successivamente è stata cercata per ogni centralina che misura gli inquinanti, le due  
 stazioni meteo con la distanza euclidea inferiore che misurassero contemporaneamente velocità del vento (wind speed), 
 direzione del vento (wind direction), temperatura (temperature) e precipitazioni (rainfall).
-Infine è stata fatta un join per unire i dati delle 6 migliori stazioni con i 2 nearest neighbor delle
+Infine è stata fatto un join per unire i dati delle 6 migliori stazioni con i 2 nearest neighbor delle
 stazioni meteo più vicine e i relativi dati meteo (allegato come NNdata.csv). 
 
 \section{Analisi missing data per il clima}

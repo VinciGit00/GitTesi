@@ -31,6 +31,7 @@ beststations <- RegistryRed %>%
   distinct(IDStation) %>%
   pull() # Stations that measure at least 2 of the variables at the same time
 
+#Insertion of the starting year and ending year
 startyear <- 2018
 lastyear  <- 2020
 
@@ -125,7 +126,7 @@ for(index in startyear:lastyear) {
 }
 
 
-#COUNT OF THE TOTAL OF THE MISSING DATAS for every station
+#COUNT OF THE TOTAL OF THE MISSING DATAS from the beginning for every station
 totalMissingFromBeginning <- NULL
 temp <- NULL
 for(index in 1:(length(tableMissingDatasTotal2))) {
@@ -224,18 +225,10 @@ setwd("/Users/marcovinciguerra/Github/GitTesi/DownloadData")
 write.table(presencetable, "presencetable_red.csv")
 
 #PART 3: plot of the Lombardy map
-map_Lombardia_stations_custom(RegistryRed,col_points = Etichetta)
+map_Lombardia_stations_custom(RegistryRed,col_points = Tag)
 
 #win.graph()
 map_Lombardia_stations_custom(RegistryRed)
-
-
-
-
-
-
-
-
 
 #PART 4: Plot of the time series
 presencetableYear <- NULL
@@ -285,7 +278,6 @@ for (i in 1:length(tableMissingAmmmonia)) {
   #setwd("/Users/marcovinciguerra/Github/GitTesi/DownloadData")
   #write.csv(presencetableYear, paste("presencetableYear",i,".csv",sep = ""))
 }
-
 
 threeYesPlot <- NULL
 setwd("/Users/marcovinciguerra/Github/GitTesi/DownloadData/Dataplot")
@@ -356,9 +348,9 @@ for (i in 1:length(lastYearStations)) {
   
 }
 
-BlueStripes(FullStations,"2018-2020") #SISTEMARE CON CONCATENAZIONE
+BlueStripes(FullStations,"2018-2020") 
 
-#PART 5: Nearest Neighbor
+#PART 5: 2 best Nearest Neighbor
 #Calculate the distances of the 2 nearest stations 
 regAQ <- get_ARPA_Lombardia_AQ_registry()
 
@@ -444,7 +436,6 @@ for (i in 1:length(WStations)) {
 BlueStripesW(FullStationsW,"2018-2020")
 
 # part 6: Scatterplots
-
 plot(table18_20[,c('Ammonia','PM10','PM25')], pch = 16,  col = alpha("red", 0.3))
 plot(table18_20[,c(4:19)],  pch = 16,  col = alpha("salmon3", 0.45))
 plot(aqwe19[,c('Ammonia','PM10','PM25','Temperature','Relative_humidity','Global_radiation','Rainfall')])
