@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1632663573 "/Users/marcovinciguerra/Github/GitTesi/Latex/main.tex" "/Users/marcovinciguerra/Github/GitTesi/Latex/main.pdf" "main" 1632663574
-  "/Users/marcovinciguerra/Github/GitTesi/Latex/main.aux" 1632663574 1305 3057dbda5873a868284933512144f9a4 ""
-  "/Users/marcovinciguerra/Github/GitTesi/Latex/main.tex" 1632663572 6110 403d64af5eca72aff021f8fd783ba115 ""
+["pdflatex"] 1632989781 "/Users/marcovinciguerra/Github/GitTesi/Latex/main.tex" "/Users/marcovinciguerra/Github/GitTesi/Latex/main.pdf" "main" 1632989783
+  "/Users/marcovinciguerra/Github/GitTesi/Latex/main.aux" 1632989782 1305 2ca490da7adf4a8b6d781e548a9a7df2 ""
+  "/Users/marcovinciguerra/Github/GitTesi/Latex/main.tex" 1632989779 6118 ed32bd7b4bf1e2a0524a7d3abf287861 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -57,11 +57,11 @@
   "Picture/b.png" 1632663373 44356 a972db488f1570c63d574fe8a734abf3 ""
   "Picture/logo.png" 1632663373 11719 b855d050b74fcad482d1accc148164df ""
   "Picture/mappina.jpeg" 1632663373 90081 0c82c1ef1cac48f753993f1336b5edd7 ""
-  "main.aux" 1632663574 1305 3057dbda5873a868284933512144f9a4 "pdflatex"
-  "main.tex" 1632663572 6110 403d64af5eca72aff021f8fd783ba115 ""
+  "main.aux" 1632989782 1305 2ca490da7adf4a8b6d781e548a9a7df2 "pdflatex"
+  "main.tex" 1632989779 6118 ed32bd7b4bf1e2a0524a7d3abf287861 ""
   (generated)
-  "/Users/marcovinciguerra/Github/GitTesi/Latex/main.log"
-  "main.pdf"
-  "main.aux"
   "main.log"
+  "main.aux"
+  "/Users/marcovinciguerra/Github/GitTesi/Latex/main.log"
   "/Users/marcovinciguerra/Github/GitTesi/Latex/main.pdf"
+  "main.pdf"
