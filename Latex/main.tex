@@ -42,8 +42,11 @@
 \section{Introduzione}
 La fase iniziale del progetto consiste nell'analisi nell'arco temporale 2018-2020 dei dati 
 forniti dal sito ARPAL relativi allo studio del $NH_{3}$ e dei particolati atmosferici $PM10$ e $PM2.5$ al 
-fine di dimostrare i risultati positivi e la diminuzione dell'inquinamento dell'aria 
-dovuti dal Covid19 in Lombardia. Le mappe della delle stazioni che rilevano gli inquinanti e meteo sono le 
+fine di dimostrare una possibile correlazione tra l'ammoniaca e i particolati. 
+E' stato scelto questo periodo di tempo perchè ci si aspetta che i dati continuino a essere rilevati nel futuro
+e si auspica che riflettano i comportamenti più recenti di questi inquinanti in un modo più accurato.
+\\Ogni stazione misura diversi inqunanti a seconda dei sensori installati e/o può anche misurare anche dati meteo.
+Le mappe della delle stazioni che rilevano gli inquinanti e meteo sono le 
 seguenti:
 \begin{figure}[h!]
     \centering
@@ -67,10 +70,12 @@ una rete omogenea ma una rete eterogenea.
 \section{Analisi preliminare dei dati per gli inquinanti}
 La fase iniziale del progetto consiste nel cercare le centraline in Lombardia
 che misurano contemporaneamente $NH_{3}$, $PM10$ e $PM2.5$ oppure solo due di essi
-(sono ammessi dei dati mancanti sporadicamente per entrambi i casi). In totale 
-ARPA Lombardia mette a disposizione 174 stazioni di qualità dell'aria e 279 stazioni 
-meteorologiche  
-Le centraline che misurano tutti e 3 i regressori sono solamente 6 e sono le seguenti:
+(sono ammessi dei dati mancanti sporadicamente per entrambi i casi), in quanto non è possibile
+studiare le relazioni tra questi inquinanti se solo uno dei tre è disponibile.
+E' importante anche tenere conto della frequenza con cui i dati non vengono misurati.
+In totale ARPA Lombardia mette a disposizione 174 stazioni di qualità dell'aria e 279 stazioni 
+meteorologiche.
+Le centraline che misurano tutti e 3 gli inquinanti sono solamente 6 e sono le seguenti:
 \begin{itemize}
     \item Cremona via Fatebenefratelli (ID station: 677)
     \item Schivenoglia (ID station: 703)
@@ -87,16 +92,16 @@ $NH_{3}$, $PM10$ e $PM2.5$ (singolarmente) e quanti giorni sono assenti tutti e 
 (allegata con il nome MissingFromTheBeginning.csv). 
 \begin{figure}[h!]
   \centering
-  \includegraphics{Picture/b}
+  \includegraphics[scale=0.75]{Picture/b.png}
   \centering
-  \includegraphics{Picture/PresenceTable.png}
+  \includegraphics[scale=0.65]{Picture/PresenceTable.png}       
 \end{figure}
 
 In allegato c'è una tabella che descrive cosa viene misurato in ognuna
 delle centraline prese in considerazione precedentemente (presencetableRed.csv), i dati di queste stazioni possono comunque risultare utili qualora fosse necessario un volume di dati più elevato.
 Per ogni centralina che presenta tutti e 3 i regressori di interesse è stato fatto
-un plot della serie storica e in presenza di un dato mancante in corrispondenza
-di uno specifico giorno è stata tracciata una linea verticale blu.
+un plot della serie storica, e in presenza di un dato mancante in corrispondenza   
+di uno specifico giorno, è stata tracciata una linea verticale blu.
 Il risultato della mappa della Lombardia in funzione di tutte le centrali che misurano 2 o più inquinanti che 
 vengono presi in considerazione è il seguente:
 
@@ -116,6 +121,8 @@ un numero molto alto di dati mancanti (sempre appartenente alla lista delle 6 mi
     \includegraphics[scale=0.35]{Picture/Milano Pascal Citta Studi 2018-2020 .jpeg}
     \caption{Milano Pascal Citta Studi 2018-2020, Mancanti Ammonia: 167, PM10: 27, PM25: 34, tutti e 3 contemporaneamente: 14}
 \end{figure}
+Come si può notare da questi due grafici (ma persiste anche per tutte le altre stazioni) la variabile
+più problematica, ossia quela con più dati mancanti,risulta essere l'ammoniaca.
 
 \section{Analisi dei dati per il meteo}
 Nel caso delle centraline meteorologiche, la strategia e l’obiettivo per studiare la qualità dei dati differisce da quella proposta 
@@ -124,11 +131,13 @@ Difatti, mentre nelle variabili della qualità dell’aria l’ammoniaca e il pa
 per così dire, i bersagli, le variabili meteorologiche hanno un ruolo meramente ausiliario. 
 Dopotutto, anche se il loro ruolo può essere determinante, non sono le variabili che i modelli cercheranno di predire. 
 Successivamente è stata cercata per ogni centralina che misura gli inquinanti, le due  
-stazioni meteo con la distanza euclidea inferiore che misurassero contemporaneamente velocità del vento (wind speed), 
-direzione del vento (wind direction), temperatura (temperature) e precipitazioni (rainfall).
-Infine è stata fatto un join per unire i dati delle 6 migliori stazioni con i 2 nearest neighbor delle
-stazioni meteo più vicine e i relativi dati meteo (allegato come NNdata.csv). 
+stazioni meteo con la distanza euclidea inferiore che prenda in considerazione contemporaneamente velocità del vento 
+(wind speed), direzione del vento (wind direction), temperatura (temperature) e precipitazioni (rainfall).
+E' stata utilizzata la distanza eucliedea e non è stata utilizzata la geometria sferica in quanto per distanze ridotte come quelle in considerazione, 
+fungono come una accettabile approssimazione delle vere distanze, anche se non tengono conto della curvatura della Terra.
+Infine è stata fatto un join per unire i dati delle 6 migliori stazioni con i dati delle due
+stazioni meteo più vicine (allegato come NNdata.csv). 
 
 \section{Analisi missing data per il clima}
-Dobbiamo chiedere a Paolo come bisogna trattarli
+Dobbiamo chiedere a Paolo come bisogna trattarli 
 \end{document}
