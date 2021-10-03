@@ -8,8 +8,8 @@ library(lubridate)
 library(sf)
 
 #Source functions
-source("/Users/marcovinciguerra/Github/GitTesi/DownloadData/Functions.R", encoding = 'UTF-8')
-source("/Users/marcovinciguerra/Github/GitTesi/DownloadData/DownloadFunction.R", encoding = 'UTF-8')
+source("~/GitHub/BachelorThesis/Rstudio code/Functions.R", encoding = 'UTF-8')
+
 
 #Filter datas with registry
 registry <- get_ARPA_Lombardia_AQ_registry()
@@ -31,7 +31,6 @@ beststations <- RegistryRed %>%
   distinct(IDStation) %>%
   pull() # Stations that measure at least 2 of the variables at the same time
 
-#Insertion of the starting year and ending year
 startyear <- 2018
 lastyear  <- 2020
 
@@ -126,7 +125,7 @@ for(index in startyear:lastyear) {
 }
 
 
-#COUNT OF THE TOTAL OF THE MISSING DATAS from the beginning for every station
+#COUNT OF THE TOTAL OF THE MISSING DATAS for every station
 totalMissingFromBeginning <- NULL
 temp <- NULL
 for(index in 1:(length(tableMissingDatasTotal2))) {
@@ -153,8 +152,8 @@ for(index in 1:(length(tableMissingDatasTotal2))) {
   } 
 }
 
-setwd("/Users/marcovinciguerra/Github/GitTesi/DownloadData")
-write.table(totalMissingFromBeginning, "MissingFromTheBeginning.csv")
+
+
 
 #YES/NO TABLE
 #Creating the table of yes/no
@@ -192,7 +191,7 @@ Column25 <- sqldf('SELECT IDStation, NameStation, 1 as PM25
       FROM Table25
       WHERE MissingPM25 >= 365
       order by IDStation')
-#Legend:
+#Legend
 #1 means presence
 #0 means absence
 presencetable <- sqldf("SELECT c25.IDStation, C25.NameStation, c25.PM25, c10.PM10, ca.Ammonia, SUM(c25.PM25+c10.PM10+ca.Ammonia) as Somma
@@ -206,9 +205,9 @@ presencetable <- sqldf('SELECT IDStation, NameStation, PM25, PM10, Ammonia
                         FROM presencetable 
                         GROUP BY  Somma, IDStation')
 
-#Plot of the stations with at least 1 observation for one of the pollutant
+#Plot of the centralines with at least 1 observation for one of the pollutant
 presencetable <- presencetable %>%
-  mutate(Etichetta = case_when(PM10 == 1 & PM25 == 1 & Ammonia == 1 ~ "All",
+  mutate(Tag = case_when(PM10 == 1 & PM25 == 1 & Ammonia == 1 ~ "All",
                                PM10 == 1 & PM25 == 1 & Ammonia == 0 ~ "PM10-PM2.5",
                                PM10 == 1 & PM25 == 0 & Ammonia == 1 ~ "PM10-NH3",
                                PM10 == 0 & PM25 == 1 & Ammonia == 1 ~ "PM2.5-NH3",
@@ -217,11 +216,10 @@ presencetable <- presencetable %>%
                                PM10 == 0 & PM25 == 0 & Ammonia == 1 ~ "NH3"))
 
 presencetable_red <- presencetable %>%
-  select(IDStation,Etichetta)
+  select(IDStation,Tag)
 
 RegistryRed <- full_join(RegistryRed,presencetable_red,by = c("IDStation"))
 
-setwd("/Users/marcovinciguerra/Github/GitTesi/DownloadData")
 write.table(presencetable, "presencetable_red.csv")
 
 #PART 3: plot of the Lombardy map
@@ -230,7 +228,17 @@ map_Lombardia_stations_custom(RegistryRed,col_points = Tag)
 #win.graph()
 map_Lombardia_stations_custom(RegistryRed)
 
+regAQ <- get_ARPA_Lombardia_AQ_registry()
+regAQ <- regAQ[,c(1,2,4,5,6,8:11)]
+regW <- get_ARPA_Lombardia_W_registry()
+regW <- regW[,c(1,2,4:10)]
+map_Lombardia_stations(rbind(regAQ,regW))
+
+map_Lombardia_stations(regAQ,col_points = 'red')
+map_Lombardia_stations(regW)
+
 #PART 4: Plot of the time series
+
 presencetableYear <- NULL
 
 for (i in 1:length(tableMissingAmmmonia)) {
@@ -279,8 +287,8 @@ for (i in 1:length(tableMissingAmmmonia)) {
   #write.csv(presencetableYear, paste("presencetableYear",i,".csv",sep = ""))
 }
 
+
 threeYesPlot <- NULL
-setwd("/Users/marcovinciguerra/Github/GitTesi/DownloadData/Dataplot")
 
 for (i in 1:length(presencetableYear)) {
   
@@ -348,9 +356,9 @@ for (i in 1:length(lastYearStations)) {
   
 }
 
-BlueStripes(FullStations,"2018-2020") 
+BlueStripes(FullStations,"2018-2020")
 
-#PART 5: 2 best Nearest Neighbor
+#PART 5: Nearest Neighbor
 #Calculate the distances of the 2 nearest stations 
 regAQ <- get_ARPA_Lombardia_AQ_registry()
 
@@ -391,7 +399,7 @@ equiv <- distance[,c('IDStation','reg_Y_nn1_ID')]
 
 we <-  get_ARPA_Lombardia_W_data(
   ID_station = distance[,'reg_Y_nn1_ID'], 
-  Year = c(startyear:lastyear),
+  Year = c(2018:2020),
   Frequency = "daily",
   Var_vec = NULL,
   Fns_vec = NULL,
@@ -413,10 +421,74 @@ aqwe<- sqldf('select *
       from tableAllyears t join equiv e on t.IDStation = e.IDStation join we on e.reg_Y_nn1_ID = we.IDStation
                where t.Date = we.Date')
 
-setwd("/Users/marcovinciguerra/Github/GitTesi/DownloadData")
+
 write_csv(aqwe,'NNdata.csv')
 
 # single out the weather variables to study regarding their missing values
+
+regW <- get_ARPA_Lombardia_W_registry()
+
+regW <- regW %>% 
+  filter(Measure %in% c("Wind_speed","Wind_direction","Temperature","Rainfall"),
+         is.na(DateStop),
+         year(DateStart)<=2017)
+
+regW <- data.frame(regW)
+
+miniregW <- sqldf('select *
+      from regW a
+      where exists (select b.IDStation 
+                    from regW b
+                    where a.IDStation = b.IDStation and b.Measure = "Wind_speed" )
+     and exists (select b.IDStation 
+                    from regW b
+                    where  a.IDStation = b.IDStation and b.Measure = "Wind_direction" )
+      and exists (select b.IDStation 
+                    from regW b
+                    where  a.IDStation = b.IDStation and b.Measure = "Temperature" )
+      and exists (select b.IDStation 
+                    from regW b
+                    where  a.IDStation = b.IDStation and b.Measure = "Rainfall" )
+      order by a.IDStation asc')
+
+
+weStations <- sqldf('select distinct IDStation from miniregW ')
+
+we1820 <-  get_ARPA_Lombardia_W_data(
+  ID_station = weStations[1:20,1],
+  #Year = c(2018:2020),
+  Year = 2020,
+  Frequency = "daily",
+)
+
+miniregW <- miniregW %>%
+  filter(is.na(DateStop)) %>%
+  distinct(IDStation,NameStation,Longitude,Latitude) %>%
+  mutate(lng = Longitude, lat = Latitude) %>%
+  sf::st_as_sf(coords = c("lng", "lat"), crs=4326)
+
+dist_mat <- sf::st_distance(regAQ,regW)
+
+reg_X <- regAQ
+reg_Y <- miniregW
+
+k <- 2
+distanceNew <- registry_KNN_dist(reg_X,reg_Y,k)
+distanceNew <- data.frame(distanceNew[[1]])
+distanceNew <- distanceNew[distanceNew[,'IDStation'] %in% threeYesPlot[[1]],]
+equiv <- distanceNew[,c('IDStation','reg_Y_nn1_ID')]
+
+we <-  get_ARPA_Lombardia_W_data(
+  ID_station = distance[,'reg_Y_nn1_ID'], 
+  Year = c(2018:2020),
+  Frequency = "daily",
+  Var_vec = NULL,
+  Fns_vec = NULL,
+  by_sensor = 0,
+  verbose = T
+)
+
+# missingWindSpeed <- MissingTable('Wind_speed','we1820')
 
 FullStationsW <- NULL
 
@@ -433,9 +505,10 @@ for (i in 1:length(WStations)) {
 }
 
 
-BlueStripesW(FullStationsW,"2018-2020")
+OrangeStripes(FullStationsW,"2018-2020")
 
 # part 6: Scatterplots
+
 plot(table18_20[,c('Ammonia','PM10','PM25')], pch = 16,  col = alpha("red", 0.3))
 plot(table18_20[,c(4:19)],  pch = 16,  col = alpha("salmon3", 0.45))
 plot(aqwe19[,c('Ammonia','PM10','PM25','Temperature','Relative_humidity','Global_radiation','Rainfall')])
