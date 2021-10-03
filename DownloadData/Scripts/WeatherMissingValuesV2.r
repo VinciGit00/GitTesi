@@ -73,7 +73,6 @@ for(index in startyear:lastyear) {
                                   on ma.IDStation = mtodos.IDStation
                                 ')
   name = paste("Missing",index,".csv",sep="" )
-  setwd("/Users/marcovinciguerra/Github/GitTesi/DownloadData/MissingTables")
   write_csv(tableMissingDatasTotal[[index-startyear+1]], name)
 }
 
@@ -282,7 +281,6 @@ for (i in 1:length(tableMissingAmmmonia)) {
                  ON c25.IDStation = c10.IDStation
                  JOIN ColumnA ca
                  ON c25.IDStation = ca.IDStation")
-  #setwd("/Users/marcovinciguerra/Github/GitTesi/DownloadData")
   #write.csv(presencetableYear, paste("presencetableYear",i,".csv",sep = ""))
 }
 
@@ -417,8 +415,8 @@ tableAllyears <- data.frame(tableAllyears)
 
 #Table with pollution stations and the first nearest weather station 
 aqwe<- sqldf('select *
-      from tableAllyears t join equiv e on t.IDStation = e.IDStation join we on e.reg_Y_nn1_ID = we.IDStation
-               where t.Date = we.Date')
+              from tableAllyears t join equiv e on t.IDStation = e.IDStation join we on e.reg_Y_nn1_ID = we.IDStation
+              where t.Date = we.Date')
 
 
 write_csv(aqwe,'NNdata.csv')
@@ -477,9 +475,29 @@ distanceNew <- data.frame(distanceNew[[1]])
 distanceNew <- distanceNew[distanceNew[,'IDStation'] %in% threeYesPlot[[1]],]
 equiv <- distanceNew[,c('IDStation','reg_Y_nn1_ID')]
 
+#Join of the tables distance e distanceNew
+#Casting
+distancedf    <- distance[,]
+distanceNewdf <- distanceNew[,c(1:4)]
+
+allTheDistance <- inner_join(distancedf, distancedf,
+                            by = c("IDStation"="IDStation"))
+#Removing columns
+allTheDistance <- subset(allTheDistance, select =-c(NameStation.y, Latitude.y, Longitude.y, 
+                                                    geometry.y, reg_Y_nn2_name.y, 
+                                                    reg_Y_nn2_ID.y,
+                                                    reg_Y_nn2_dist.y))
+
+#Renaming the variables
+allTheDistance <- rename(allTheDistance, nnCond = reg_Y_nn1_name.y,
+                         IDnnCond = reg_Y_nn1_ID.y,
+                         distNNCond= reg_Y_nn1_dist.y,
+                         
+                         )
+
 we <-  get_ARPA_Lombardia_W_data(
   ID_station = distance[,'reg_Y_nn1_ID'], 
-  Year = c(2018:2020),
+  Year = c(startyear:lastyear),
   Frequency = "daily",
   Var_vec = NULL,
   Fns_vec = NULL,
