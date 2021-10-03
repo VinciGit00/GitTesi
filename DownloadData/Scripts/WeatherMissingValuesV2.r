@@ -8,8 +8,7 @@ library(lubridate)
 library(sf)
 
 #Source functions
-source("~/GitHub/BachelorThesis/Rstudio code/Functions.R", encoding = 'UTF-8')
-
+source("~/GitHub/GitTesi/DownloadData/Scripts/Functions.R", encoding = 'UTF-8')
 
 #Filter datas with registry
 registry <- get_ARPA_Lombardia_AQ_registry()
