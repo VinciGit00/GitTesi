@@ -133,11 +133,23 @@ Dopotutto, anche se il loro ruolo può essere determinante, non sono le variabil
 Successivamente è stata cercata per ogni centralina che misura gli inquinanti, le due  
 stazioni meteo con la distanza euclidea inferiore che prenda in considerazione contemporaneamente velocità del vento 
 (wind speed), direzione del vento (wind direction), temperatura (temperature) e precipitazioni (rainfall).
+La distanza dalle stazioni inquinanti e le stazioni meteo che misurano i dati d'interesse contemporaneamente in qui in questo caso possono 
+essere maggiori o minori. 
 E' stata utilizzata la distanza eucliedea e non è stata utilizzata la geometria sferica in quanto per distanze ridotte come quelle in considerazione, 
 fungono come una accettabile approssimazione delle vere distanze, anche se non tengono conto della curvatura della Terra.
 Infine è stata fatto un join per unire i dati delle 6 migliori stazioni con i dati delle due
 stazioni meteo più vicine (allegato come NNdata.csv). 
 
 \section{Analisi missing data per il clima}
-Dobbiamo chiedere a Paolo come bisogna trattarli 
+Anche per tutti i dati meteo è stato stampata una serie storica che rappresenta i missing data nel tempo.
+\\Cassina Valsassina Moggio presenta un numero quasi nullo di dati mancanti, invece Sermide E Felonica Sp 
+non misura la wind speed e la wind direction praticamente fino alla fine del del 2018.
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.35]{Picture/Cassina Valsassina Moggio 2018-2020 .jpeg} 
+  \caption{Cassina Valsassina Moggio 2018-2020}
+  \centering
+  \includegraphics[scale=0.35]{Picture/Sermide.jpeg}
+  \caption{Sermide E Felonica Sp  2018-2020}
+\end{figure}
 \end{document}
