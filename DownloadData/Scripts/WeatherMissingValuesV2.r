@@ -496,7 +496,7 @@ allTheDistance <- rename(allTheDistance, nnCond = reg_Y_nn1_name.y,
                          )
 
 we <-  get_ARPA_Lombardia_W_data(
-  ID_station = distance[,'reg_Y_nn1_ID'], 
+  ID_station = distancenNew[,'reg_Y_nn1_ID'], 
   Year = c(startyear:lastyear),
   Frequency = "daily",
   Var_vec = NULL,
