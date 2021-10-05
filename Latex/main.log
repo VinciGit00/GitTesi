@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.1)  4 OCT 2021 20:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.1)  5 OCT 2021 23:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -103,27 +103,34 @@ Package caption Info: Standard document class detected.
 )
 \c@subfigure=\count198
 \c@subtable=\count199
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count266
+\float@exts=\toks17
+\float@box=\box47
+\@float@everytoks=\toks18
+\@floatcapt=\box48
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count266
-\l__pdf_internal_box=\box47
+\l__color_backend_stack_int=\count267
+\l__pdf_internal_box=\box49
 ) (/Users/marcovinciguerra/Github/GitTesi/Latex/main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -159,29 +166,29 @@ LaTeX Font Info:    ... okay on input line 34.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \it@ocap on input line 34.
-LaTeX Info: Redefining \it@ccap on input line 34.
+LaTeX Info: Redefining \it@ocap on input line 35.
+LaTeX Info: Redefining \it@ccap on input line 35.
 
 File italian.ldf warning: 
 italian.ldf    With OT1 encoding guillemets are poorly faked
 italian.ldf    Use T1 encoding
 italian.ldf    or specify a font with command \CaporaliFrom
 italian.ldf    See the documentation concerning the babel-italian typesetting 
-italian.ldf    on input line 34.
+italian.ldf    on input line 35.
 
 (/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count267
+\scratchcounter=\count268
 \scratchdimen=\dimen157
-\scratchbox=\box48
-\nofMPsegments=\count268
-\nofMParguments=\count269
-\everyMPshowfont=\toks17
-\MPscratchCnt=\count270
+\scratchbox=\box50
+\nofMPsegments=\count269
+\nofMParguments=\count270
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count271
 \MPscratchDim=\dimen158
-\MPnumerator=\count271
-\makeMPintoPDFobject=\count272
-\everyMPtoPDFconversion=\toks18
+\MPnumerator=\count272
+\makeMPintoPDFobject=\count273
+\everyMPtoPDFconversion=\toks20
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -189,40 +196,41 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 36.
+(Font)              <7> on input line 37.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 36.
+(Font)              <5> on input line 37.
 <Picture/logo.png, id=1, 163.3603pt x 110.66344pt>
 File: Picture/logo.png Graphic file (type png)
 <use Picture/logo.png>
-Package pdftex.def Info: Picture/logo.png  used on input line 36.
+Package pdftex.def Info: Picture/logo.png  used on input line 37.
 (pdftex.def)             Requested size: 56.9055pt x 38.5487pt.
 <Picture/UniBg-logo.jpg, id=3, 1003.75pt x 1003.75pt>
 File: Picture/UniBg-logo.jpg Graphic file (type jpg)
 <use Picture/UniBg-logo.jpg>
-Package pdftex.def Info: Picture/UniBg-logo.jpg  used on input line 36.
+Package pdftex.def Info: Picture/UniBg-logo.jpg  used on input line 37.
 (pdftex.def)             Requested size: 71.13188pt x 71.12737pt.
 <Picture/Lpollution.png, id=4, 209.78375pt x 163.61125pt>
 File: Picture/Lpollution.png Graphic file (type png)
 <use Picture/Lpollution.png>
-Package pdftex.def Info: Picture/Lpollution.png  used on input line 55.
+Package pdftex.def Info: Picture/Lpollution.png  used on input line 56.
 (pdftex.def)             Requested size: 173.27652pt x 135.13821pt.
 <Picture/Lweather.png, id=5, 192.72pt x 165.61874pt>
 File: Picture/Lweather.png Graphic file (type png)
 <use Picture/Lweather.png>
-Package pdftex.def Info: Picture/Lweather.png  used on input line 61.
+Package pdftex.def Info: Picture/Lweather.png  used on input line 62.
 (pdftex.def)             Requested size: 173.27652pt x 148.9089pt.
 <Picture/b.png, id=6, 514.92375pt x 282.30469pt>
 File: Picture/b.png Graphic file (type png)
 <use Picture/b.png>
-Package pdftex.def Info: Picture/b.png  used on input line 95.
+Package pdftex.def Info: Picture/b.png  used on input line 96.
 (pdftex.def)             Requested size: 386.19186pt x 211.72798pt.
 <Picture/PresenceTable.png, id=7, 455.45157pt x 393.72093pt>
 File: Picture/PresenceTable.png Graphic file (type png)
 <use Picture/PresenceTable.png>
-Package pdftex.def Info: Picture/PresenceTable.png  used on input line 97.
+Package pdftex.def Info: Picture/PresenceTable.png  used on input line 98.
 (pdftex.def)             Requested size: 296.04001pt x 255.91557pt.
  [1
 
@@ -230,47 +238,41 @@ Package pdftex.def Info: Picture/PresenceTable.png  used on input line 97.
 <Picture/mappina.jpeg, id=25, 1284.8pt x 722.7pt>
 File: Picture/mappina.jpeg Graphic file (type jpg)
 <use Picture/mappina.jpeg>
-Package pdftex.def Info: Picture/mappina.jpeg  used on input line 108.
+Package pdftex.def Info: Picture/mappina.jpeg  used on input line 109.
 (pdftex.def)             Requested size: 449.68674pt x 252.94878pt.
  [2 </Users/marcovinciguerra/Github/GitTesi/Latex/Picture/b.png> </Users/marcovinciguerra/Github/GitTesi/Latex/Picture/PresenceTable.png>]
 <Picture/Cremona Via Fatebenefratelli 2018-2020 .jpeg, id=31, 1284.8pt x 722.7pt>
 File: Picture/Cremona Via Fatebenefratelli 2018-2020 .jpeg Graphic file (type jpg)
 <use Picture/Cremona Via Fatebenefratelli 2018-2020 .jpeg>
-Package pdftex.def Info: Picture/Cremona Via Fatebenefratelli 2018-2020 .jpeg  used on input line 118.
+Package pdftex.def Info: Picture/Cremona Via Fatebenefratelli 2018-2020 .jpeg  used on input line 119.
 (pdftex.def)             Requested size: 449.68674pt x 252.94878pt.
 <Picture/Milano Pascal Citta Studi 2018-2020 .jpeg, id=32, 1284.8pt x 722.7pt>
 File: Picture/Milano Pascal Citta Studi 2018-2020 .jpeg Graphic file (type jpg)
 <use Picture/Milano Pascal Citta Studi 2018-2020 .jpeg>
-Package pdftex.def Info: Picture/Milano Pascal Citta Studi 2018-2020 .jpeg  used on input line 121.
+Package pdftex.def Info: Picture/Milano Pascal Citta Studi 2018-2020 .jpeg  used on input line 125.
 (pdftex.def)             Requested size: 449.68674pt x 252.94878pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<Picture/Cassina Valsassina Moggio 2018-2020 .jpeg, id=33, 1284.8pt x 722.7pt>
+ [3 </Users/marcovinciguerra/Github/GitTesi/Latex/Picture/mappina.jpeg> </Users/marcovinciguerra/Github/GitTesi/Latex/Picture/Cremona Via Fatebenefratelli 2018-2020 .jpeg>]
+<Picture/Cassina Valsassina Moggio 2018-2020 .jpeg, id=36, 1284.8pt x 722.7pt>
 File: Picture/Cassina Valsassina Moggio 2018-2020 .jpeg Graphic file (type jpg)
 <use Picture/Cassina Valsassina Moggio 2018-2020 .jpeg>
-Package pdftex.def Info: Picture/Cassina Valsassina Moggio 2018-2020 .jpeg  used on input line 149.
+Package pdftex.def Info: Picture/Cassina Valsassina Moggio 2018-2020 .jpeg  used on input line 157.
 (pdftex.def)             Requested size: 449.68674pt x 252.94878pt.
-<Picture/Sermide.jpeg, id=34, 1284.8pt x 722.7pt>
+<Picture/Sermide.jpeg, id=37, 1284.8pt x 722.7pt>
 File: Picture/Sermide.jpeg Graphic file (type jpg)
 <use Picture/Sermide.jpeg>
-Package pdftex.def Info: Picture/Sermide.jpeg  used on input line 152.
+Package pdftex.def Info: Picture/Sermide.jpeg  used on input line 160.
 (pdftex.def)             Requested size: 449.68674pt x 252.94878pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[3 </Users/marcovinciguerra/Github/GitTesi/Latex/Picture/mappina.jpeg>] [4 </Users/marcovinciguerra/Github/GitTesi/Latex/Picture/Cremona Via Fatebenefratelli 2018-2020 .jpeg> </Users/marcovinciguerra/Github/GitTesi/Latex/Picture/Milano Pascal Citta Studi 2018-2020 .jpeg>] [5 </Users/marcovinciguerra/Github/GitTesi/Latex/Picture/Cassina Valsassina Moggio 2018-2020 .jpeg> </Users/marcovinciguerra/Github/GitTesi/Latex/Picture/Sermide.jpeg>] (/Users/marcovinciguerra/Github/GitTesi/Latex/main.aux) ) 
+ [4 </Users/marcovinciguerra/Github/GitTesi/Latex/Picture/Milano Pascal Citta Studi 2018-2020 .jpeg>] [5 </Users/marcovinciguerra/Github/GitTesi/Latex/Picture/Cassina Valsassina Moggio 2018-2020 .jpeg> </Users/marcovinciguerra/Github/GitTesi/Latex/Picture/Sermide.jpeg>] (/Users/marcovinciguerra/Github/GitTesi/Latex/main.aux) ) 
 Here is how much of TeX's memory you used:
- 4289 strings out of 478994
- 69171 string characters out of 5858185
- 388745 words of memory out of 5000000
- 21758 multiletter control sequences out of 15000+600000
+ 4341 strings out of 478994
+ 69891 string characters out of 5858185
+ 390116 words of memory out of 5000000
+ 21806 multiletter control sequences out of 15000+600000
  405877 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,8n,77p,323b,458s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 69i,8n,77p,341b,460s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on /Users/marcovinciguerra/Github/GitTesi/Latex/main.pdf (5 pages, 1564334 bytes).
+Output written on /Users/marcovinciguerra/Github/GitTesi/Latex/main.pdf (5 pages, 1564423 bytes).
 PDF statistics:
  74 PDF objects out of 1000 (max. 8388607)
  41 compressed objects within 1 object stream

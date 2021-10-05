@@ -6,6 +6,7 @@
 \usepackage{titling}
 \usepackage{graphicx}
 \usepackage{subcaption}
+\usepackage{float}
 
 \title{Report analisi dell'aria}
 \author{David Guzman Piedrahita e Marco Vinciguerra}
@@ -14,7 +15,7 @@
 \makeatletter         
 \def\@maketitle{
 \noindent\begin{minipage}{\textwidth}
-\begin{minipage}[c]{0.8\textwidth}
+\begin{minipage}[c]{0.8\textwidth}  
 \begin{center}
 {\Huge \bfseries \sffamily \@title }\\[4ex] 
 {\Large  \@author}\\[4ex] 
@@ -113,16 +114,23 @@ e quindi sono state scelte le stazioni con il numero di missing data inferiore.
 Ecco un esempio di una  delle 6 migliori centraline con un numero accettabile di dati mancanti e una con
 un numero molto alto di dati mancanti (sempre appartenente alla lista delle 6 migliori centrali):
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[scale=0.35]{Picture/Cremona Via Fatebenefratelli 2018-2020 .jpeg} 
     \caption{Cremona Via Fatebenefratelli 2018-2020, Mancanti Ammonia: 2, PM10: 4, PM25: 7, tutti e 3 contemporaneamente: 2}
     \centering
+\end{figure}
+
+\begin{figure}[H]
     \includegraphics[scale=0.35]{Picture/Milano Pascal Citta Studi 2018-2020 .jpeg}
     \caption{Milano Pascal Citta Studi 2018-2020, Mancanti Ammonia: 167, PM10: 27, PM25: 34, tutti e 3 contemporaneamente: 14}
 \end{figure}
+
+
 Come si può notare da questi due grafici (ma persiste anche per tutte le altre stazioni) la variabile
-più problematica, ossia quela con più dati mancanti,risulta essere l'ammoniaca.
+più problematica, ossia quela con più dati mancanti, risulta essere l'ammoniaca.
+
+
 
 \section{Analisi dei dati per il meteo}
 Nel caso delle centraline meteorologiche, la strategia e l’obiettivo per studiare la qualità dei dati differisce da quella proposta 
@@ -144,7 +152,7 @@ stazioni meteo più vicine (allegato come NNdata.csv).
 Anche per tutti i dati meteo è stato stampata una serie storica che rappresenta i missing data nel tempo.
 \\Cassina Valsassina Moggio presenta un numero quasi nullo di dati mancanti, invece Sermide E Felonica Sp 
 non misura la wind speed e la wind direction praticamente fino alla fine del del 2018.
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
   \includegraphics[scale=0.35]{Picture/Cassina Valsassina Moggio 2018-2020 .jpeg} 
   \caption{Cassina Valsassina Moggio 2018-2020}

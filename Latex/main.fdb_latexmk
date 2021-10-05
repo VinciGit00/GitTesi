@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1633373265 "/Users/marcovinciguerra/Github/GitTesi/Latex/main.tex" "/Users/marcovinciguerra/Github/GitTesi/Latex/main.pdf" "main" 1633373269
-  "/Users/marcovinciguerra/Github/GitTesi/Latex/main.aux" 1633373269 1591 146be50fc18ac9868dfacb76ae447d0a ""
-  "/Users/marcovinciguerra/Github/GitTesi/Latex/main.tex" 1633373255 7854 8c44f16129c3db981d71313249b6995d ""
+["pdflatex"] 1633470292 "/Users/marcovinciguerra/Github/GitTesi/Latex/main.tex" "/Users/marcovinciguerra/Github/GitTesi/Latex/main.pdf" "main" 1633470294
+  "/Users/marcovinciguerra/Github/GitTesi/Latex/main.aux" 1633470293 1591 ce9a6e47f633a08b42762896993c1b89 ""
+  "/Users/marcovinciguerra/Github/GitTesi/Latex/main.tex" 1633470288 7910 d2da0235e30c4d86079a8d066f146af4 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -34,6 +34,7 @@
   "/usr/local/texlive/2021/texmf-dist/tex/latex/caption/subcaption.sty" 1603745920 6133 46bea384e36e9b74bd53a238fc2d0654 ""
   "/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1579991033 13886 d1306dcf79a944f6988e688c1785f9ce ""
   "/usr/local/texlive/2021/texmf-dist/tex/latex/etoolbox/etoolbox.sty" 1601931149 46845 3b58f70c6e861a13d927bff09d35ecbc ""
+  "/usr/local/texlive/2021/texmf-dist/tex/latex/float/float.sty" 1137110151 6749 16d2656a1984957e674b149555f1ea1d ""
   "/usr/local/texlive/2021/texmf-dist/tex/latex/geometry/geometry.sty" 1578002852 41601 9cf6c5257b1bc7af01a58859749dd37a ""
   "/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.cfg" 1465944070 1224 978390e9c2234eab29404bc21b268d1e ""
   "/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-def/pdftex.def" 1601931164 19103 48d29b6e2a64cb717117ef65f107b404 ""
@@ -59,11 +60,11 @@
   "Picture/b.png" 1633187809 110363 c17c5281c58ac32761f8221baec285c7 ""
   "Picture/logo.png" 1632663373 11719 b855d050b74fcad482d1accc148164df ""
   "Picture/mappina.jpeg" 1632663373 90081 0c82c1ef1cac48f753993f1336b5edd7 ""
-  "main.aux" 1633373269 1591 146be50fc18ac9868dfacb76ae447d0a "pdflatex"
-  "main.tex" 1633373255 7854 8c44f16129c3db981d71313249b6995d ""
+  "main.aux" 1633470293 1591 ce9a6e47f633a08b42762896993c1b89 "pdflatex"
+  "main.tex" 1633470288 7910 d2da0235e30c4d86079a8d066f146af4 ""
   (generated)
+  "main.aux"
   "main.log"
+  "/Users/marcovinciguerra/Github/GitTesi/Latex/main.log"
   "/Users/marcovinciguerra/Github/GitTesi/Latex/main.pdf"
   "main.pdf"
-  "main.aux"
-  "/Users/marcovinciguerra/Github/GitTesi/Latex/main.log"
