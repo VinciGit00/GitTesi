@@ -480,8 +480,8 @@ equiv <- distanceNew[,c('IDStation','reg_Y_nn1_ID')]
 distancedf    <- distance[,]
 distanceNewdf <- distanceNew[,c(1:4)]
 
-allTheDistance <- inner_join(distancedf, distancedf,
-                            by = c("IDStation"="IDStation"))
+allTheDistance <- inner_join(distancedf, distanceNew,
+                             by = c("IDStation"="IDStation"))
 #Removing columns
 allTheDistance <- subset(allTheDistance, select =-c(NameStation.y, Latitude.y, Longitude.y, 
                                                     geometry.y, reg_Y_nn2_name.y, 
@@ -493,10 +493,10 @@ allTheDistance <- rename(allTheDistance, nnCond = reg_Y_nn1_name.y,
                          IDnnCond = reg_Y_nn1_ID.y,
                          distNNCond= reg_Y_nn1_dist.y,
                          
-                         )
+)
 
 we <-  get_ARPA_Lombardia_W_data(
-  ID_station = distancenNew[,'reg_Y_nn1_ID'], 
+  ID_station = distanceNew[,'reg_Y_nn1_ID'], 
   Year = c(startyear:lastyear),
   Frequency = "daily",
   Var_vec = NULL,
