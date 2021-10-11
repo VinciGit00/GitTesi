@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.1)  5 OCT 2021 23:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.1)  11 OCT 2021 15:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -225,12 +225,12 @@ Package pdftex.def Info: Picture/Lweather.png  used on input line 62.
 <Picture/b.png, id=6, 514.92375pt x 282.30469pt>
 File: Picture/b.png Graphic file (type png)
 <use Picture/b.png>
-Package pdftex.def Info: Picture/b.png  used on input line 96.
+Package pdftex.def Info: Picture/b.png  used on input line 98.
 (pdftex.def)             Requested size: 386.19186pt x 211.72798pt.
 <Picture/PresenceTable.png, id=7, 455.45157pt x 393.72093pt>
 File: Picture/PresenceTable.png Graphic file (type png)
 <use Picture/PresenceTable.png>
-Package pdftex.def Info: Picture/PresenceTable.png  used on input line 98.
+Package pdftex.def Info: Picture/PresenceTable.png  used on input line 100.
 (pdftex.def)             Requested size: 296.04001pt x 255.91557pt.
  [1
 
@@ -238,18 +238,18 @@ Package pdftex.def Info: Picture/PresenceTable.png  used on input line 98.
 <Picture/mappina.jpeg, id=25, 1284.8pt x 722.7pt>
 File: Picture/mappina.jpeg Graphic file (type jpg)
 <use Picture/mappina.jpeg>
-Package pdftex.def Info: Picture/mappina.jpeg  used on input line 109.
+Package pdftex.def Info: Picture/mappina.jpeg  used on input line 108.
 (pdftex.def)             Requested size: 449.68674pt x 252.94878pt.
  [2 </Users/marcovinciguerra/Github/GitTesi/Latex/Picture/b.png> </Users/marcovinciguerra/Github/GitTesi/Latex/Picture/PresenceTable.png>]
 <Picture/Cremona Via Fatebenefratelli 2018-2020 .jpeg, id=31, 1284.8pt x 722.7pt>
 File: Picture/Cremona Via Fatebenefratelli 2018-2020 .jpeg Graphic file (type jpg)
 <use Picture/Cremona Via Fatebenefratelli 2018-2020 .jpeg>
-Package pdftex.def Info: Picture/Cremona Via Fatebenefratelli 2018-2020 .jpeg  used on input line 119.
+Package pdftex.def Info: Picture/Cremona Via Fatebenefratelli 2018-2020 .jpeg  used on input line 121.
 (pdftex.def)             Requested size: 449.68674pt x 252.94878pt.
 <Picture/Milano Pascal Citta Studi 2018-2020 .jpeg, id=32, 1284.8pt x 722.7pt>
 File: Picture/Milano Pascal Citta Studi 2018-2020 .jpeg Graphic file (type jpg)
 <use Picture/Milano Pascal Citta Studi 2018-2020 .jpeg>
-Package pdftex.def Info: Picture/Milano Pascal Citta Studi 2018-2020 .jpeg  used on input line 125.
+Package pdftex.def Info: Picture/Milano Pascal Citta Studi 2018-2020 .jpeg  used on input line 127.
 (pdftex.def)             Requested size: 449.68674pt x 252.94878pt.
  [3 </Users/marcovinciguerra/Github/GitTesi/Latex/Picture/mappina.jpeg> </Users/marcovinciguerra/Github/GitTesi/Latex/Picture/Cremona Via Fatebenefratelli 2018-2020 .jpeg>]
 <Picture/Cassina Valsassina Moggio 2018-2020 .jpeg, id=36, 1284.8pt x 722.7pt>
@@ -266,13 +266,13 @@ Package pdftex.def Info: Picture/Sermide.jpeg  used on input line 160.
 Here is how much of TeX's memory you used:
  4341 strings out of 478994
  69891 string characters out of 5858185
- 390116 words of memory out of 5000000
+ 391117 words of memory out of 5000000
  21806 multiletter control sequences out of 15000+600000
  405877 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,8n,77p,341b,460s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on /Users/marcovinciguerra/Github/GitTesi/Latex/main.pdf (5 pages, 1564423 bytes).
+Output written on /Users/marcovinciguerra/Github/GitTesi/Latex/main.pdf (5 pages, 1564383 bytes).
 PDF statistics:
  74 PDF objects out of 1000 (max. 8388607)
  41 compressed objects within 1 object stream
