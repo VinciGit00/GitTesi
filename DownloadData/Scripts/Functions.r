@@ -218,6 +218,7 @@ Download <- function(startyear, lastyear, centraline) {
   
   return(cast)
 }
+
 #Nearest neighbor functions
 
 ##### k_min_vals_vec_idx

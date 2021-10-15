@@ -23,7 +23,15 @@ arrayStations <-c(703,681, 627)
 startyear <- 2018
 endyear   <- 2020
 
-#Datas stations
-datas <- Download(startyear, endyear, arrayStations)
+#Datas stations download
+total <- NULL
+
+for(i in 1:length(arrayStations)){
+  datas    <- Download(startyear, endyear, arrayStations[i])  
+  total[[i]] <- datas
+}
+total
+
+datas    <- Download(startyear, endyear, arrayStations[1])  
 
 #TOD: weather stations anda plot of the datas
