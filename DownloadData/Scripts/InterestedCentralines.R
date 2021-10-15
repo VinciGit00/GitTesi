@@ -23,16 +23,7 @@ arrayStations <-c(703,681, 627)
 startyear <- 2018
 endyear   <- 2020
 
-
 #Datas stations
-datas <- get_ARPA_Lombardia_AQ_data(
-  ID_station = arrayStations,
-  Year = c(startyear:endyear),
-  Frequency = "hourly",
-  Var_vec = NULL,
-  Fns_vec = NULL,
-  by_sensor = 0,
-  verbose = T
-)
+datas <- Download(startyear, endyear, arrayStations)
 
 #TOD: weather stations anda plot of the datas
