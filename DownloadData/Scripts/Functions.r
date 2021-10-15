@@ -88,7 +88,7 @@ OrangeStripes <- function(vector,year){
   
   for (i in 1:length(vector)) {
     c9a <- ggplot(vector[[i]], aes(x = Date, y = Wind_speed)) +
-      geom_line()  + labs(title = paste(vector[[i]][1,3],year))
+    geom_line()  + labs(title = paste(vector[[i]][1,3],year))
     nada <- is.na(vector[[i]]["Wind_speed"])
     c9a <- c9a + geom_vline(xintercept = vector[[i]][nada,1], alpha = 0.3, 
                             color = "orange", size=1.5)
