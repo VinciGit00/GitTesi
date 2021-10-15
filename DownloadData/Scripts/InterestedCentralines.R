@@ -16,7 +16,7 @@ source("~/GitHub/GitTesi/DownloadData/Scripts/Functions.R", encoding = 'UTF-8')
 #3 627: Cremona P.zza Cadorna (U) 
 
 #Array with the numbers of the stations
-arrayStations <-c(703,681, 627)
+arrayStations <-c(703, 681, 627)
 
 
 #Years interested
@@ -27,11 +27,12 @@ endyear   <- 2020
 total <- NULL
 
 for(i in 1:length(arrayStations)){
-  datas    <- Download(startyear, endyear, arrayStations[i])  
+  
+  datas <- Easydownload(startyear, endyear, arrayStations[i])
+  
   total[[i]] <- datas
 }
-total
 
-datas    <- Download(startyear, endyear, arrayStations[1])  
 
-#TOD: weather stations anda plot of the datas
+
+#TODO: weather stations anda plot of the datas
