@@ -33,6 +33,4 @@ for(i in 1:length(arrayStations)){
   total[[i]] <- datas
 }
 
-
-
 #TODO: weather stations anda plot of the datas

@@ -225,7 +225,7 @@ Easydownload<- function(startyear, endyear, Station) {
   #Downloading
   data<- get_ARPA_Lombardia_AQ_data(
     ID_station = Station,
-    Year = 2019,
+    Year = c(startyear:endyear),
     Frequency = "hourly",
     Var_vec = NULL,
     Fns_vec = NULL,
