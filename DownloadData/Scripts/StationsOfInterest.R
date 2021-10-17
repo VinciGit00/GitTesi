@@ -64,6 +64,7 @@ dist_mat <- sf::st_distance(regAQl,regWl) #Calculating distances
 k <- 4
 
 distance <- registry_KNN_dist(regAQl,regWl,k)[[1]] #Table containing potential weather stations for a given AQ station
+write_csv(distance,'distance.csv')
 
 #2.2 Dowload of W datasets with contraints on avialable info-------------------
 
@@ -93,6 +94,7 @@ regWConstrained1 <- regWConstrained %>% filter(is.na(DateStop)) %>%
 dist_matConstrained <- sf::st_distance(regAQl,regWConstrained1) #Calculating distances
 
 distanceConstrained  <- registry_KNN_dist(regAQl,regWConstrained1,k)[[1]] #Table containing potential weather stations for a given AQ station
+write_csv(distanceConstrained,'distanceConstrained.csv')
 
 
 
@@ -198,3 +200,20 @@ for (j in 1:k) {
   
 }
 
+
+#4.5 Unique table for AQ and W--------------------------------------------
+
+aq <- Easydownload(2018,2020,681)
+w <-  get_ARPA_Lombardia_W_data(
+  ID_station = distanceConstrained[distanceConstrained[,'IDStation']==681,'reg_Y_nn1_ID'], 
+  Year = c(startyear:endyear),
+  Frequency = "daily")
+
+equiv <- distance[,c(1,6)]
+
+aqw<- sqldf('select *
+      from aq t join equiv e on t.IDStation = e.IDStation join w on e.reg_Y_nn1_ID = w.IDStation
+               where t.Date = w.Date')
+
+
+write_csv(aqw,'NNdata.csv')
