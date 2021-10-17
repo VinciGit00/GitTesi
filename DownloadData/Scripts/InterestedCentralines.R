@@ -8,7 +8,7 @@ library(lubridate)
 library(sf)
 
 #0. Source functions ----------------------------------------------------------
-source("~GitHub/GitTesi/DownloadData/Scripts/Functions.R", encoding = 'UTF-8')
+source("~/GitHub/GitTesi/DownloadData/Scripts/Functions.R", encoding = 'UTF-8')
 
 #Stations we are interested in:
 #1 703: Schivenoglia (R)
@@ -200,7 +200,7 @@ for (j in 1:k) {
 
 #4.4 Count of missing datas---------------------------------
 
-cast2 <- Download(startyear, endyear, CentralineMorethan1)
+cast2 <- Download(startyear, endyear, arrayStations)
 
 #Queries for counting the amount of missing datas
 tableMissingAmmmonia2<-NULL
