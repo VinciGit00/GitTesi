@@ -13,7 +13,7 @@ source("~/GitHub/GitTesi/DownloadData/Scripts/Functions.R", encoding = 'UTF-8')
 #Stations we are interested:
 #1 703: Schivenoglia (R)
 #2 681: Moggio (R)
-#3 627: Cremona P.zza Cadorna (U) 
+#3 627: Cremona via Fatebenfratelli(U) 
 
 #Array with the numbers of the stations
 arrayStations <-c(703, 681, 627)
