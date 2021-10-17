@@ -8,7 +8,7 @@ library(lubridate)
 library(sf)
 
 #0. Source functions ----------------------------------------------------------
-source("~/GitHub/BachelorThesis/Rstudio code/Functions.R", encoding = 'UTF-8')
+source("~GitHub/GitTesi/DownloadData/Scripts/Functions.R", encoding = 'UTF-8')
 
 #Stations we are interested in:
 #1 703: Schivenoglia (R)
