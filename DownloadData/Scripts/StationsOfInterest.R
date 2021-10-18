@@ -201,24 +201,6 @@ for (j in 1:k) {
 }
 
 
-#4.5 Unique table for AQ and W--------------------------------------------
-
-aq <- Easydownload(2018,2020,681)
-w <-  get_ARPA_Lombardia_W_data(
-  ID_station = distanceConstrained[distanceConstrained[,'IDStation']==681,'reg_Y_nn1_ID'], 
-  Year = c(startyear:endyear),
-  Frequency = "daily")
-
-equiv <- distance[,c(1,6)]
-
-aqw<- sqldf('select *
-      from aq t join equiv e on t.IDStation = e.IDStation join w on e.reg_Y_nn1_ID = w.IDStation
-               where t.Date = w.Date')
-
-
-write_csv(aqw,'NNdata.csv')
-
-
 #4.4 Count of missing datas---------------------------------
 
 cast2 <- Download(startyear, endyear, arrayStations)
@@ -284,3 +266,57 @@ for(index in 1:(length(tableMissingDatasTotal2))) {
                                       GROUP BY t.IDStation
                                        ')
   } 
+}
+#4.5 Barplot/Piechart of missing data-------------------------------------------------
+
+temp <- totalMissingFromBeginning # preparing the table to be used for Barplots and Piecharts
+row.names(temp) <- temp$NameStation
+temp$IDStation <- NULL
+temp$NameStation <- NULL
+temp[] <- lapply(temp, as.numeric)
+MissingCount <- t(temp)
+
+for (i in 1:ncol(MissingCount)) { # saving all piecharts
+  
+  jpeg(filename =paste(colnames(MissingCount)[i],' BarPlotMV.jpeg',sep = ''),width = 619, height = 471 )
+  barplot(height = MissingCount[,i])
+  dev.off()
+  jpeg(filename =paste(colnames(MissingCount)[i],' PieChartMV.jpeg',sep = ''),width = 619, height = 471 )
+  pie( MissingCount[,i])
+  dev.off()
+  
+  
+}
+
+#5 Unique table for AQ and W--------------------------------------------
+
+aq <- Easydownload(2018,2020,681)
+w <-  get_ARPA_Lombardia_W_data(
+  ID_station = distanceConstrained[distanceConstrained[,'IDStation']==681,'reg_Y_nn1_ID'], 
+  Year = c(startyear:endyear),
+  Frequency = "daily")
+
+equiv <- distance[,c(1,6)]
+
+aqw<- sqldf('select *
+      from aq t join equiv e on t.IDStation = e.IDStation join w on e.reg_Y_nn1_ID = w.IDStation
+               where t.Date = w.Date')
+
+
+write_csv(aqw,'NNdata.csv')
+
+aq <- Easydownload(2018,2020,681)
+w <-  get_ARPA_Lombardia_W_data(
+  ID_station = distanceConstrained[distanceConstrained[,'IDStation']==681,'reg_Y_nn1_ID'], 
+  Year = c(startyear:endyear),
+  Frequency = "daily")
+
+equiv <- distance[,c(1,6)]
+
+aqw<- sqldf('select *
+      from aq t join equiv e on t.IDStation = e.IDStation join w on e.reg_Y_nn1_ID = w.IDStation
+               where t.Date = w.Date')
+
+
+write_csv(aqw,'NNdata.csv')
+
