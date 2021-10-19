@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1634484638 "/Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/shortReport.tex" "/Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/shortReport.pdf" "shortReport" 1634484641
-  "/Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/shortReport.aux" 1634484641 3948 5e7a1f05ec32ed4b02b3842ff3ed8c3d ""
-  "/Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/shortReport.tex" 1634484634 3862 55fa1d95f11cdfe1eb1c27b20347ecad ""
+["pdflatex"] 1634634547 "/Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/shortReport.tex" "/Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/shortReport.pdf" "shortReport" 1634634549
+  "/Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/shortReport.aux" 1634634549 5115 c87da75a901d2450bdf3a0ecf360c4d8 ""
+  "/Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/shortReport.tex" 1634634545 5023 7ba409b01e04375005569b19c5da29ad ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
@@ -51,6 +51,12 @@
   "Picture/3/Bigarello k= 3 2018 2020 .jpeg" 1634479100 149236 d3848434f886c0113efa63953e70d265 ""
   "Picture/3/Cremona Via Gerre Borghi k= 3 2018 2020 .jpeg" 1634479100 146318 cc5451920ba89a6ad5ae38b662218476 ""
   "Picture/AQStationsOfInterest.jpeg" 1634461856 10760 deb56ba18afe2a6c07a4acdd6d3eeda6 ""
+  "Picture/Barplots e piecharts/Cremona Via Fatebenefratelli BarPlotMV.jpeg" 1634632148 14461 7763173afdff76cdc8c43e7e694fc6a2 ""
+  "Picture/Barplots e piecharts/Cremona Via Fatebenefratelli PieChartMV.jpeg" 1634632148 13795 7e35634f1e13ebdcea7da407db410bae ""
+  "Picture/Barplots e piecharts/Moggio BarPlotMV.jpeg" 1634632148 15101 092298541ed227f290853dff118e2e42 ""
+  "Picture/Barplots e piecharts/Moggio PieChartMV.jpeg" 1634632148 14529 55fe970beb0c375e8ebf48721b418de1 ""
+  "Picture/Barplots e piecharts/Schivenoglia BarPlotMV.jpeg" 1634632148 14532 15b3aa81cf76164d8b928a098b8f41e9 ""
+  "Picture/Barplots e piecharts/Schivenoglia PieChartMV.jpeg" 1634632148 13891 9b7f2e7c95e8b9a2aa75f5df2436cc46 ""
   "Picture/Cremona Via Fatebenefratelli 2018-2020.jpeg" 1634461856 153520 9d30eb4161bb72093ff9dfb333ffc4b6 ""
   "Picture/Moggio 2018-2020.jpeg" 1634461856 159710 666f8b35c447a17ef8be6805c39e4959 ""
   "Picture/Schivenoglia 2018-2020.jpeg" 1634461856 168190 8badc9e2e00ff658118abad860f9fb38 ""
@@ -58,8 +64,8 @@
   "Picture/WStationsOfInterest.jpeg" 1634461856 30951 d16ece970f3cf42242e73e5899e1c813 ""
   "Picture/WStationsOfInterestConstrained.jpeg" 1634461856 31095 4a0317ad0bb62099c7fd289bae51d572 ""
   "Picture/logo.png" 1632663373 11719 b855d050b74fcad482d1accc148164df ""
-  "shortReport.aux" 1634484641 3948 5e7a1f05ec32ed4b02b3842ff3ed8c3d "pdflatex"
-  "shortReport.tex" 1634484634 3862 55fa1d95f11cdfe1eb1c27b20347ecad ""
+  "shortReport.aux" 1634634549 5115 c87da75a901d2450bdf3a0ecf360c4d8 "pdflatex"
+  "shortReport.tex" 1634634545 5023 7ba409b01e04375005569b19c5da29ad ""
   (generated)
   "shortReport.aux"
   "/Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/shortReport.log"
