@@ -141,7 +141,7 @@ for(index in 1:(length(tableMissingDatasTotal2))) {
                                       SUM(t.MissingPM25+a.MissingPM25)
                                       as MissingPM25,
                                       SUM(t.MissingAllThree+a.MissingAllThree)
-                                      as t.MissingAllThree
+                                      as MissingAllThree
                                       FROM temp t 
                                       JOIN auxiliaryTable a
                                       ON t.IDstation = a.IDStation

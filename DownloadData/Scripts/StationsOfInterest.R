@@ -8,8 +8,7 @@ library(lubridate)
 library(sf)
 
 #0. Source functions ----------------------------------------------------------
-source("~/GitHub/BachelorThesis/Rstudio code/Functions.R", encoding = 'UTF-8')
-
+source("~/GitHub/GitTesi/DownloadData/Scripts/Functions.R", encoding = 'UTF-8')
 #Stations we are interested in:
 #1 703: Schivenoglia (R)
 #2 681: Moggio (R)
@@ -290,9 +289,9 @@ for (i in 1:ncol(MissingCount)) { # saving all piecharts
 
 #5 Unique table for AQ and W--------------------------------------------
 
-aq <- Easydownload(2018,2020,681)
+aq <- Easydownload(startyear,endyear,arrayStations)
 w <-  get_ARPA_Lombardia_W_data(
-  ID_station = distanceConstrained[distanceConstrained[,'IDStation']==681,'reg_Y_nn1_ID'], 
+  ID_station = distanceConstrained[distanceConstrained[,'IDStation']==arrayStations,'reg_Y_nn1_ID'], 
   Year = c(startyear:endyear),
   Frequency = "daily")
 
@@ -305,18 +304,4 @@ aqw<- sqldf('select *
 
 write_csv(aqw,'NNdata.csv')
 
-aq <- Easydownload(2018,2020,681)
-w <-  get_ARPA_Lombardia_W_data(
-  ID_station = distanceConstrained[distanceConstrained[,'IDStation']==681,'reg_Y_nn1_ID'], 
-  Year = c(startyear:endyear),
-  Frequency = "daily")
-
-equiv <- distance[,c(1,6)]
-
-aqw<- sqldf('select *
-      from aq t join equiv e on t.IDStation = e.IDStation join w on e.reg_Y_nn1_ID = w.IDStation
-               where t.Date = w.Date')
-
-
-write_csv(aqw,'NNdata.csv')
 
