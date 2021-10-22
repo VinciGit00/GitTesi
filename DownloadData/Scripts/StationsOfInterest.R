@@ -290,10 +290,6 @@ for (i in 1:ncol(MissingCount)) { # saving all piecharts
 #5 Unique table for AQ and W--------------------------------------------
 
 aq <- Easydownload(startyear,endyear,arrayStations)
-w <-  get_ARPA_Lombardia_W_data(
-  ID_station = distanceConstrained[distanceConstrained[,'IDStation']==arrayStations,'reg_Y_nn1_ID'], 
-  Year = c(startyear:endyear),
-  Frequency = "daily")
 
 w <-  get_ARPA_Lombardia_W_data(
   ID_station = c(677 , 671, 111), 
