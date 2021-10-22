@@ -295,7 +295,13 @@ w <-  get_ARPA_Lombardia_W_data(
   Year = c(startyear:endyear),
   Frequency = "daily")
 
-equiv <- distance[,c(1,6)]
+w <-  get_ARPA_Lombardia_W_data(
+  ID_station = c(677 , 671, 111), 
+  Year = c(startyear:endyear),
+  Frequency = "daily")
+
+
+equiv <- distanceConstrained[,c(1,6)]
 
 aqw<- sqldf('select *
       from aq t join equiv e on t.IDStation = e.IDStation join w on e.reg_Y_nn1_ID = w.IDStation
