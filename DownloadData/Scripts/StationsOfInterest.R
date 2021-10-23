@@ -299,9 +299,9 @@ w <-  get_ARPA_Lombardia_W_data(
 
 equiv <- distanceConstrained[,c(1,6)]
 
-aqw<- sqldf('select *
-      from aq t join equiv e on t.IDStation = e.IDStation join w on e.reg_Y_nn1_ID = w.IDStation
-               where t.Date = w.Date')
+aqw<- sqldf('SELECT *
+      FROM aq t JOIN equiv e ON t.IDStation = e.IDStation JOIN w ON e.reg_Y_nn1_ID = w.IDStation
+               WHERE t.Date = w.Date')
 
 
 write_csv(aqw,'NNdata.csv')
