@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.1)  23 OCT 2021 22:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.9)  12 NOV 2021 11:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -379,14 +379,14 @@ Package pdftex.def Info: Picture/Barplots e piecharts/Cremona Via Fatebenefratel
  [12 </Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/Picture/2/Persico Dosimo k= 2 2018 2020 .jpeg> </Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/Picture/3/Cremona Via Gerre Borghi k= 3 2018 2020 .jpeg>] [13 </Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/Picture/Barplots e piecharts/Cremona Via Fatebenefratelli BarPlotMV.jpeg> </Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/Picture/Barplots e piecharts/Cremona Via Fatebenefratelli PieChartMV.jpeg>] (/Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/shortReport.aux) ) 
 Here is how much of TeX's memory you used:
  4428 strings out of 478994
- 75457 string characters out of 5858185
- 384062 words of memory out of 5000000
+ 75457 string characters out of 5858184
+ 384063 words of memory out of 5000000
  21873 multiletter control sequences out of 15000+600000
  405848 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,8n,77p,365b,275s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb>
-Output written on "/Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/shortReport.pdf" (13 pages, 3323691 bytes).
+Output written on "/Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/shortReport.pdf" (13 pages, 3323696 bytes).
 PDF statistics:
  104 PDF objects out of 1000 (max. 8388607)
  47 compressed objects within 1 object stream
