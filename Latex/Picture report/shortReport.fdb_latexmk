@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1636713436 "/Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/shortReport.tex" "/Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/shortReport.pdf" "shortReport" 1636713437
-  "/Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/shortReport.aux" 1636713437 5441 8138e3b0fe2a8252cb3837db1bab54a9 ""
-  "/Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/shortReport.tex" 1636495777 5699 cee687180801d47a72039afeb95f7f57 ""
+["pdflatex"] 1636892365 "/Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/shortReport.tex" "/Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/shortReport.pdf" "shortReport" 1636892392
+  "/Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/shortReport.aux" 1636892366 5544 adaae1ad6b25a322fb109decd4df8ad3 ""
+  "/Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/shortReport.tex" 1636892364 5787 30fc538da08d746e75b02ef375e21cd6 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
@@ -42,6 +42,7 @@
   "/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1616695603 5169178 a2ce6e2d73f603b690db6777d06dbccb ""
   "/usr/local/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1636498458 2724740 abddf1c0c308c18d42f363a86a112a35 ""
   "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
+  "NeuralNetwork.jpeg" 1636816861 1223284 17ec80a276c614644f7f841a3ff4e2c6 ""
   "Picture/1/Cassina Valsassina Moggio k= 1 2018 2020 .jpeg" 1636495777 148640 8c298c8bd82140d011d29894d516c2a4 ""
   "Picture/1/Cremona Via Fatebenefratelli k= 1 2018 2020 .jpeg" 1636495777 148811 c38160b9581bede48124f325e573fece ""
   "Picture/1/Sermide E Felonica .jpeg" 1636495777 132640 61fdf7a2cb177a55cd247980f75ff414 ""
@@ -70,11 +71,11 @@
   "Picture/WStationsOfInterest.jpeg" 1636495777 30951 d16ece970f3cf42242e73e5899e1c813 ""
   "Picture/WStationsOfInterestConstrained.jpeg" 1636495777 31095 4a0317ad0bb62099c7fd289bae51d572 ""
   "Picture/logo.png" 1636495777 11719 b855d050b74fcad482d1accc148164df ""
-  "shortReport.aux" 1636713437 5441 8138e3b0fe2a8252cb3837db1bab54a9 "pdflatex"
-  "shortReport.tex" 1636495777 5699 cee687180801d47a72039afeb95f7f57 ""
+  "shortReport.aux" 1636892366 5544 adaae1ad6b25a322fb109decd4df8ad3 "pdflatex"
+  "shortReport.tex" 1636892364 5787 30fc538da08d746e75b02ef375e21cd6 ""
   (generated)
-  "shortReport.log"
   "/Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/shortReport.pdf"
   "shortReport.pdf"
   "/Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/shortReport.log"
+  "shortReport.log"
   "shortReport.aux"
