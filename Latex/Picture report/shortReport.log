@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.9)  14 NOV 2021 13:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.9)  14 NOV 2021 13:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -376,13 +376,13 @@ File: Picture/Barplots e piecharts/Cremona Via Fatebenefratelli PieChartMV.jpeg 
 <use Picture/Barplots e piecharts/Cremona Via Fatebenefratelli PieChartMV.jpeg>
 Package pdftex.def Info: Picture/Barplots e piecharts/Cremona Via Fatebenefratelli PieChartMV.jpeg  used on input line 194.
 (pdftex.def)             Requested size: 248.5241pt x 189.10315pt.
- [12 </Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/Picture/2/Persico Dosimo k= 2 2018 2020 .jpeg> </Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/Picture/3/Cremona Via Gerre Borghi k= 3 2018 2020 .jpeg>]
-<NeuralNetwork.jpeg, id=82, 1804.7425pt x 3601.455pt>
+ [12 </Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/Picture/2/Persico Dosimo k= 2 2018 2020 .jpeg> </Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/Picture/3/Cremona Via Gerre Borghi k= 3 2018 2020 .jpeg>] [13 </Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/Picture/Barplots e piecharts/Cremona Via Fatebenefratelli BarPlotMV.jpeg> </Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/Picture/Barplots e piecharts/Cremona Via Fatebenefratelli PieChartMV.jpeg>]
+<NeuralNetwork.jpeg, id=86, 1804.7425pt x 3601.455pt>
 File: NeuralNetwork.jpeg Graphic file (type jpg)
 <use NeuralNetwork.jpeg>
-Package pdftex.def Info: NeuralNetwork.jpeg  used on input line 201.
-(pdftex.def)             Requested size: 270.69969pt x 540.19495pt.
- [13 </Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/Picture/Barplots e piecharts/Cremona Via Fatebenefratelli BarPlotMV.jpeg> </Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/Picture/Barplots e piecharts/Cremona Via Fatebenefratelli PieChartMV.jpeg>] [14 </Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/NeuralNetwork.jpeg>] (/Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/shortReport.aux) ) 
+Package pdftex.def Info: NeuralNetwork.jpeg  used on input line 202.
+(pdftex.def)             Requested size: 180.48482pt x 360.1666pt.
+ [14 </Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/NeuralNetwork.jpeg>] (/Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/shortReport.aux) ) 
 Here is how much of TeX's memory you used:
  4434 strings out of 478994
  75583 string characters out of 5858184
@@ -392,7 +392,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  69i,8n,77p,365b,275s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb>
-Output written on "/Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/shortReport.pdf" (14 pages, 4548488 bytes).
+Output written on "/Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/shortReport.pdf" (14 pages, 4549491 bytes).
 PDF statistics:
  108 PDF objects out of 1000 (max. 8388607)
  49 compressed objects within 1 object stream
