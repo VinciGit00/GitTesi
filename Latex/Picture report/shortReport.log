@@ -1,40 +1,82 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.9)  14 NOV 2021 13:22
-entering extended mode
- restricted \write18 enabled.
- file:line:error style messages enabled.
- %&-line parsing enabled.
-**"/Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/shortReport.tex"
-(/Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/shortReport.tex
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021)  (format=lualatex 2021.11.9)  21 DEC 2021 15:39
+ restricted system commands enabled.
+**shortReport.tex
+(./shortReport.tex
 LaTeX2e <2020-10-01> patch level 4
-L3 programming layer <2021-02-18> (/usr/local/texlive/2021/texmf-dist/tex/latex/base/article.cls
+Lua module: luaotfload 2021-01-08 3.17 Lua based OpenType font support
+Lua module: lualibs 2020-12-30 2.73 ConTeXt Lua standard libraries.
+Lua module: lualibs-extended 2020-12-30 2.73 ConTeXt Lua libraries -- extended c
+ollection.
+luaotfload | conf : Root cache directory is "/Users/marcovinciguerra/Library/tex
+live/2021/texmf-var/luatex-cache/generic/names".
+luaotfload | init : Loading fontloader "fontloader-2021-01-07.lua" from kpse-res
+olved path "/usr/local/texlive/2021/texmf-dist/tex/luatex/luaotfload/fontloader-
+2021-01-07.lua".
+Lua-only attribute luaotfload@noligature = 1
+Lua-only attribute luaotfload@syllabe = 2
+luaotfload | init : Context OpenType loader version 0x1.8e76c8b439581p+1
+Inserting `luaotfload.node_processor' at position 1 in `pre_linebreak_filter'.
+Inserting `luaotfload.node_processor' at position 1 in `hpack_filter'.
+Inserting `luaotfload.glyph_stream' at position 1 in `glyph_stream_provider'.
+Inserting `luaotfload.define_font' at position 1 in `define_font'.
+Lua-only attribute luaotfload_color_attribute = 3
+luaotfload | conf : Root cache directory is "/Users/marcovinciguerra/Library/tex
+live/2021/texmf-var/luatex-cache/generic/names".
+Inserting `luaotfload.harf.strip_prefix' at position 1 in `find_opentype_file'.
+Inserting `luaotfload.harf.strip_prefix' at position 1 in `find_truetype_file'.
+Inserting `luaotfload.harf.finalize_vlist' at position 1 in `post_linebreak_filt
+er'.
+Inserting `luaotfload.harf.finalize_hlist' at position 2 in `hpack_filter'.
+Inserting `luaotfload.cleanup_files' at position 1 in `wrapup_run'.
+Inserting `luaotfload.harf.finalize_unicode' at position 1 in `finish_pdffile'.
+Inserting `luaotfload.glyphinfo' at position 1 in `glyph_info'.
+Inserting `luaotfload.aux.set_sscale_dimens' at position 1 in `luaotfload.patch_
+font'.
+Inserting `luaotfload.aux.set_font_index' at position 2 in `luaotfload.patch_fon
+t'.
+Inserting `luaotfload.aux.patch_cambria_domh' at position 3 in `luaotfload.patch
+_font'.
+Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_fon
+t_unsafe'.
+Inserting `luaotfload.aux.set_capheight' at position 4 in `luaotfload.patch_font
+'.
+Inserting `luaotfload.aux.set_xheight' at position 5 in `luaotfload.patch_font'.
+Inserting `luaotfload.rewrite_fontname' at position 6 in `luaotfload.patch_font'
+. L3 programming layer <2021-02-18>
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
 (/usr/local/texlive/2021/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
-)
-\c@part=\count179
-\c@section=\count180
-\c@subsection=\count181
-\c@subsubsection=\count182
-\c@paragraph=\count183
-\c@subparagraph=\count184
-\c@figure=\count185
-\c@table=\count186
+luaotfload | db : Font names database loaded from /Users/marcovinciguerra/Librar
+y/texlive/2021/texmf-var/luatex-cache/generic/names/luaotfload-names.luc)
+\c@part=\count175
+\c@section=\count176
+\c@subsection=\count177
+\c@subsubsection=\count178
+\c@paragraph=\count179
+\c@subparagraph=\count180
+\c@figure=\count181
+\c@table=\count182
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen138
-) (/usr/local/texlive/2021/texmf-dist/tex/latex/geometry/geometry.sty
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
- (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks15
-) (/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/ifvtex.sty
+)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
- (/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
+
+(/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 ))
-\Gm@cnth=\count187
-\Gm@cntv=\count188
-\c@Gm@tempcnt=\count189
+\Gm@cnth=\count183
+\Gm@cntv=\count184
+\c@Gm@tempcnt=\count185
 \Gm@bindingoffset=\dimen139
 \Gm@wd@mp=\dimen140
 \Gm@odd@mp=\dimen141
@@ -44,50 +86,161 @@ Package: iftex 2020/03/06 v1.0d TeX engine tests
 \Gm@layouthoffset=\dimen145
 \Gm@layoutvoffset=\dimen146
 \Gm@dimlist=\toks16
-) (/usr/local/texlive/2021/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2021/03/24 3.56 The Babel package
- (/usr/local/texlive/2021/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2021/03/24 3.56 Babel common definitions
-\babel@savecnt=\count190
-\U@D=\dimen147
-\l@babelnohyphens=\language87
- (/usr/local/texlive/2021/texmf-dist/tex/generic/babel/txtbabel.def)
-\bbl@readstream=\read2
 )
-\bbl@dirlevel=\count191
- (/usr/local/texlive/2021/texmf-dist/tex/generic/babel-italian/italian.ldf
+(/usr/local/texlive/2021/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2021/03/24 3.56 The Babel package
+
+(/usr/local/texlive/2021/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2021/03/24 3.56 Babel common definitions
+
+(/usr/local/texlive/2021/texmf-dist/tex/generic/babel/luababel.def
+\bbl@readstream=\read2
+\l@dumylang=\language2
+Package babel Info: Non-standard hyphenation setup on input line 117.
+\l@nohyphenation=\language3
+\l@german-x-2021-02-26=\language4
+\l@ngerman-x-2021-02-26=\language5
+\l@afrikaans=\language6
+\l@ancientgreek=\language7
+\l@ibycus=\language8
+\l@arabic=\language9
+\l@armenian=\language10
+\l@basque=\language11
+\l@belarusian=\language12
+\l@bulgarian=\language13
+\l@catalan=\language14
+\l@pinyin=\language15
+\l@churchslavonic=\language16
+\l@coptic=\language17
+\l@croatian=\language18
+\l@czech=\language19
+\l@danish=\language20
+\l@dutch=\language21
+\l@ukenglish=\language22
+\l@usenglishmax=\language23
+\l@esperanto=\language24
+\l@estonian=\language25
+\l@ethiopic=\language26
+\l@farsi=\language27
+\l@finnish=\language28
+\l@schoolfinnish=\language29
+\l@french=\language30
+\l@friulan=\language31
+\l@galician=\language32
+\l@georgian=\language33
+\l@german=\language34
+\l@ngerman=\language35
+\l@swissgerman=\language36
+\l@greek=\language37
+\l@monogreek=\language38
+\l@hungarian=\language39
+\l@icelandic=\language40
+\l@assamese=\language41
+\l@bengali=\language42
+\l@gujarati=\language43
+\l@hindi=\language44
+\l@kannada=\language45
+\l@malayalam=\language46
+\l@marathi=\language47
+\l@oriya=\language48
+\l@pali=\language49
+\l@panjabi=\language50
+\l@tamil=\language51
+\l@telugu=\language52
+\l@indonesian=\language53
+\l@interlingua=\language54
+\l@irish=\language55
+\l@italian=\language56
+\l@kurmanji=\language57
+\l@classiclatin=\language58
+\l@latin=\language59
+\l@liturgicallatin=\language60
+\l@latvian=\language61
+\l@lithuanian=\language62
+\l@macedonian=\language63
+\l@mongolian=\language64
+\l@mongolianlmc=\language65
+\l@bokmal=\language66
+\l@nynorsk=\language67
+\l@occitan=\language68
+\l@piedmontese=\language69
+\l@polish=\language70
+\l@portuguese=\language71
+\l@romanian=\language72
+\l@romansh=\language73
+\l@russian=\language74
+\l@sanskrit=\language75
+\l@serbian=\language76
+\l@serbianc=\language77
+\l@slovak=\language78
+\l@slovenian=\language79
+\l@spanish=\language80
+\l@swedish=\language81
+\l@thai=\language82
+\l@turkish=\language83
+\l@turkmen=\language84
+\l@ukrainian=\language85
+\l@uppersorbian=\language86
+\l@welsh=\language87
+\babelcatcodetablenum=\catcodetable12
+\bbl@pattcodes=\catcodetable13
+)
+\babel@savecnt=\count186
+\U@D=\dimen147
+\l@babelnohyphens=\language88
+
+(/usr/local/texlive/2021/texmf-dist/tex/generic/babel/luababel.def
+\bbl@attr@locale=\attribute4
+))
+(/usr/local/texlive/2021/texmf-dist/tex/generic/babel-italian/italian.ldf
 Language: italian 2020/05/21 v.1.4.04 Italian support for the babel system
-\it@lettering=\count192
-\it@doublequoteactive=\count193
-\it@ISOcompliance=\count194
-)) (/usr/local/texlive/2021/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+\it@lettering=\count187
+\it@doublequoteactive=\count188
+\it@ISOcompliance=\count189
+
+(/usr/local/texlive/2021/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-it.
+tex UTF-8 Italian hyphenation patterns
+(/usr/local/texlive/2021/texmf-dist/tex/generic/hyph-utf8/patterns/tex/hyph-it.
+tex)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/hyph-utf8/patterns/quote/hyph-q
+uote-it.tex))))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count195
-) (/usr/local/texlive/2021/texmf-dist/tex/latex/titling/titling.sty
+\etb@tempcnta=\count190
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/titling/titling.sty
 Package: titling 2009/09/04 v2.1d maketitle typesetting
 \thanksmarkwidth=\skip49
 \thanksmargin=\skip50
 \droptitle=\skip51
-) (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
- (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
- (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-) (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 105.
- (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+Package graphics Info: Driver file: luatex.def on input line 105.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-def/luatex.def
+File: luatex.def 2020/10/05 v1.2a Graphics/color driver for luatex
 ))
 \Gin@req@height=\dimen148
 \Gin@req@width=\dimen149
-) (/usr/local/texlive/2021/texmf-dist/tex/latex/caption/subcaption.sty
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
- (/usr/local/texlive/2021/texmf-dist/tex/latex/caption/caption.sty
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2020/10/26 v3.5g Customizing captions (AR)
- (/usr/local/texlive/2021/texmf-dist/tex/latex/caption/caption3.sty
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
 \captionmargin=\dimen150
 \captionmargin@=\dimen151
@@ -98,24 +251,27 @@ Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
 \caption@hangindent=\dimen156
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count196
-\c@continuedfloat=\count197
+\c@caption@flags=\count191
+\c@continuedfloat=\count192
 )
-\c@subfigure=\count198
-\c@subtable=\count199
-) (/usr/local/texlive/2021/texmf-dist/tex/latex/float/float.sty
+\c@subfigure=\count193
+\c@subtable=\count194
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count266
+\c@float@type=\count195
 \float@exts=\toks17
 \float@box=\box47
 \@float@everytoks=\toks18
 \@floatcapt=\box48
-) (/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count267
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-luatex.def
+File: l3backend-luatex.def 2021-03-18 L3 backend support: PDF output (LuaTeX)
+\l__color_backend_stack_int=\count196
 \l__pdf_internal_box=\box49
-) (/Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/shortReport.aux)
-\openout1 = `shortReport.aux'.
+)
+(./shortReport.aux)
+\openout1 = shortReport.aux
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
 LaTeX Font Info:    ... okay on input line 35.
@@ -126,6 +282,14 @@ LaTeX Font Info:    ... okay on input line 35.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
 LaTeX Font Info:    ... okay on input line 35.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 3
+5.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 35.
 LaTeX Font Info:    ... okay on input line 35.
 LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
 LaTeX Font Info:    ... okay on input line 35.
@@ -133,9 +297,9 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
 LaTeX Font Info:    ... okay on input line 35.
 
 *geometry* driver: auto-detecting
-*geometry* detected driver: pdftex
+*geometry* detected driver: luatex
 *geometry* verbose mode - [ preamble ] result:
-* driver: pdftex
+* driver: luatex
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
@@ -166,34 +330,27 @@ LaTeX Font Info:    ... okay on input line 35.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \it@ocap on input line 35.
-LaTeX Info: Redefining \it@ccap on input line 35.
-
-File italian.ldf warning: 
-italian.ldf    With OT1 encoding guillemets are poorly faked
-italian.ldf    Use T1 encoding
-italian.ldf    or specify a font with command \CaporaliFrom
-italian.ldf    See the documentation concerning the babel-italian typesetting 
-italian.ldf    on input line 35.
-
 (/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count268
+\scratchcounter=\count197
 \scratchdimen=\dimen157
 \scratchbox=\box50
-\nofMPsegments=\count269
-\nofMParguments=\count270
+\nofMPsegments=\count198
+\nofMParguments=\count199
 \everyMPshowfont=\toks19
-\MPscratchCnt=\count271
+\MPscratchCnt=\count266
 \MPscratchDim=\dimen158
-\MPnumerator=\count272
-\makeMPintoPDFobject=\count273
+\MPnumerator=\count267
+\makeMPintoPDFobject=\count268
 \everyMPtoPDFconversion=\toks20
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
- (/usr/local/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
 ))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
@@ -205,197 +362,272 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 <Picture/logo.png, id=1, 163.3603pt x 110.66344pt>
 File: Picture/logo.png Graphic file (type png)
 <use Picture/logo.png>
-Package pdftex.def Info: Picture/logo.png  used on input line 37.
-(pdftex.def)             Requested size: 56.9055pt x 38.5487pt.
-<Picture/UniBg-logo.jpg, id=3, 1003.75pt x 1003.75pt>
+Package luatex.def Info: Picture/logo.png  used on input line 37.
+(luatex.def)             Requested size: 56.9055pt x 38.5487pt.
+<Picture/UniBg-logo.jpg, id=2, 1003.75pt x 1003.75pt>
 File: Picture/UniBg-logo.jpg Graphic file (type jpg)
 <use Picture/UniBg-logo.jpg>
-Package pdftex.def Info: Picture/UniBg-logo.jpg  used on input line 37.
-(pdftex.def)             Requested size: 71.13188pt x 71.12737pt.
-<Picture/AQStationsOfInterest.jpeg, id=4, 465.99094pt x 354.57469pt>
+Package luatex.def Info: Picture/UniBg-logo.jpg  used on input line 37.
+(luatex.def)             Requested size: 71.13188pt x 71.12737pt.
+<Picture/AQStationsOfInterest.jpeg, id=3, 465.99094pt x 354.57469pt>
 File: Picture/AQStationsOfInterest.jpeg Graphic file (type jpg)
 <use Picture/AQStationsOfInterest.jpeg>
-Package pdftex.def Info: Picture/AQStationsOfInterest.jpeg  used on input line 45.
-(pdftex.def)             Requested size: 326.19142pt x 248.20059pt.
-<Picture/WStationsOfInterestConstrained.jpeg, id=5, 621.32124pt x 472.76625pt>
+Package luatex.def Info: Picture/AQStationsOfInterest.jpeg  used on input line 
+45.
+(luatex.def)             Requested size: 326.19142pt x 248.20059pt.
+<Picture/WStationsOfInterestConstrained.jpeg, id=4, 621.32124pt x 472.76625pt>
 File: Picture/WStationsOfInterestConstrained.jpeg Graphic file (type jpg)
 <use Picture/WStationsOfInterestConstrained.jpeg>
-Package pdftex.def Info: Picture/WStationsOfInterestConstrained.jpeg  used on input line 50.
-(pdftex.def)             Requested size: 248.5241pt x 189.10315pt.
-<Picture/WStationsOfInterest.jpeg, id=6, 621.32124pt x 472.76625pt>
+Package luatex.def Info: Picture/WStationsOfInterestConstrained.jpeg  used on i
+nput line 50.
+(luatex.def)             Requested size: 248.5241pt x 189.10315pt.
+<Picture/WStationsOfInterest.jpeg, id=5, 621.32124pt x 472.76625pt>
 File: Picture/WStationsOfInterest.jpeg Graphic file (type jpg)
 <use Picture/WStationsOfInterest.jpeg>
-Package pdftex.def Info: Picture/WStationsOfInterest.jpeg  used on input line 55.
-(pdftex.def)             Requested size: 248.5241pt x 189.10315pt.
- [1
+Package luatex.def Info: Picture/WStationsOfInterest.jpeg  used on input line 5
+5.
+(luatex.def)             Requested size: 248.5241pt x 189.10315pt.
 
-{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/Picture/logo.png> </Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/Picture/UniBg-logo.jpg> </Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/Picture/AQStationsOfInterest.jpeg> </Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/Picture/WStationsOfInterestConstrained.jpeg>]
-<Picture/Scatter/SchivenogliaScatter.png, id=19, 639.38875pt x 534.99875pt>
+[1
+
+{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}<./Picture
+/logo.png><./Picture/UniBg-logo.jpg><./Picture/AQStationsOfInterest.jpeg><./Pict
+ure/WStationsOfInterestConstrained.jpeg>]
+<Picture/Scatter/SchivenogliaScatter.png, id=18, 639.38875pt x 534.99875pt>
 File: Picture/Scatter/SchivenogliaScatter.png Graphic file (type png)
 <use Picture/Scatter/SchivenogliaScatter.png>
-Package pdftex.def Info: Picture/Scatter/SchivenogliaScatter.png  used on input line 63.
-(pdftex.def)             Requested size: 351.66489pt x 294.25021pt.
-<Picture/Scatter/SchivenogliaScatterBig.png, id=20, 1533.73pt x 1420.30624pt>
+Package luatex.def Info: Picture/Scatter/SchivenogliaScatter.png  used on input
+ line 63.
+(luatex.def)             Requested size: 351.66489pt x 294.25021pt.
+<Picture/Scatter/SchivenogliaScatterBig.png, id=19, 1533.73pt x 1420.30624pt>
 File: Picture/Scatter/SchivenogliaScatterBig.png Graphic file (type png)
 <use Picture/Scatter/SchivenogliaScatterBig.png>
-Package pdftex.def Info: Picture/Scatter/SchivenogliaScatterBig.png  used on input line 64.
-(pdftex.def)             Requested size: 460.12256pt x 426.09515pt.
- [2 </Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/Picture/WStationsOfInterest.jpeg>]
-Overfull \vbox (38.91335pt too high) has occurred while \output is active []
+Package luatex.def Info: Picture/Scatter/SchivenogliaScatterBig.png  used on in
+put line 64.
+(luatex.def)             Requested size: 460.12256pt x 426.09515pt.
+ [2<./Picture/WStationsOfInterest.jpeg>]
+Overfull \vbox (38.92497pt too high) has occurred while \output is active []
 
- [3 </Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/Picture/Scatter/SchivenogliaScatter.png> </Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/Picture/Scatter/SchivenogliaScatterBig.png>]
-<Picture/Schivenoglia 2018-2020.jpeg, id=29, 1284.8pt x 722.7pt>
+
+[3<./Picture/Scatter/SchivenogliaScatter.png><./Picture/Scatter/SchivenogliaScat
+terBig.png>]
+<Picture/Schivenoglia 2018-2020.jpeg, id=28, 1284.8pt x 722.7pt>
 File: Picture/Schivenoglia 2018-2020.jpeg Graphic file (type jpg)
 <use Picture/Schivenoglia 2018-2020.jpeg>
-Package pdftex.def Info: Picture/Schivenoglia 2018-2020.jpeg  used on input line 70.
-(pdftex.def)             Requested size: 513.9109pt x 289.07487pt.
+Package luatex.def Info: Picture/Schivenoglia 2018-2020.jpeg  used on input lin
+e 70.
+(luatex.def)             Requested size: 513.9109pt x 289.07487pt.
 
 Overfull \hbox (18.83293pt too wide) in paragraph at lines 70--71
  [][] 
  []
 
-<Picture/1/Sermide E Felonica .jpeg, id=30, 1284.8pt x 722.7pt>
+<Picture/1/Sermide E Felonica .jpeg, id=29, 1284.8pt x 722.7pt>
 File: Picture/1/Sermide E Felonica .jpeg Graphic file (type jpg)
 <use Picture/1/Sermide E Felonica .jpeg>
-Package pdftex.def Info: Picture/1/Sermide E Felonica .jpeg  used on input line 78.
-(pdftex.def)             Requested size: 385.44298pt x 216.81166pt.
-<Picture/2/Mantova Tridolino k= 2 2018 2020 .jpeg, id=31, 1284.8pt x 722.7pt>
+Package luatex.def Info: Picture/1/Sermide E Felonica .jpeg  used on input line
+ 78.
+(luatex.def)             Requested size: 385.44298pt x 216.81166pt.
+<Picture/2/Mantova Tridolino k= 2 2018 2020 .jpeg, id=30, 1284.8pt x 722.7pt>
 File: Picture/2/Mantova Tridolino k= 2 2018 2020 .jpeg Graphic file (type jpg)
 <use Picture/2/Mantova Tridolino k= 2 2018 2020 .jpeg>
-Package pdftex.def Info: Picture/2/Mantova Tridolino k= 2 2018 2020 .jpeg  used on input line 85.
-(pdftex.def)             Requested size: 385.44298pt x 216.81166pt.
-[4 </Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/Picture/Schivenoglia 2018-2020.jpeg> </Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/Picture/1/Sermide E Felonica .jpeg>]
-<Picture/3/Bigarello k= 3 2018 2020 .jpeg, id=35, 1284.8pt x 722.7pt>
+Package luatex.def Info: Picture/2/Mantova Tridolino k= 2 2018 2020 .jpeg  used
+ on input line 85.
+(luatex.def)             Requested size: 385.44298pt x 216.81166pt.
+[4<./Picture/Schivenoglia 2018-2020.jpeg><./Picture/1/Sermide E Felonica .jpeg>]
+<Picture/3/Bigarello k= 3 2018 2020 .jpeg, id=34, 1284.8pt x 722.7pt>
 File: Picture/3/Bigarello k= 3 2018 2020 .jpeg Graphic file (type jpg)
 <use Picture/3/Bigarello k= 3 2018 2020 .jpeg>
-Package pdftex.def Info: Picture/3/Bigarello k= 3 2018 2020 .jpeg  used on input line 92.
-(pdftex.def)             Requested size: 385.44298pt x 216.81166pt.
-<Picture/Barplots e piecharts/Schivenoglia BarPlotMV.jpeg, id=36, 621.32124pt x 472.76625pt>
-File: Picture/Barplots e piecharts/Schivenoglia BarPlotMV.jpeg Graphic file (type jpg)
+Package luatex.def Info: Picture/3/Bigarello k= 3 2018 2020 .jpeg  used on inpu
+t line 92.
+(luatex.def)             Requested size: 385.44298pt x 216.81166pt.
+<Picture/Barplots e piecharts/Schivenoglia BarPlotMV.jpeg, id=35, 621.32124pt x
+ 472.76625pt>
+File: Picture/Barplots e piecharts/Schivenoglia BarPlotMV.jpeg Graphic file (ty
+pe jpg)
 <use Picture/Barplots e piecharts/Schivenoglia BarPlotMV.jpeg>
-Package pdftex.def Info: Picture/Barplots e piecharts/Schivenoglia BarPlotMV.jpeg  used on input line 99.
-(pdftex.def)             Requested size: 248.5241pt x 189.10315pt.
-<Picture/Barplots e piecharts/Schivenoglia PieChartMV.jpeg, id=37, 621.32124pt x 472.76625pt>
-File: Picture/Barplots e piecharts/Schivenoglia PieChartMV.jpeg Graphic file (type jpg)
+Package luatex.def Info: Picture/Barplots e piecharts/Schivenoglia BarPlotMV.jp
+eg  used on input line 99.
+(luatex.def)             Requested size: 248.5241pt x 189.10315pt.
+<Picture/Barplots e piecharts/Schivenoglia PieChartMV.jpeg, id=36, 621.32124pt 
+x 472.76625pt>
+File: Picture/Barplots e piecharts/Schivenoglia PieChartMV.jpeg Graphic file (t
+ype jpg)
 <use Picture/Barplots e piecharts/Schivenoglia PieChartMV.jpeg>
-Package pdftex.def Info: Picture/Barplots e piecharts/Schivenoglia PieChartMV.jpeg  used on input line 103.
-(pdftex.def)             Requested size: 248.5241pt x 189.10315pt.
- [5 </Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/Picture/2/Mantova Tridolino k= 2 2018 2020 .jpeg> </Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/Picture/3/Bigarello k= 3 2018 2020 .jpeg>]
-<Picture/Scatter/MoggioScatter.png, id=41, 613.29124pt x 534.99875pt>
+Package luatex.def Info: Picture/Barplots e piecharts/Schivenoglia PieChartMV.j
+peg  used on input line 103.
+(luatex.def)             Requested size: 248.5241pt x 189.10315pt.
+ [5<./Picture/2/Mantova Tridolino k= 2 2018 2020 .jpeg><./Picture/3/Bigarello k=
+ 3 2018 2020 .jpeg>]
+<Picture/Scatter/MoggioScatter.png, id=40, 613.29124pt x 534.99875pt>
 File: Picture/Scatter/MoggioScatter.png Graphic file (type png)
 <use Picture/Scatter/MoggioScatter.png>
-Package pdftex.def Info: Picture/Scatter/MoggioScatter.png  used on input line 112.
-(pdftex.def)             Requested size: 337.31122pt x 294.25021pt.
-<Picture/Scatter/MoggioScatterBig.png, id=42, 1507.6325pt x 1420.30624pt>
+Package luatex.def Info: Picture/Scatter/MoggioScatter.png  used on input line 
+112.
+(luatex.def)             Requested size: 337.31122pt x 294.25021pt.
+<Picture/Scatter/MoggioScatterBig.png, id=41, 1507.6325pt x 1420.30624pt>
 File: Picture/Scatter/MoggioScatterBig.png Graphic file (type png)
 <use Picture/Scatter/MoggioScatterBig.png>
-Package pdftex.def Info: Picture/Scatter/MoggioScatterBig.png  used on input line 113.
-(pdftex.def)             Requested size: 452.29324pt x 426.09515pt.
- [6 </Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/Picture/Barplots e piecharts/Schivenoglia BarPlotMV.jpeg> </Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/Picture/Barplots e piecharts/Schivenoglia PieChartMV.jpeg>]
-Overfull \vbox (38.91335pt too high) has occurred while \output is active []
+Package luatex.def Info: Picture/Scatter/MoggioScatterBig.png  used on input li
+ne 113.
+(luatex.def)             Requested size: 452.29324pt x 426.09515pt.
+ [6<./Picture/Barplots e piecharts/Schivenoglia BarPlotMV.jpeg><./Picture/Barplo
+ts e piecharts/Schivenoglia PieChartMV.jpeg>]
+Overfull \vbox (38.92497pt too high) has occurred while \output is active []
 
- [7 </Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/Picture/Scatter/MoggioScatter.png> </Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/Picture/Scatter/MoggioScatterBig.png>]
-<Picture/Moggio 2018-2020.jpeg, id=52, 1284.8pt x 722.7pt>
+
+[7<./Picture/Scatter/MoggioScatter.png><./Picture/Scatter/MoggioScatterBig.png>]
+<Picture/Moggio 2018-2020.jpeg, id=50, 1284.8pt x 722.7pt>
 File: Picture/Moggio 2018-2020.jpeg Graphic file (type jpg)
 <use Picture/Moggio 2018-2020.jpeg>
-Package pdftex.def Info: Picture/Moggio 2018-2020.jpeg  used on input line 119.
-(pdftex.def)             Requested size: 513.9109pt x 289.07487pt.
+Package luatex.def Info: Picture/Moggio 2018-2020.jpeg  used on input line 119.
+
+(luatex.def)             Requested size: 513.9109pt x 289.07487pt.
 
 Overfull \hbox (18.83293pt too wide) in paragraph at lines 119--120
  [][] 
  []
 
-<Picture/1/Cassina Valsassina Moggio k= 1 2018 2020 .jpeg, id=53, 1284.8pt x 722.7pt>
-File: Picture/1/Cassina Valsassina Moggio k= 1 2018 2020 .jpeg Graphic file (type jpg)
+<Picture/1/Cassina Valsassina Moggio k= 1 2018 2020 .jpeg, id=51, 1284.8pt x 72
+2.7pt>
+File: Picture/1/Cassina Valsassina Moggio k= 1 2018 2020 .jpeg Graphic file (ty
+pe jpg)
 <use Picture/1/Cassina Valsassina Moggio k= 1 2018 2020 .jpeg>
-Package pdftex.def Info: Picture/1/Cassina Valsassina Moggio k= 1 2018 2020 .jpeg  used on input line 127.
-(pdftex.def)             Requested size: 385.44298pt x 216.81166pt.
-<Picture/2/Barzio Piani Di Bobbio k= 2 2018 2020 .jpeg, id=54, 1284.8pt x 722.7pt>
-File: Picture/2/Barzio Piani Di Bobbio k= 2 2018 2020 .jpeg Graphic file (type jpg)
+Package luatex.def Info: Picture/1/Cassina Valsassina Moggio k= 1 2018 2020 .jp
+eg  used on input line 127.
+(luatex.def)             Requested size: 385.44298pt x 216.81166pt.
+<Picture/2/Barzio Piani Di Bobbio k= 2 2018 2020 .jpeg, id=52, 1284.8pt x 722.7
+pt>
+File: Picture/2/Barzio Piani Di Bobbio k= 2 2018 2020 .jpeg Graphic file (type 
+jpg)
 <use Picture/2/Barzio Piani Di Bobbio k= 2 2018 2020 .jpeg>
-Package pdftex.def Info: Picture/2/Barzio Piani Di Bobbio k= 2 2018 2020 .jpeg  used on input line 134.
-(pdftex.def)             Requested size: 385.44298pt x 216.81166pt.
-[8 </Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/Picture/Moggio 2018-2020.jpeg> </Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/Picture/1/Cassina Valsassina Moggio k= 1 2018 2020 .jpeg>]
-<Picture/Barplots e piecharts/Moggio BarPlotMV.jpeg, id=58, 621.32124pt x 472.76625pt>
-File: Picture/Barplots e piecharts/Moggio BarPlotMV.jpeg Graphic file (type jpg)
+Package luatex.def Info: Picture/2/Barzio Piani Di Bobbio k= 2 2018 2020 .jpeg 
+ used on input line 134.
+(luatex.def)             Requested size: 385.44298pt x 216.81166pt.
+[8<./Picture/Moggio 2018-2020.jpeg><./Picture/1/Cassina Valsassina Moggio k= 1 2
+018 2020 .jpeg>]
+<Picture/Barplots e piecharts/Moggio BarPlotMV.jpeg, id=56, 621.32124pt x 472.7
+6625pt>
+File: Picture/Barplots e piecharts/Moggio BarPlotMV.jpeg Graphic file (type jpg
+)
 <use Picture/Barplots e piecharts/Moggio BarPlotMV.jpeg>
-Package pdftex.def Info: Picture/Barplots e piecharts/Moggio BarPlotMV.jpeg  used on input line 141.
-(pdftex.def)             Requested size: 248.5241pt x 189.10315pt.
-<Picture/Barplots e piecharts/Moggio PieChartMV.jpeg, id=59, 621.32124pt x 472.76625pt>
-File: Picture/Barplots e piecharts/Moggio PieChartMV.jpeg Graphic file (type jpg)
+Package luatex.def Info: Picture/Barplots e piecharts/Moggio BarPlotMV.jpeg  us
+ed on input line 141.
+(luatex.def)             Requested size: 248.5241pt x 189.10315pt.
+<Picture/Barplots e piecharts/Moggio PieChartMV.jpeg, id=57, 621.32124pt x 472.
+76625pt>
+File: Picture/Barplots e piecharts/Moggio PieChartMV.jpeg Graphic file (type jp
+g)
 <use Picture/Barplots e piecharts/Moggio PieChartMV.jpeg>
-Package pdftex.def Info: Picture/Barplots e piecharts/Moggio PieChartMV.jpeg  used on input line 145.
-(pdftex.def)             Requested size: 248.5241pt x 189.10315pt.
-<Picture/Scatter/CremonaScatter.png, id=60, 720.6925pt x 534.99875pt>
+Package luatex.def Info: Picture/Barplots e piecharts/Moggio PieChartMV.jpeg  u
+sed on input line 145.
+(luatex.def)             Requested size: 248.5241pt x 189.10315pt.
+<Picture/Scatter/CremonaScatter.png, id=58, 720.6925pt x 534.99875pt>
 File: Picture/Scatter/CremonaScatter.png Graphic file (type png)
 <use Picture/Scatter/CremonaScatter.png>
-Package pdftex.def Info: Picture/Scatter/CremonaScatter.png  used on input line 154.
-(pdftex.def)             Requested size: 396.38211pt x 294.25021pt.
-<Picture/Scatter/CremonaScatterBig.png, id=61, 1615.03375pt x 1420.30624pt>
+Package luatex.def Info: Picture/Scatter/CremonaScatter.png  used on input line
+ 154.
+(luatex.def)             Requested size: 396.38211pt x 294.25021pt.
+<Picture/Scatter/CremonaScatterBig.png, id=59, 1615.03375pt x 1420.30624pt>
 File: Picture/Scatter/CremonaScatterBig.png Graphic file (type png)
 <use Picture/Scatter/CremonaScatterBig.png>
-Package pdftex.def Info: Picture/Scatter/CremonaScatterBig.png  used on input line 155.
-(pdftex.def)             Requested size: 484.51387pt x 426.09515pt.
- [9 </Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/Picture/2/Barzio Piani Di Bobbio k= 2 2018 2020 .jpeg> </Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/Picture/Barplots e piecharts/Moggio BarPlotMV.jpeg> </Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/Picture/Barplots e piecharts/Moggio PieChartMV.jpeg>]
-Overfull \vbox (38.91335pt too high) has occurred while \output is active []
+Package luatex.def Info: Picture/Scatter/CremonaScatterBig.png  used on input l
+ine 155.
+(luatex.def)             Requested size: 484.51387pt x 426.09515pt.
+ [9<./Picture/2/Barzio Piani Di Bobbio k= 2 2018 2020 .jpeg><./Picture/Barplots 
+e piecharts/Moggio BarPlotMV.jpeg><./Picture/Barplots e piecharts/Moggio PieChar
+tMV.jpeg>]
+Overfull \vbox (38.92497pt too high) has occurred while \output is active []
 
- [10 </Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/Picture/Scatter/CremonaScatter.png> </Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/Picture/Scatter/CremonaScatterBig.png>]
-<Picture/Cremona Via Fatebenefratelli 2018-2020.jpeg, id=70, 1284.8pt x 722.7pt>
-File: Picture/Cremona Via Fatebenefratelli 2018-2020.jpeg Graphic file (type jpg)
+
+[10<./Picture/Scatter/CremonaScatter.png><./Picture/Scatter/CremonaScatterBig.pn
+g>]
+<Picture/Cremona Via Fatebenefratelli 2018-2020.jpeg, id=68, 1284.8pt x 722.7pt
+>
+File: Picture/Cremona Via Fatebenefratelli 2018-2020.jpeg Graphic file (type jp
+g)
 <use Picture/Cremona Via Fatebenefratelli 2018-2020.jpeg>
-Package pdftex.def Info: Picture/Cremona Via Fatebenefratelli 2018-2020.jpeg  used on input line 161.
-(pdftex.def)             Requested size: 513.9109pt x 289.07487pt.
+Package luatex.def Info: Picture/Cremona Via Fatebenefratelli 2018-2020.jpeg  u
+sed on input line 161.
+(luatex.def)             Requested size: 513.9109pt x 289.07487pt.
 
 Overfull \hbox (18.83293pt too wide) in paragraph at lines 161--162
  [][] 
  []
 
-<Picture/1/Cremona Via Fatebenefratelli k= 1 2018 2020 .jpeg, id=71, 1284.8pt x 722.7pt>
-File: Picture/1/Cremona Via Fatebenefratelli k= 1 2018 2020 .jpeg Graphic file (type jpg)
+<Picture/1/Cremona Via Fatebenefratelli k= 1 2018 2020 .jpeg, id=69, 1284.8pt x
+ 722.7pt>
+File: Picture/1/Cremona Via Fatebenefratelli k= 1 2018 2020 .jpeg Graphic file 
+(type jpg)
 <use Picture/1/Cremona Via Fatebenefratelli k= 1 2018 2020 .jpeg>
-Package pdftex.def Info: Picture/1/Cremona Via Fatebenefratelli k= 1 2018 2020 .jpeg  used on input line 169.
-(pdftex.def)             Requested size: 385.44298pt x 216.81166pt.
-<Picture/2/Persico Dosimo k= 2 2018 2020 .jpeg, id=72, 1284.8pt x 722.7pt>
+Package luatex.def Info: Picture/1/Cremona Via Fatebenefratelli k= 1 2018 2020 
+.jpeg  used on input line 169.
+(luatex.def)             Requested size: 385.44298pt x 216.81166pt.
+<Picture/2/Persico Dosimo k= 2 2018 2020 .jpeg, id=70, 1284.8pt x 722.7pt>
 File: Picture/2/Persico Dosimo k= 2 2018 2020 .jpeg Graphic file (type jpg)
 <use Picture/2/Persico Dosimo k= 2 2018 2020 .jpeg>
-Package pdftex.def Info: Picture/2/Persico Dosimo k= 2 2018 2020 .jpeg  used on input line 176.
-(pdftex.def)             Requested size: 385.44298pt x 216.81166pt.
-[11 </Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/Picture/Cremona Via Fatebenefratelli 2018-2020.jpeg> </Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/Picture/1/Cremona Via Fatebenefratelli k= 1 2018 2020 .jpeg>]
-<Picture/3/Cremona Via Gerre Borghi k= 3 2018 2020 .jpeg, id=76, 1284.8pt x 722.7pt>
-File: Picture/3/Cremona Via Gerre Borghi k= 3 2018 2020 .jpeg Graphic file (type jpg)
+Package luatex.def Info: Picture/2/Persico Dosimo k= 2 2018 2020 .jpeg  used on
+ input line 176.
+(luatex.def)             Requested size: 385.44298pt x 216.81166pt.
+[11<./Picture/Cremona Via Fatebenefratelli 2018-2020.jpeg><./Picture/1/Cremona V
+ia Fatebenefratelli k= 1 2018 2020 .jpeg>]
+<Picture/3/Cremona Via Gerre Borghi k= 3 2018 2020 .jpeg, id=75, 1284.8pt x 722
+.7pt>
+File: Picture/3/Cremona Via Gerre Borghi k= 3 2018 2020 .jpeg Graphic file (typ
+e jpg)
 <use Picture/3/Cremona Via Gerre Borghi k= 3 2018 2020 .jpeg>
-Package pdftex.def Info: Picture/3/Cremona Via Gerre Borghi k= 3 2018 2020 .jpeg  used on input line 183.
-(pdftex.def)             Requested size: 385.44298pt x 216.81166pt.
-<Picture/Barplots e piecharts/Cremona Via Fatebenefratelli BarPlotMV.jpeg, id=77, 621.32124pt x 472.76625pt>
-File: Picture/Barplots e piecharts/Cremona Via Fatebenefratelli BarPlotMV.jpeg Graphic file (type jpg)
+Package luatex.def Info: Picture/3/Cremona Via Gerre Borghi k= 3 2018 2020 .jpe
+g  used on input line 183.
+(luatex.def)             Requested size: 385.44298pt x 216.81166pt.
+<Picture/Barplots e piecharts/Cremona Via Fatebenefratelli BarPlotMV.jpeg, id=7
+6, 621.32124pt x 472.76625pt>
+File: Picture/Barplots e piecharts/Cremona Via Fatebenefratelli BarPlotMV.jpeg 
+Graphic file (type jpg)
 <use Picture/Barplots e piecharts/Cremona Via Fatebenefratelli BarPlotMV.jpeg>
-Package pdftex.def Info: Picture/Barplots e piecharts/Cremona Via Fatebenefratelli BarPlotMV.jpeg  used on input line 190.
-(pdftex.def)             Requested size: 248.5241pt x 189.10315pt.
-<Picture/Barplots e piecharts/Cremona Via Fatebenefratelli PieChartMV.jpeg, id=78, 621.32124pt x 472.76625pt>
-File: Picture/Barplots e piecharts/Cremona Via Fatebenefratelli PieChartMV.jpeg Graphic file (type jpg)
+Package luatex.def Info: Picture/Barplots e piecharts/Cremona Via Fatebenefrate
+lli BarPlotMV.jpeg  used on input line 190.
+(luatex.def)             Requested size: 248.5241pt x 189.10315pt.
+<Picture/Barplots e piecharts/Cremona Via Fatebenefratelli PieChartMV.jpeg, id=
+77, 621.32124pt x 472.76625pt>
+File: Picture/Barplots e piecharts/Cremona Via Fatebenefratelli PieChartMV.jpeg
+ Graphic file (type jpg)
 <use Picture/Barplots e piecharts/Cremona Via Fatebenefratelli PieChartMV.jpeg>
-Package pdftex.def Info: Picture/Barplots e piecharts/Cremona Via Fatebenefratelli PieChartMV.jpeg  used on input line 194.
-(pdftex.def)             Requested size: 248.5241pt x 189.10315pt.
- [12 </Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/Picture/2/Persico Dosimo k= 2 2018 2020 .jpeg> </Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/Picture/3/Cremona Via Gerre Borghi k= 3 2018 2020 .jpeg>] [13 </Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/Picture/Barplots e piecharts/Cremona Via Fatebenefratelli BarPlotMV.jpeg> </Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/Picture/Barplots e piecharts/Cremona Via Fatebenefratelli PieChartMV.jpeg>]
-<NeuralNetwork.jpeg, id=86, 1804.7425pt x 3601.455pt>
+
+Package luatex.def Info: Picture/Barplots e piecharts/Cremona Via Fatebenefrate
+lli PieChartMV.jpeg  used on input line 194.
+(luatex.def)             Requested size: 248.5241pt x 189.10315pt.
+ [12<./Picture/2/Persico Dosimo k= 2 2018 2020 .jpeg><./Picture/3/Cremona Via Ge
+rre Borghi k= 3 2018 2020 .jpeg>]
+[13<./Picture/Barplots e piecharts/Cremona Via Fatebenefratelli BarPlotMV.jpeg><
+./Picture/Barplots e piecharts/Cremona Via Fatebenefratelli PieChartMV.jpeg>]
+<NeuralNetwork.jpeg, id=84, 170.52686pt x 340.29497pt>
 File: NeuralNetwork.jpeg Graphic file (type jpg)
 <use NeuralNetwork.jpeg>
-Package pdftex.def Info: NeuralNetwork.jpeg  used on input line 202.
-(pdftex.def)             Requested size: 180.48482pt x 360.1666pt.
- [14 </Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/NeuralNetwork.jpeg>] (/Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/shortReport.aux) ) 
-Here is how much of TeX's memory you used:
- 4434 strings out of 478994
- 75583 string characters out of 5858184
- 384063 words of memory out of 5000000
- 21878 multiletter control sequences out of 15000+600000
- 405848 words of font info for 35 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 69i,8n,77p,365b,275s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb>
-Output written on "/Users/marcovinciguerra/Github/GitTesi/Latex/Picture report/shortReport.pdf" (14 pages, 4549491 bytes).
-PDF statistics:
- 108 PDF objects out of 1000 (max. 8388607)
- 49 compressed objects within 1 object stream
- 0 named destinations out of 1000 (max. 500000)
- 146 words of extra memory for PDF output out of 10000 (max. 10000000)
+Package luatex.def Info: NeuralNetwork.jpeg  used on input line 202.
+(luatex.def)             Requested size: 17.05368pt x 34.03148pt.
+
+[14<./NeuralNetwork.jpeg>] (./shortReport.aux))
+
+Here is how much of LuaTeX's memory you used:
+ 4925 strings out of 478531
+ 100000,460012 words of node,token memory allocated
+ 459 words of node memory still in use:
+   4 hlist, 1 vlist, 1 rule, 5 glue, 3 kern, 1 glyph, 7 attribute, 51 glue_spec,
+ 5 attribute_list, 1 write nodes
+   avail lists: 1:1,2:316,3:101,4:10,5:54,6:35,7:979,8:1,9:185,10:9,11:131
+ 24572 multiletter control sequences out of 65536+600000
+ 41 fonts using 4323183 bytes
+ 69i,8n,74p,298b,293s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf>
+</usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf>
+</usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.o
+tf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman12-regula
+r.otf></usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmsans10-bold
+.otf>
+Output written on shortReport.pdf (14 pages, 4505692 bytes).
+
+PDF statistics: 121 PDF objects out of 1000 (max. 8388607)
+ 52 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 131072)
+ 1 words of extra memory for PDF output out of 10000 (max. 100000000)
 
