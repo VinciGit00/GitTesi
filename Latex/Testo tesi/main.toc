@@ -1,0 +1,13 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {italian}{}
+\babel@toc {italian}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Introduzione}{4}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Tecnologie utilizzate}{5}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Implementazione del modulo planner}{6}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Testing}{7}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Conclusioni}{8}{}%
