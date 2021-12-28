@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.9)  23 DEC 2021 10:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.9)  28 DEC 2021 19:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/Users/marcovinciguerra/Desktop/Template Tesi Triennale/main.tex"
-(/Users/marcovinciguerra/Desktop/Template Tesi Triennale/main.tex
+**"/Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/main.tex"
+(/Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/main.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18> (/usr/local/texlive/2021/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2020/04/10 v1.4m Standard LaTeX document class
@@ -380,7 +380,7 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
-) (/Users/marcovinciguerra/Desktop/Template Tesi Triennale/uninafrontespizio.sty
+) (/Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/uninafrontespizio.sty
 Package: uninafrontespizio 2018/07/24 UniNA Frontespizio Package
  (/usr/local/texlive/2021/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
@@ -571,7 +571,7 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'italian'.
- (/Users/marcovinciguerra/Desktop/Template Tesi Triennale/main.aux)
+ (/Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
@@ -653,7 +653,7 @@ Package: blx-case-expl3 2020/12/31 v3.16 expl3 case changing code for biblatex
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
- (/Users/marcovinciguerra/Desktop/Template Tesi Triennale/main.bbl)
+ (/Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/main.bbl)
 Package biblatex Info: Reference section=0 on input line 70.
 Package biblatex Info: Reference segment=0 on input line 70.
  (/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -676,15 +676,15 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 \c@lstlisting=\count430
- (/Users/marcovinciguerra/Desktop/Template Tesi Triennale/frontespizio.tex
-<logo-federico-II.pdf, id=4, 501.79471pt x 499.8675pt>
-File: logo-federico-II.pdf Graphic file (type pdf)
-<use logo-federico-II.pdf>
-Package pdftex.def Info: logo-federico-II.pdf  used on input line 5.
-(pdftex.def)             Requested size: 113.81102pt x 113.37299pt.
+ (/Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/frontespizio.tex
+<UniBg-logo.jpg, id=4, 1003.75pt x 1003.75pt>
+File: UniBg-logo.jpg Graphic file (type jpg)
+<use UniBg-logo.jpg>
+Package pdftex.def Info: UniBg-logo.jpg  used on input line 5.
+(pdftex.def)             Requested size: 113.81102pt x 113.79767pt.
  [1
 
-{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Users/marcovinciguerra/Desktop/Template Tesi Triennale/logo-federico-II.pdf>]) (/Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/dedica.tex) [2] (/Users/marcovinciguerra/Desktop/Template Tesi Triennale/main.toc)
+{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/UniBg-logo.jpg>]) (/Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/dedica.tex) [2] (/Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/main.toc)
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
@@ -692,33 +692,33 @@ Package pdftex.def Info: logo-federico-II.pdf  used on input line 5.
 
 ]
 Capitolo 1.
-(/Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/introduzione.tex) [4
+(/Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/introduzione.tex) [4
 
 ]
 Capitolo 2.
-(/Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/capitolo2.tex) [5
+(/Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/capitolo2.tex) [5
 
 ]
 Capitolo 3.
-(/Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/capitolo3.tex) [6
+(/Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/capitolo3.tex) [6
 
 ]
 Capitolo 4.
-(/Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/capitolo4.tex) [7
+(/Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/capitolo4.tex) [7
 
 ]
 Capitolo 5.
-(/Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/conclusioni.tex) [8
+(/Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/conclusioni.tex) [8
 
-] (/Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/appendice.tex) (/Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/ringraziamenti.tex [9
+] (/Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/appendice.tex) (/Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/ringraziamenti.tex [9
 
 ])
 
-LaTeX Warning: Empty bibliography on input line 92.
+LaTeX Warning: Empty bibliography on input line 93.
 
 [10
 
-] (/Users/marcovinciguerra/Desktop/Template Tesi Triennale/main.aux)
+] (/Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/main.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -732,18 +732,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 22743 strings out of 478994
- 445117 string characters out of 5858184
- 1236266 words of memory out of 5000000
+ 22744 strings out of 478994
+ 445061 string characters out of 5858184
+ 1236260 words of memory out of 5000000
  39867 multiletter control sequences out of 15000+600000
  406442 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,5n,102p,795b,1307s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on "/Users/marcovinciguerra/Desktop/Template Tesi Triennale/main.pdf" (10 pages, 177310 bytes).
+Output written on "/Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/main.pdf" (10 pages, 448711 bytes).
 PDF statistics:
- 55 PDF objects out of 1000 (max. 8388607)
- 38 compressed objects within 1 object stream
+ 53 PDF objects out of 1000 (max. 8388607)
+ 36 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 

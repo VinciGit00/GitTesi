@@ -1,9 +1,9 @@
-PWD /Users/marcovinciguerra/Desktop/Template Tesi Triennale
+PWD /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi
 INPUT /usr/local/texlive/2021/texmf.cnf
 INPUT /usr/local/texlive/2021/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/main.tex
-OUTPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/main.log
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/main.tex
+OUTPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/main.log
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/base/report.cls
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/base/report.cls
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/base/report.cls
@@ -392,17 +392,17 @@ INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/uninafrontespizio.sty
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/uninafrontespizio.sty
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/uninafrontespizio.sty
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/uninafrontespizio.sty
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/uninafrontespizio.sty
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/uninafrontespizio.sty
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/uninafrontespizio.sty
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/uninafrontespizio.sty
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/uninafrontespizio.sty
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/uninafrontespizio.sty
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/uninafrontespizio.sty
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/uninafrontespizio.sty
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/uninafrontespizio.sty
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/uninafrontespizio.sty
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/uninafrontespizio.sty
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/uninafrontespizio.sty
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/uninafrontespizio.sty
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/uninafrontespizio.sty
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/uninafrontespizio.sty
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/uninafrontespizio.sty
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/uninafrontespizio.sty
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/uninafrontespizio.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/setspace/setspace.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/setspace/setspace.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/setspace/setspace.sty
@@ -623,10 +623,10 @@ INPUT /usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libr
 INPUT /usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 INPUT /usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarybackgrounds.code.tex
 INPUT /usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarybackgrounds.code.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/main.aux
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/main.aux
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/main.aux
-OUTPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/main.aux
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/main.aux
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/main.aux
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/main.aux
+OUTPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/main.aux
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/biblatex/lbx/italian.lbx
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/biblatex/lbx/italian.lbx
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/biblatex/lbx/italian.lbx
@@ -644,13 +644,13 @@ INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/l3kernel/expl3.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-OUTPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/main.bcf
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/main.bbl
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/main.bbl
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/main.bbl
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/main.bbl
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/main.bbl
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/main.bbl
+OUTPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/main.bcf
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/main.bbl
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/main.bbl
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/main.bbl
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/main.bbl
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/main.bbl
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/main.bbl
 INPUT /usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -670,25 +670,25 @@ INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/frontespizio.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/frontespizio.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/frontespizio.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/frontespizio.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/frontespizio.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/frontespizio.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/frontespizio.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/frontespizio.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/frontespizio.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/frontespizio.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/frontespizio.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/frontespizio.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/frontespizio.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/frontespizio.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/frontespizio.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/frontespizio.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/frontespizio.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/frontespizio.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/frontespizio.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/frontespizio.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/frontespizio.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/frontespizio.tex
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/logo-federico-II.pdf
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/logo-federico-II.pdf
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/logo-federico-II.pdf
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/logo-federico-II.pdf
-OUTPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/main.pdf
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/logo-federico-II.pdf
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/UniBg-logo.jpg
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/UniBg-logo.jpg
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/UniBg-logo.jpg
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/UniBg-logo.jpg
+OUTPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/main.pdf
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/UniBg-logo.jpg
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
@@ -696,102 +696,102 @@ INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm
 INPUT /usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/dedica.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/dedica.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/dedica.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/dedica.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/dedica.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/dedica.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/dedica.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/dedica.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/dedica.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/dedica.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/dedica.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/dedica.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/dedica.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/dedica.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/dedica.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/dedica.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/dedica.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/dedica.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/dedica.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/dedica.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/dedica.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/dedica.tex
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/main.toc
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/main.toc
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/main.toc
-OUTPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/main.toc
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/introduzione.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/introduzione.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/introduzione.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/introduzione.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/introduzione.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/introduzione.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/introduzione.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/introduzione.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/introduzione.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/introduzione.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/introduzione.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/capitolo2.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/capitolo2.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/capitolo2.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/capitolo2.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/capitolo2.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/capitolo2.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/capitolo2.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/capitolo2.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/capitolo2.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/capitolo2.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/capitolo2.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/capitolo3.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/capitolo3.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/capitolo3.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/capitolo3.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/capitolo3.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/capitolo3.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/capitolo3.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/capitolo3.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/capitolo3.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/capitolo3.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/capitolo3.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/capitolo4.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/capitolo4.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/capitolo4.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/capitolo4.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/capitolo4.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/capitolo4.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/capitolo4.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/capitolo4.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/capitolo4.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/capitolo4.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/capitolo4.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/conclusioni.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/conclusioni.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/conclusioni.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/conclusioni.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/conclusioni.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/conclusioni.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/conclusioni.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/conclusioni.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/conclusioni.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/conclusioni.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/conclusioni.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/appendice.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/appendice.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/appendice.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/appendice.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/appendice.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/appendice.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/appendice.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/appendice.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/appendice.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/appendice.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/appendice.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/ringraziamenti.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/ringraziamenti.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/ringraziamenti.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/ringraziamenti.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/ringraziamenti.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/ringraziamenti.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/ringraziamenti.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/ringraziamenti.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/ringraziamenti.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/ringraziamenti.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/capitoli/ringraziamenti.tex
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/main.aux
-INPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/main.run.xml
-OUTPUT /Users/marcovinciguerra/Desktop/Template Tesi Triennale/main.run.xml
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/main.toc
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/main.toc
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/main.toc
+OUTPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/main.toc
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/introduzione.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/introduzione.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/introduzione.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/introduzione.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/introduzione.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/introduzione.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/introduzione.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/introduzione.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/introduzione.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/introduzione.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/introduzione.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/capitolo2.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/capitolo2.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/capitolo2.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/capitolo2.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/capitolo2.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/capitolo2.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/capitolo2.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/capitolo2.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/capitolo2.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/capitolo2.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/capitolo2.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/capitolo3.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/capitolo3.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/capitolo3.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/capitolo3.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/capitolo3.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/capitolo3.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/capitolo3.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/capitolo3.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/capitolo3.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/capitolo3.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/capitolo3.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/capitolo4.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/capitolo4.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/capitolo4.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/capitolo4.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/capitolo4.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/capitolo4.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/capitolo4.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/capitolo4.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/capitolo4.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/capitolo4.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/capitolo4.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/conclusioni.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/conclusioni.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/conclusioni.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/conclusioni.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/conclusioni.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/conclusioni.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/conclusioni.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/conclusioni.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/conclusioni.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/conclusioni.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/conclusioni.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/appendice.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/appendice.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/appendice.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/appendice.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/appendice.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/appendice.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/appendice.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/appendice.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/appendice.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/appendice.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/appendice.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/ringraziamenti.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/ringraziamenti.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/ringraziamenti.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/ringraziamenti.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/ringraziamenti.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/ringraziamenti.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/ringraziamenti.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/ringraziamenti.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/ringraziamenti.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/ringraziamenti.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/capitoli/ringraziamenti.tex
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/main.aux
+INPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/main.run.xml
+OUTPUT /Users/marcovinciguerra/Github/GitTesi/Latex/Testo tesi/main.run.xml
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
