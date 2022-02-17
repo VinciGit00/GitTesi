@@ -42,10 +42,10 @@ tre centraline di qualità dell'aria e da centraline meterologiche dislocate in 
 che sottolineano una forte relazione tra il particolato e l'ammoninaca, tenendo conto anche di altre variabili
 atmosferische, quali: la velocità e la direzione de vento, l'angolatura (tramite il quadrante), la temperatura e le precipitazioni.
 \section{Risultati delle reti neurali}
-Il dataset a disposizione è stato diviso in training e validazione (scrivere la percentuale)
-Infatti,usando per la creazione del mdoelli dati dal 2014 al 2019 e per la 
-validazione tutto il 2020. Otteniamo un notevole inseguimento della previsione rispetto ai dati reali, 
-usando dati di cinque giorni successivi per determinare l'andamento del sesto giorno.
+Le informazioni sono state utilizzate per creare e allenare il modello, ma anche per valutare le sue prestazioni quando lo stesso deve gestire nuovi dati e periodi temporali. A tal fine sono stati utilizzati gli anni dal 2014 fino al 2019 per costruire la rete neurale e l’anno 2020 per confrontare i dati previsti dal modello con i rispettivi dati reali.
+\\Il modello utilizza l’andamento di cinque giorni consecutivi per calcolare il valore atteso del sesto giorno e, come evidenziato dal grafico, si ottiene un notevole inseguimento della previsione rispetto ai dati reali quando si modella l’andamento del particolato PM10 in funzione dell’ammoniaca. Lo stesso si può dire della relazione inversa, ovvero calcolando la previsione dell’andamento dell’ammoniaca in funzione del PM10.
+\\In più, è da sottolineare il fatto che i dati utilizzati per il modello sono stati rilevati prima della pandemia e i successivi lockdown, ma il modello continua a offrire previsioni valide nonostante la più alta variabilità dell’attività industriale e urbana in tutto il 2020. 
+
 \section{Regressione tramite reti neurali}
 La figura qui sotto rappresenta in arancione il modello da noi ottenuto, 
 mentre quello in blu l'andamento reale.
