@@ -13,7 +13,7 @@
 \title{Breve report sui risultati ottenuti tesi}
 \author{David Guzman Piedrahita and Marco Vinciguerra}
  
-\begin{document}
+\begin{document} 
 \maketitle        
 \section{Introduzione e reti neurali utilizzate}
 Per studiare la potenziale relazione tra ammoniaca e particolato in Lombardia, sono state utilizzate
@@ -25,7 +25,7 @@ strumenti adatti a modellizzare serie storiche i cui valori dipendono dal passat
 istanti temporali precedenti. I diversi modelli implementati permettono di 
 gestire dati mancanti nel dataset, e sono in grado
 di migliorare il rendimento dei modelli, stabilizzandolo e rimuovendo le informazioni superflue.
-    \includegraphics[scale=0.4]{Immagini/mappaTipologie.jpeg}
+    \includegraphics[scale=0.3]{Immagini/mappaTipologie.jpeg}
 
 Il problema dei dati mancanti in questo tipo di analisi riveste un ruolo importante
 in quanto i sensori di rilevamento degli inquinanti vengono spesso disattivati causando la perdita 
@@ -34,8 +34,8 @@ dei dati. In questo caso, come si può vedere dalla figura seguente, i dati manc
     
 \section{Caso studio e dati}
 
-Le 3 centraline prese in considerazione sono state Moggio (ID=681, rurale), Cremona via Fatebenefratelli(ID=627, urbana)
-e Schivenoglia (ID=703, rurale).
+Le 3 centraline prese in considerazione sono state Moggio, Schivenoglia e 
+Cremona via Fatebenefratelli. Le prime 2 sono di tipo rurale mentre l'ultima è di tipo urbano.
 Per il caso studio sono stati utilizzati dati provenienti dalle 
 tre centraline di qualità dell'aria e da centraline meterologiche dislocate in tutta la Lombardia.
 \\Usando, per esempio, i dati della centralina di Moggio dal 2014 al 2020, possiamo ottenere risultati 
@@ -49,6 +49,6 @@ usando dati di cinque giorni successivi per determinare l'andamento del sesto gi
 \section{Regressione tramite reti neurali}
 La figura qui sotto rappresenta in arancione il modello da noi ottenuto, 
 mentre quello in blu l'andamento reale.
-    \includegraphics[scale = 0.5]{Immagini/Regressione1.PNG}
+    \includegraphics[scale = 0.5]{Immagini/regressionePM25.PNG}
 
 \end{document} 
