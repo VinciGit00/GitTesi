@@ -16,27 +16,40 @@
 \begin{document}
 \maketitle        
 \section{Introduzione e reti neurali utilizzate}
-Per studiare la potenziale relazione tra ammoniaca e particolato, sono state utilizzate
-diverse strategie di machine learning, in modo di trovare una combinazione di approcci
-che rifletta, nel modo più accurato possibile, il comportamento e le interazioni tra le due 
-sostanze in questione, anche in relazione ad altre variabili di inquinamento e meteorologiche.
+Per studiare la potenziale relazione tra ammoniaca e particolato in Lombardia, sono state utilizzate
+diverse strategie di machine learning al fine di trovare un modello in grado di descrivere 
+nel modo più accurato possibile, il comportamento e le interazioni tra le due 
+sostanze in questione. 
 \\In particolare, sono state utilizzate diverse tipologie di rete neurali LSTM (long-short term memory),
-che sono adatte a modellizzare fenomeni che dipendono da stati precedenti del sistema
-in quanto permettono di possedere l'informazione degli
-istanti temporali precedenti. Le diverse strategie
-che sono state valutate, comprendono metodologie per gestire la mancanza di dati nel dataset, e metodologie
-per migliorare il rendimento dei modelli, stabilizzandolo e rimuovendo dati superflui.  
-\section{Regressori}
-Sono stati utlizzati dati provenienti da diverse centraline meteorologiche e di inquinamento in tutta la Lombardia.
-\\Usando, per esempio, i dati di Moggio che vanno dal 2014 al 2020, possiamo ottenere risultati che sottolineano una 
-forte relazione del particolato rispetto all'ammoninaca, in concomitanza di altri dati  
-Wind\_speed, Wind\_direction (in gradi), quadrante della 
-velocità del vento, Temperature e Rainfall. 
+strumenti adatti a modellizzare serie storiche i cui valori dipendono dal passato utilizzando le informazioni degli
+istanti temporali precedenti. I diversi modelli implementati permettono di 
+gestire dati mancanti nel dataset, e sono in grado
+di migliorare il rendimento dei modelli, stabilizzandolo e rimuovendo le informazioni superflue.
+    \includegraphics[scale=0.8]{Immagini/Lpollution.png}
+
+Il problema dei dati mancanti in questo tipo di analisi riveste un ruolo importante
+in quanto i sensori di rilevamento degli inquinanti vengono spesso disattivati causando la perdita 
+dei dati. In questo caso, come si può vedere dalla figura seguente, i dati mancanti sono assenti
+\\\includegraphics[scale=0.4]{Immagini/Cassina Valsassina Moggio 2018-2020 .jpeg}
+    
+
+\section{Caso studio e dati}
+
+Le 3 centraline prese in considerazione sono state Moggio (ID=681, rurale), Cremona via Fatebenefratelli(ID=627, urbana)
+e Schivenoglia (ID=703, rurale)
+Per ilc aso studio sono stati utilizzati dati provenienti dalle 
+3centraline di qualità dell'aria e da centraline meterologiche dislocate in tutta la Lombardia.
+\\Usando, per esempio, i dati della centralina di Moggio dal 2014 al 2020, possiamo ottenere risultati 
+che sottolineano una forte relazione tra il particolato e l'ammoninaca, tenendo conto anche di altre variabili
+atmosferische, quali: la velocità e la direzione de vento, l'angolatura (tramite il quadrante), la temperatura e le precipitazioni.
+\section{Risultati delle reti neurali}
+Il dataset a disposizione è stato diviso in training e validazione (scrivere la percentuale)
 Infatti,usando per la creazione del mdoelli dati dal 2014 al 2019 e per la 
 validazione tutto il 2020. Otteniamo un notevole inseguimento della previsione  rispetto ai dati reali, 
 usando dati di 5 giorni successivi per determinare l'andamento del sesto giorno.
-\section{Training}
-\includegraphics[scale = 0.5]{Immagini/Training.PNG}
 \section{Regressione tramite reti neurali}
-\includegraphics[scale = 0.5]{Immagini/Regressione1.PNG}
+La figura qui sotto rappresenta in arancione il modello da noi ottenuto, 
+mentre quello in blu il modello reale.
+    \includegraphics[scale = 0.5]{Immagini/Regressione1.PNG}
+
 \end{document} 
