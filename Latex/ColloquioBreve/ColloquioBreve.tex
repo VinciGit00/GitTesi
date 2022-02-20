@@ -25,11 +25,10 @@ strumenti adatti a modellizzare serie storiche i cui valori dipendono dal passat
 istanti temporali precedenti. I diversi modelli implementati permettono di 
 gestire dati mancanti nel dataset, e sono in grado
 di migliorare il rendimento dei modelli, stabilizzandolo e rimuovendo le informazioni superflue.
-    \includegraphics[scale=0.3]{Immagini/mappaTipologie.jpeg}
-
-Il problema dei dati mancanti in questo tipo di analisi riveste un ruolo importante
+\includegraphics[scale=0.3]{Immagini/mappaTipologie.jpeg}
+\\Il problema dei dati mancanti in questo tipo di analisi riveste un ruolo importante
 in quanto i sensori di rilevamento degli inquinanti vengono spesso disattivati causando la perdita 
-dei dati. In questo caso, come si può vedere dalla figura seguente, i dati mancanti, sottolienati in blu, sono molto frequenti.
+dei dati. In questo caso, come si può vedere dalla figura seguente, i dati mancanti, sottolineati in blu, sono molto frequenti.
 \\\includegraphics[scale=0.4]{Immagini/Moggio 2018-2020.jpeg}
     
 \section{Caso studio e dati}
@@ -40,7 +39,7 @@ Per il caso studio sono stati utilizzati dati provenienti dalle
 tre centraline di qualità dell'aria e da centraline meterologiche dislocate in tutta la Lombardia.
 \\Usando, per esempio, i dati della centralina di Moggio dal 2014 al 2020, possiamo ottenere risultati 
 che sottolineano una forte relazione tra il particolato e l'ammoninaca, tenendo conto anche di altre variabili
-atmosferische, quali: la velocità e la direzione de vento, l'angolatura (tramite il quadrante), la temperatura e le precipitazioni.
+atmosferische, quali: la velocità e la direzione (tramite il quadrante cartesiano) del vento, la temperatura e le precipitazioni.
 \section{Risultati delle reti neurali}
 Le informazioni sono state utilizzate per creare e allenare il modello, ma anche per valutare le sue prestazioni quando lo stesso deve gestire nuovi dati e periodi temporali. A tal fine sono stati utilizzati gli anni dal 2014 fino al 2019 per costruire la rete neurale e l’anno 2020 per confrontare i dati previsti dal modello con i rispettivi dati reali.
 \\Il modello utilizza l’andamento di cinque giorni consecutivi per calcolare il valore atteso del sesto giorno e, come evidenziato dal grafico, si ottiene un notevole inseguimento della previsione rispetto ai dati reali quando si modella l’andamento del particolato PM10 in funzione dell’ammoniaca. Lo stesso si può dire della relazione inversa, ovvero calcolando la previsione dell’andamento dell’ammoniaca in funzione del PM10.
@@ -48,7 +47,7 @@ Le informazioni sono state utilizzate per creare e allenare il modello, ma anche
 
 \section{Regressione tramite reti neurali}
 La figura qui sotto rappresenta in arancione il modello da noi ottenuto, 
-mentre quello in blu l'andamento reale.
-    \includegraphics[scale = 0.5]{Immagini/regressionePM25.PNG}
+mentre quello in blu l'andamento reale del PM10.
+\\\includegraphics[scale = 0.5]{Immagini/RegressionePM10.png}
 
 \end{document} 
