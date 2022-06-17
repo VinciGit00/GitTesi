@@ -2,3 +2,8 @@
 .Rhistory
 .RData
 .Ruserdata
+.DS_Store
+DownloadData/.DS_Store
+DownloadData/Images and dataset/.DS_Store
+Latex/.DS_Store
+Latex/Picture report/.DS_Store
