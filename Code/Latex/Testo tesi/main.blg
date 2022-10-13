@@ -1,0 +1,15 @@
+[0] Config.pm:311> INFO - This is Biber 2.16
+[0] Config.pm:314> INFO - Logfile is 'main.blg'
+[50] biber-darwin:340> INFO - === Tue Dec 28, 2021, 19:21:23
+[61] Biber.pm:415> INFO - Reading 'main.bcf'
+[126] Biber.pm:949> INFO - Using all citekeys in bib section 0
+[137] Biber.pm:4340> INFO - Processing section 0
+[145] Biber.pm:4531> INFO - Looking for bibtex format file 'references.bib' for section 0
+[145] Utils.pm:395> WARN - Data source 'references.bib' is empty, ignoring
+[149] UCollate.pm:68> INFO - Overriding locale 'it-IT' defaults 'variable = shifted' with 'variable = non-ignorable'
+[149] UCollate.pm:68> INFO - Overriding locale 'it-IT' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[149] Biber.pm:4168> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'it-IT'
+[149] Biber.pm:4174> INFO - No sort tailoring available for locale 'it-IT'
+[149] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[150] bbl.pm:757> INFO - Output to main.bbl
+[150] Biber.pm:128> INFO - WARNINGS: 1

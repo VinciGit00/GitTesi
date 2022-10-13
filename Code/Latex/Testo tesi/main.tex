@@ -1,0 +1,96 @@
+\documentclass[12pt, twoside]{report}
+\usepackage[a4paper, margin=3.3cm]{geometry}
+\usepackage[italian]{babel}
+\usepackage{lipsum}
+\usepackage{fancyhdr}
+\usepackage[style=alphabetic]{biblatex}
+\usepackage{csquotes}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{xcolor}
+\graphicspath{ {./images/} }
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+\addbibresource{references.bib}
+\fancyhead[LE, RO]{\thepage}
+\fancyhead[RE]{\leftmark}
+\fancyhead[LO]{\rightmark}
+%\fancyfoot[LE, RO]{\thepage}
+\fancyfoot[CO, CE]{}
+
+% STEP 1: include the package
+\usepackage{uninafrontespizio}
+% STEP 2: Front-page configuration
+\Universita{Università degli Studi di Bergamo}
+\Dipartimento{Dipartimento di Ingegneria Elettrica e Tecnologie dell'Informazione}
+\CorsoDiLaurea{Corso di Laurea Triennale in Informatica}
+\Materia{Tesi sperimentale in statistica e machine learning} % optional
+\AnnoAccademico{Anno Accademico 2021--2022}
+\Titolo{Titolo tesi lmao}
+\Relatore{Prof. Alessandro Fassò}
+\RelatoreLabel{Relatore} %optional, default: Relatore
+%\relandcorrelsep{2em} %optional, vertical space between relatori and correlatori default: 1.5ex
+\Correlatore{Ill. Dott. Ciccino \textsc{Rossi}}
+%\Correlatore{Dott.Foo \textsc{Bar}} % can add as many "Correlatori" as you wish
+%\CorrelatoreLabel{Controrelatore} %optional, default: Correlatore
+\Candidato{ David Guzman Piedrahita e Marco Vinciguerra} %only one candidate is currently supported
+%\CandidatoLabel{Candidata} %optional, default: Candidato
+\Matricola{N86/0000}
+\Logo{UniBg-logo.jpg} %path to logo image
+\LogoWidth{4cm} %optional, default: 3cm
+\LogoPosition{below-uni} % or top, or below-title, or above-title, or no-logo
+
+
+
+
+\begin{document}
+    % STEP 3: use \makefrontpage and/or \makefrontpagealt
+    \input{frontespizio}
+    \nocite{*}
+    \input{capitoli/dedica}
+    \pagestyle{empty}
+    
+    \tableofcontents
+    \pagestyle{fancy}
+    \chapter{Introduzione}
+    Inizio del testo della tesi.
+    \input{capitoli/introduzione}
+    \chapter{Tecnologie utilizzate}
+    \input{capitoli/capitolo2}
+    \chapter{Implementazione del modulo planner}
+    \input{capitoli/capitolo3}
+    \chapter{Testing}
+    \input{capitoli/capitolo4}
+    \chapter{Conclusioni}
+    \input{capitoli/conclusioni}
+    \chapter*{Appendice}
+    \input{capitoli/appendice}
+    \input{capitoli/ringraziamenti}
+    \printbibliography
+
+
+\end{document}
